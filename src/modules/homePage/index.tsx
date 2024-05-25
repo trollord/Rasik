@@ -1,3 +1,7 @@
+import Header from "../commonComponents/header";
+
 export function HomePage() {
-    return 'homePage'
+    return <>
+      <Header></Header>
+    </>
 }
