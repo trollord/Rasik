@@ -1,7 +1,7 @@
-import Header from "../commonComponents/header";
+import Header from "../../../commonComponents/header";
 import { Grid ,Typography, Button} from "@mui/material";
-import {AboutUsImage} from './../commonComponents/icons'
-export function AboutPage() {
+import {AboutUsImage} from '../../../commonComponents/icons'
+export function AboutUs() {
     return <>
       <Header/>
 

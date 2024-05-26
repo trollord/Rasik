@@ -1,20 +1,21 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
 import { HomePage } from './modules/homePage';
-import { AboutPage } from './modules/aboutPage';
-import ContactForm from './modules/contactForm';
+import { theme } from './theme';
+import { ServicePage } from './modules/servicePage';
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <Router>
-   
         <Routes>
-          
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path='contact' element={<ContactForm/>}/>
+          {/* The services page will open with a single service displayed. We will determine the method by which the service is selected and displayed on the page*/}
+          <Route path="/services" element={<ServicePage />} />
         </Routes>
     </Router>
+    </ThemeProvider>
   );
 }
 
