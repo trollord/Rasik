@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material';
 import { HomePage } from './modules/homePage';
 import { theme } from './theme';
 import { ServicePage } from './modules/servicePage';
+import { About } from './modules/homePage/components/aboutUs';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           {/* The services page will open with a single service displayed. We will determine the method by which the service is selected and displayed on the page*/}
           <Route path="/services" element={<ServicePage />} />
+         
         </Routes>
     </Router>
     </ThemeProvider>

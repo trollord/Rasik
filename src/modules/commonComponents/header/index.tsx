@@ -1,6 +1,8 @@
 import { useState ,MouseEvent} from 'react';
-import { Button, Grid, Typography,Box, IconButton ,Menu ,MenuItem,MenuList} from '@mui/material';
+import { Button, Grid,Box, IconButton ,Menu ,MenuItem,MenuList} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import {HashLink as Link} from 'react-router-hash-link';
+
 
 export function Header() {
    const [anchorNav,setAnchorNav] = useState<null | HTMLElement>(null);
@@ -14,7 +16,7 @@ export function Header() {
    }
    
   return (
-    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-evenly" direction={"row"} border={1} display="flex">
+    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-evenly" direction={"row"}  display="flex" >
        
          <Box width={100}  height={ 50}>
            <img src="/image.png" alt="logo" width={"100%"} height={"100%"}/>
@@ -23,18 +25,18 @@ export function Header() {
            {/* <SVGComponent></SVGComponent> */}
 
        
-        <Typography fontWeight={600} fontSize={24} fontFamily="Inter">
+        <Link to='#services' fontWeight={600} fontSize={24} fontFamily="Inter">
            Services
-           </Typography>
-           <Typography>
+           </Link>
+           <Link to='#ourwork'>
            Our work
-           </Typography>
-           <Typography>
+           </Link>
+           <Link to='#testimonials'>
            Testimonials
-           </Typography>
-           <Typography>
+           </Link>
+           <Link to='#about'>
            About us
-           </Typography>
+           </Link>
            <Button sx={{ backgroundColor:'#EB3335' ,width:'169px',height:'38px',borderRadius:'10px',boxShadow: '0px 4px 4px 0px #00000040', color:"#FFFFFF"}}>
               Contact Us
            </Button> 

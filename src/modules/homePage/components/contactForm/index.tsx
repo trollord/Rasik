@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { Grid } from '@mui/material';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +35,8 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Grid width='50%' bgcolor='#F1E5D1'>
+        <form onSubmit={handleSubmit}>
       <div>
         <label>Name</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -49,6 +51,9 @@ export const ContactForm = () => {
       </div>
       <button type="submit">Send Email</button>
     </form>
+
+    </Grid>
+  
   );
 };
 
