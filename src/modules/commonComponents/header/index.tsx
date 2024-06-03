@@ -16,16 +16,16 @@ export function Header() {
    }
    
   return (
-    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-evenly" direction={"row"}  display="flex" >
+    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-between" direction={"row"}  display="flex" p={3} columnSpacing={8}>
        
-         <Box width={100}  height={ 50}>
+         <Grid  item width={100}  height={50} md={2}>
            <img src="/image.png" alt="logo" width={"100%"} height={"100%"}/>
 
-         </Box>
-           {/* <SVGComponent></SVGComponent> */}
+         </Grid>
+                   
 
-       
-        <Link to='#services' fontWeight={600} fontSize={24} fontFamily="Inter">
+       <Grid item display='flex' justifyContent='space-between' alignItems='center' md={10}  sx={{display:{xs:'none',md:'flex'}}}>
+           <Link to='#services' fontWeight={600} fontSize={24} fontFamily="Inter">
            Services
            </Link>
            <Link to='#ourwork'>
@@ -40,9 +40,11 @@ export function Header() {
            <Button sx={{ backgroundColor:'#EB3335' ,width:'169px',height:'38px',borderRadius:'10px',boxShadow: '0px 4px 4px 0px #00000040', color:"#FFFFFF"}}>
               Contact Us
            </Button> 
+       </Grid>
+        
 
    
-        <Box sx={{display:{xs:'flex',md:'none'},justifyContent: 'flex-end',alignItems: 'flex-end' }}>
+        <Box sx={{display:{xs:'flex',md:'none'} }}>
          <IconButton size='large' edge='start' onClick={openMenu}>
             <MenuIcon/>
          </IconButton>
