@@ -7,7 +7,7 @@ function Carasouel() {
     return (
       <Grid m='auto' height='496px'>  
 
-          <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}>
+          <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
                   <div>
                       <img src="/assets/cookie.jpg" height='490px'/>
                     
