@@ -1,13 +1,13 @@
-import Header from '../../../commonComponents/header';
+
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel} from 'react-responsive-carousel';
 import { Grid } from '@mui/material';
 
 function Carasouel() {
     return (
-      <Grid m='auto' height='496px'>  
+      <Grid m='80px auto' height='496px' >  
 
-          <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
+          <Carousel  autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
                   <div>
                       <img src="/assets/cookie.jpg" height='490px'/>
                     

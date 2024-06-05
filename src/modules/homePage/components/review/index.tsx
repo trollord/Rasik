@@ -2,6 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel} from 'react-responsive-carousel';
 import { QuotationMark } from "../../../commonComponents/icons";
+import '../../../../App.css'
 
 const testimonials = [
     {
@@ -38,12 +39,12 @@ function Review() {
         
 
         <Grid  height='300px' width='70%' >
-        <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showIndicators showStatus={false}>
+        <Carousel className="e-carousel e-carousel-indicators" autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}  showStatus={false}>
         {testimonials.map((testimonial, index) => (
         <div key={index} style={{height:'320px',padding:'5px'}}>
            <div style={{textAlign:'left'}}><QuotationMark/></div>
-          <p style={{fontSize:'35px'}}>{testimonial.quote}</p>
-          <p style={{fontWeight:'700',fontSize:'30px'}}>
+          <p style={{fontSize:'32px',textAlign:'left'}}>{testimonial.quote}</p>
+          <p style={{fontWeight:'700',fontSize:'28px',textAlign:'left',marginTop:'10px'}}>
             <strong>{testimonial.author}</strong>
           </p>
         </div>

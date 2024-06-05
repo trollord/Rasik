@@ -15,32 +15,32 @@ export function Header() {
    setAnchorNav(null)
    }
    
-   // to fixed the navbar :-   position={'fixed'} top='0' left='0' zIndex={'1'}
+   // to fixed the navbar :-  
 
   return (
-    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-between" direction={"row"}  display="flex" p={3} columnSpacing={8}>
+    <Grid container  height="15vh" alignItems={"center"} justifyContent="space-between" direction={"row"}  display="flex" pl={5} pr={3} columnSpacing={8} bgcolor='#fff'  position={'fixed'} top='0' left='0' zIndex={'1'}>
        
-         <Grid  item width={100}  height={50} md={2}>
+         <Grid  item width={100}  height={50} md={2} ml={5}>
            <img src="/image.png" alt="logo" width={"100%"} height={"100%"}/>
 
          </Grid>
                    
 
-       <Grid item display='flex' justifyContent='space-between' alignItems='center' md={10}  sx={{display:{xs:'none',md:'flex'}}}>
-           <Link  to='services'  spy={true} smooth={true}  offset={-100} duration={500}  style={{color:'#000',fontFamily:'inter',fontSize:'24px',fontWeight:'600'}}>
+       <Grid item display='flex' justifyContent='space-around' alignItems='center' md={9}  sx={{display:{xs:'none',md:'flex'}}}>
+           <Link  to='services'  spy={true} smooth={true}  offset={-100} duration={500}  style={{color:'#000',fontFamily:'sans-serif',fontSize:'22px',fontWeight:'600'}}>
            Services
            </Link>
-           <Link   to='ourwork'  spy={true} smooth={true}  offset={-100} duration={500} style={{color:'#000',fontFamily:'inter',fontSize:'24px',fontWeight:'600'}}>
+           <Link   to='ourwork'  spy={true} smooth={true}  offset={-100} duration={500} style={{color:'#000',fontFamily:'sans-serif',fontSize:'22px',fontWeight:'600'}}>
            Our work
            </Link>
-           <Link  to='testimonials'  spy={true} smooth={true}  offset={-100} duration={500} style={{color:'#000',fontFamily:'inter',fontSize:'24px',fontWeight:'600'}}>
+           <Link  to='testimonials'  spy={true} smooth={true}  offset={-100} duration={500} style={{color:'#000',fontFamily:'sans-serif',fontSize:'22px',fontWeight:'600'}}>
            Testimonials
            </Link>
-           <Link  to='about'   spy={true} smooth={true}  offset={-100} duration={500}style={{color:'#000',fontFamily:'inter',fontSize:'24px',fontWeight:'600'}}>
+           <Link  to='about'   spy={true} smooth={true}  offset={-100} duration={500}style={{color:'#000',fontFamily:'sans-serif',fontSize:'22px',fontWeight:'600'}}>
            About us
            </Link>
-           <Button sx={{ backgroundColor:'#EB3335' ,width:'169px',height:'38px',borderRadius:'10px',boxShadow: '0px 4px 4px 0px #00000040', color:"#FFFFFF"}}>
-              Contact Us
+           <Button sx={{fontWeight:'600', fontFamily:'sans-serif',backgroundColor:'#EB3335' ,width:'169px',height:'38px',borderRadius:'10px',boxShadow: '0px 4px 4px 0px #00000040',fontSize:'22px', color:"#FFFFFF",textTransform:'none'}}>
+              Contact us
            </Button> 
        </Grid>
         

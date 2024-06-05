@@ -4,7 +4,7 @@ import { Carousel} from 'react-responsive-carousel';
 
 function OurWork() {
   return (
-    <Grid height='700px' width='100%'  border={2} container p={5} display='flex' alignItems='center'  flexDirection='column'  id='ourwork' gap='40px'>
+    <Grid height='700px' width='100%' container p={5} display='flex' alignItems='center'  flexDirection='column'  id='ourwork' gap='40px'>
         <Grid item>
             <Typography variant='h3' style={{fontWeight:'700'}} textAlign='center'>Our Work</Typography>
             <Typography  textAlign='center'>Your Vision, Our Expertise</Typography>
@@ -12,12 +12,7 @@ function OurWork() {
         <Grid container item >
             <Grid  item md={4}  display='flex' alignItems='center' flexDirection='column'>
                 <Typography variant='h5' mb={2} style={{fontWeight:'600'}}>Print Clients</Typography>
-                <Box width='250px' height='400px' border={1}>
-                 <Carousel width='200px' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}>
-                 
-                  
-                 </Carousel>
-                </Box>
+                <Box width='250px' height='400px' border={1}></Box>     
             </Grid>
             <Grid  item md={4}  display='flex' alignItems='center' flexDirection='column'>
                 <Typography variant='h5'mb={2} style={{fontWeight:'600'}}>Digital Clients</Typography>
