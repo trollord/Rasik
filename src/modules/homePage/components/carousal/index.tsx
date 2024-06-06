@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 
 function Carasouel() {
     return (
-      <Grid m='80px auto' height='496px' >  
+      <Grid mt='15vh' height='496px' >  
 
           <Carousel  autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
                   <div>

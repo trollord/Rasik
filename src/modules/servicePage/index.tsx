@@ -5,11 +5,13 @@ import Footer from "../homePage/components/footer";
 
 export function ServicePage(){
     return (
-        <Grid container display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
+        <Grid container display='flex'  flexDirection='column' justifyContent='center' alignItems='center'>
+            
             <Header/>
+            
 
-            <Grid item width='80%' display='flex' flexDirection='column' justifyContent='center' alignItems='center' p={5}>
-                <Box  width='200px' height='200px' bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center'>
+            <Grid item width='80%' display='flex' flexDirection='column' justifyContent='center' alignItems='center' p={5} mt='15vh'>
+                <Box  width='200px' height='200px' bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center' boxShadow='0px 4px 4px 0px #00000040'>
                     <PrintMedia height='130px' width='130px'/>
                 </Box>
                 <Typography variant="h4" style={{fontWeight:'600'}}>Print Media</Typography>
@@ -19,24 +21,24 @@ export function ServicePage(){
             <Grid container  item display='flex' flexDirection='column' justifyContent='center' alignItems='center' mb={5}>
                 <Typography variant="h5" style={{fontWeight:'600'}} mb={4}>Our channel partners</Typography>
 
-            <Grid container item  p={5} bgcolor='#F1E5D1' width='90%' height='700px' display='flex' justifyContent='space-between'> 
+            <Grid container item  p={5} bgcolor='#F1E5D1' width='90%' height='700px' display='flex' justifyContent='space-between' borderRadius='5px'> 
             <Grid item display='flex' justifyContent='space-around' width='100%'> 
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2}  borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff'  m={2}  borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2}  borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff'  m={2}  borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
             </Grid>
             <Grid item display='flex' justifyContent='space-around' width='100%'> 
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff'  m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff'  m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
             </Grid>
             <Grid item display='flex' justifyContent='space-around'  width='100%'> 
-            <Box height='180px' width='180px' bgcolor='#fff' m={2}borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-            <Box height='180px' width='180px' bgcolor='#fff'  m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2}borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
+            <Box height='180px' width='200px' bgcolor='#fff'  m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
             </Grid>
             
            
@@ -45,7 +47,7 @@ export function ServicePage(){
             
             </Grid>
 
-            <Button size="medium" sx={{ backgroundColor:'#EB3335' ,width:'169px',height:'38px',boxShadow: '0px 4px 4px 0px #00000040', color:"#FFFFFF" ,marginBottom:'20px'}}>Enqiure now!</Button>
+            <Button size="medium" sx={{ backgroundColor:'#EB3335' ,width:'169px',height:'38px',boxShadow: '0px 4px 4px 0px #00000040', color:"#FFFFFF" ,marginBottom:'20px',textTransform:'none',fontSize:'20px'}}>Enqiure now!</Button>
 
             <Footer/>
         </Grid>

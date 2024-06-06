@@ -5,6 +5,8 @@
     font-family:sans-serif;
 }
 
-.e-carousel .e-carousel-indicators{
-   
+.carousel{
+    display: 'flex';
+    flex-direction: "column";
+    gap:'10px'
 }

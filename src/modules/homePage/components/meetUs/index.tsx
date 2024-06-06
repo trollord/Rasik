@@ -17,9 +17,9 @@ function MeetUs() {
       <Typography variant="h3" style={{fontWeight:'700'}}>Meet Us</Typography>
         <Grid  columnSpacing={5} p={3} width='85%'  bgcolor='#EADBC8'  height='300px' ml='25px' container item display='flex' justifyContent='space-between' mb={5} boxShadow='0px 4px 4px 0px #00000040' borderRadius='10px'>
 
-<Grid item md={5}  height='220px' border={2} bgcolor='#000' borderRadius='10px'>
+<Grid item md={5}  height='220px' border={2} borderRadius='10px'>
 <GoogleMapReact
-
+    
     bootstrapURLKeys={{ key: "" }}
     defaultCenter={defaultProps.center}
     defaultZoom={defaultProps.zoom}

@@ -1,10 +1,32 @@
 import { Grid, Typography ,Box} from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel} from 'react-responsive-carousel';
+import { Opacity } from '@mui/icons-material';
+
+
+const images = [
+    {
+      img1:'assets/logo.png',
+      img2:'assets/logo.png'
+     
+    },
+    {
+      img1:'assets/logo.png',
+      img2:'assets/logo.png'
+
+    },
+    {
+      img1:'assets/logo.png',
+      img2:'assets/logo.png'
+
+    },
+   
+  ];
+
 
 function OurWork() {
   return (
-    <Grid height='700px' width='100%' container p={5} display='flex' alignItems='center'  flexDirection='column'  id='ourwork' gap='40px'>
+    <Grid height='700px' width='100%' container p={5} display='flex' alignItems='center'  flexDirection='column'  id='ourwork' gap='40px' bgcolor='#000' color='#fff'>
         <Grid item>
             <Typography variant='h3' style={{fontWeight:'700'}} textAlign='center'>Our Work</Typography>
             <Typography  textAlign='center'>Your Vision, Our Expertise</Typography>
@@ -12,15 +34,54 @@ function OurWork() {
         <Grid container item >
             <Grid  item md={4}  display='flex' alignItems='center' flexDirection='column'>
                 <Typography variant='h5' mb={2} style={{fontWeight:'600'}}>Print Clients</Typography>
-                <Box width='250px' height='400px' border={1}></Box>     
+                <Box width='250px' height='400px'  bgcolor='rgba(255,255,255,0.2)' p={3} sx={{borderRadius:'10px'}}>
+                <Carousel className='.carousel'  autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}  showStatus={false}>
+        {images.map((img,index) => (
+        <div key={index} style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:'20px'}}>
+           
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',marginBottom:'50px',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+        </div>
+      ))}
+              </Carousel></Box>     
             </Grid>
             <Grid  item md={4}  display='flex' alignItems='center' flexDirection='column'>
                 <Typography variant='h5'mb={2} style={{fontWeight:'600'}}>Digital Clients</Typography>
-                <Box width='250px' height='400px' border={1}></Box>
+                <Box width='250px' height='400px'  bgcolor='rgba(255,255,255,0.2)' p={3} sx={{borderRadius:'10px'}}>
+                <Carousel className='.carousel'  autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}  showStatus={false}>
+        {images.map((img,index) => (
+        <div key={index} style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:'20px'}}>
+           
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',marginBottom:'50px',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+        </div>
+      ))}
+              </Carousel></Box>
             </Grid>
             <Grid item md={4}  display='flex' alignItems='center' flexDirection='column'>
                 <Typography variant='h5' mb={2} style={{fontWeight:'600'}}>Overseas Clients</Typography>
-                <Box width='250px' height='400px' border={1}></Box>
+                <Box width='250px' height='400px'  bgcolor='rgba(255,255,255,0.2)' p={3} sx={{borderRadius:'10px'}}>
+                <Carousel className='.carousel'  autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}  showStatus={false}>
+        {images.map((img,index) => (
+        <div key={index} style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:'20px'}}>
+           
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+          <div style={{height:'150px', width:'180px',backgroundColor:'#F1E5D1',marginBottom:'50px',borderRadius:'10px'}}>
+            <img src={img.img1} style={{height:'120px', width:'120px',}}/>
+          </div>
+        </div>
+      ))}
+              </Carousel></Box>
             </Grid>
         </Grid>
         
