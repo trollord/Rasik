@@ -1,13 +1,19 @@
 import { Grid, Typography } from "@mui/material";
-
+import styles from "./styles.module.css"
 function MeetUs() {
   return (
-   <Grid  spacing={2} p={2} width='80%'  bgcolor='#EADBC8'  height='300px' m='auto' container display='flex' justifyContent='space-evenly'>
+    <div className={styles.frameParent}>
+        <div className={styles.meetUsWrapper}>
+          <h1 className={styles.meetUs}>Meet Us</h1>
+        </div>
 
-    <Grid item md={6}  height='200px' m='auto 0' border={2} bgcolor='#000' borderRadius='10px'>Map</Grid>
-    <Grid item md={3} >
+   <Grid  spacing={2} p={2} width='1144px'  bgcolor='#EADBC8'  height='251px' m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+
+    
+    <Grid item md={6}  height='210px'width="498px" m='auto 0' border={2} bgcolor='#000' borderRadius='10px'>Map</Grid>
+    {/* <Grid item md={3} >
         <div>
-            <Typography variant="h5">Office</Typography>
+            <Typography variant="h5" fontFamily={}>Office</Typography>
             <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
                  Mumbai- 400 013.</Typography>
         </div>
@@ -33,9 +39,159 @@ function MeetUs() {
              <Typography>Mr. Twinkle shah</Typography>
              <Typography>Cell : +91-8898827588</Typography>
      </div>
-        </div>
-        
+        </div> */}
+        <Grid height = "170px" width="496.25px">
 
+        
+        <div className={styles.frameWrapper}>
+            <div className={styles.frameGroup}>
+              <div className={styles.office109PrimePlazaJVParent}>
+                <div className={styles.office109PrimeContainer}>
+                  <p className={styles.office}>
+                    <b>OFFICE</b>
+                  </p>
+                  <p className={styles.primePlazaJVPatelItCo}>
+                    <span>
+                      <span
+                        className={styles.primePlazaJ}
+                      >{`109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) `}</span>
+                    </span>
+                  </p>
+                  <p className={styles.mumbai400013}>
+                    <span>
+                      <span className={styles.mumbai4000131}>
+                        Mumbai- 400 013.
+                      </span>
+                    </span>
+                  </p>
+                  <p className={styles.blankLine}>
+                    <span>
+                      <span className={styles.blankLine1}>&nbsp;</span>
+                    </span>
+                  </p>
+                  <p className={styles.blankLine2}>
+                    <span>
+                      <span className={styles.blankLine3}>&nbsp;</span>
+                    </span>
+                  </p>
+                </div>
+                <div className={styles.eMailRasikads43gmailcomPrWrapper}>
+                  <div className={styles.eMailRasikads43gmailcomPr}>
+                    <p className={styles.eMail}>
+                      <b>E-Mail</b>
+                    </p>
+                    <p className={styles.rasikads43gmailcomPrashant}>
+                      <a
+                        className={styles.rasikads43gmailcom}
+                        href="mailto:rasikads43@gmail.com"
+                        target="_blank"
+                      >
+                        <span>
+                          <span className={styles.rasikads43gmailcom1}>
+                            rasikads43@gmail.com
+                          </span>
+                        </span>
+                      </a>
+                      <span>
+                        &nbsp;
+                        <span className={styles.prashantrasikcommunicationsc}>
+                          prashant@rasikcommunications.com
+                        </span>
+                      </span>
+                    </p>
+                    <p className={styles.blankLine4}>
+                      <span>&nbsp;</span>
+                    </p>
+                    <p className={styles.blankLine5}>
+                      <span>&nbsp;</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.contactsMrPrashantContainer}>
+                <p className={styles.contacts}>
+                  <b>Contacts</b>
+                </p>
+                <p className={styles.mrPrashantShah}>
+                  <span>
+                    <span className={styles.mrPrashantShah1}>
+                      Mr. Prashant Shah
+                    </span>
+                  </span>
+                </p>
+                <p className={styles.cell919768128256}>
+                  <span>
+                    <span className={styles.cell9197681282561}>
+                      Cell : +91-9768128256
+                    </span>
+                  </span>
+                </p>
+                <p className={styles.blankLine6}>
+                  <span>
+                    <span className={styles.blankLine7}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.mrParthShah}>
+                  <span>
+                    <span className={styles.mrParthShah1}>Mr. Parth Shah</span>
+                  </span>
+                </p>
+                <p className={styles.cell919821028256}>
+                  <span>
+                    <span className={styles.cell9198210282561}>
+                      Cell : +91-9821028256
+                    </span>
+                  </span>
+                </p>
+                <p className={styles.blankLine8}>
+                  <span>
+                    <span className={styles.blankLine9}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.mrTwinkleShah}>
+                  <span>
+                    <span className={styles.mrTwinkleShah1}>
+                      Mr. Twinkle shah
+                    </span>
+                  </span>
+                </p>
+                <p className={styles.cell918898827588}>
+                  <span>
+                    <span className={styles.cell9188988275881}>
+                      Cell : +91-8898827588
+                    </span>
+                    <span className={styles.blankLine10}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.blankLine11}>
+                  <span>
+                    <span className={styles.blankLine12}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.blankLine13}>
+                  <span>
+                    <span className={styles.blankLine14}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.blankLine15}>
+                  <span>
+                    <span className={styles.blankLine16}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.blankLine17}>
+                  <span>
+                    <span className={styles.blankLine18}>&nbsp;</span>
+                  </span>
+                </p>
+                <p className={styles.blankLine19}>
+                  <span>
+                    <span className={styles.blankLine20}>&nbsp;</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          </Grid>
 
 
 
@@ -47,9 +203,11 @@ function MeetUs() {
 
        
 
-    </Grid>
+    {/* </Grid> */}
 
    </Grid>
+   <div style={{ height: 20 }} />
+   </div>
   )
 }
 

@@ -5,7 +5,7 @@ import { HomePage } from './modules/homePage';
 import { theme } from './theme';
 import { ServicePage } from './modules/servicePage';
 import { About } from './modules/homePage/components/aboutUs';
-
+import "./global.css";
 function App() {
   return (
     <ThemeProvider theme={theme}>
