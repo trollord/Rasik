@@ -1,0 +1,382 @@
+.meetUs {
+    margin: 0;
+    position: relative;
+    /* font-family: var(--font-sunflower); */
+    /* font-size: inherit; */
+    line-height: 60px;
+    font-weight: 600;
+    font-size: 64px;
+    font-family: var(--font-inter);
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
+  }
+  .meetUsWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 var(--padding-2xl) 0 var(--padding-xl);
+  }
+  .frameChild {
+    height: 251px;
+    width: 1144px;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-antiquewhite);
+    display: none;
+    max-width: 100%;
+  }
+  .frameItem {
+    border: 0;
+    background-color: var(--color-black);
+    height: 210px;
+    width: auto;
+    outline: 0;
+    flex: 0.1325;
+    border-radius: var(--br-xl);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-56xl) var(--padding-197xl);
+    box-sizing: border-box;
+    font-family: var(--font-sansita);
+    font-weight: 700;
+    font-size: var(--font-size-13xl);
+    color: var(--color-white);
+    min-width: 324px;
+    max-width: 100%;
+    z-index: 1;
+  }
+  .office {
+    margin: 0;
+    font-size: 24px;
+    font-family: var(--font-sunflower);
+  }
+  .primePlazaJ {
+    font-weight: 300;
+    font-size: 14px;
+
+  }
+  .primePlazaJVPatelItCo {
+    margin: 0;
+    font-size: var(--font-size-sm);
+
+  }
+  .mumbai4000131 {
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--font-sunflower)
+  }
+  .mumbai400013 {
+    margin: 0;
+  }
+  .blankLine1 {
+    font-weight: 500;
+  }
+  .blankLine {
+    margin: 0;
+  }
+  .blankLine3 {
+    font-weight: 500;
+  }
+  .blankLine2 {
+    margin: 0;
+  }
+  .office109PrimeContainer {
+    align-self: stretch;
+    height: 96px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .eMail {
+    margin: 0;
+    font-size: 24px;
+    font-family: var(--font-inria-sans);
+  }
+  .rasikads43gmailcom1 {
+    text-decoration: underline;
+    font-family: var(--font-inria-sans);
+    font-size: 14px;
+
+  }
+  .rasikads43gmailcom {
+    color: inherit;
+  }
+  .prashantrasikcommunicationsc {
+    text-decoration: underline;
+    font-size: 14px;
+
+  }
+  .rasikads43gmailcomPrashant {
+    margin: 0;
+    font-size: var(--font-size-sm);
+  }
+  .blankLine4,
+  .blankLine5 {
+    margin: 0;
+  }
+  .eMailRasikads43gmailcomPr {
+    width: 283px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    max-height: 63px;
+    word-break: break-word;
+    z-index: 1;
+  }
+  .eMailRasikads43gmailcomPrWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-12xs);
+    font-family: var(--font-inria-sans);
+  }
+  .office109PrimePlazaJVParent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--font-sunflower);
+    justify-content: flex-start;
+    gap: var(--gap-2xs);
+    min-width: 185px;
+  }
+  .contacts {
+    margin: 0;
+    font-family: var(--font-sunflower);
+    font-size: 24px;
+
+  }
+  .mrPrashantShah1 {
+    font-weight: 300;
+    font-family: var(--font-sunflower);
+    font-size: 14px;
+
+  }
+  .mrPrashantShah {
+    margin: 0;
+    font-family: var(--font-sunflower);
+    /* font-size: var(--font-size-sm); */
+    font-size: 14px;
+
+  }
+  .cell9197681282561 {
+    font-weight: 300;
+    font-size: 14px;
+
+    font-family: var(--font-sunflower);
+  }
+  .cell919768128256 {
+    margin: 0;
+    font-family: var(--font-sunflower);
+  }
+  .blankLine7 {
+    font-weight: 300;
+  }
+  .blankLine6 {
+    margin: 0;
+  }
+  .mrParthShah1 {
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--font-sunflower);
+  }
+  .mrParthShah {
+    margin: 0;
+    font-size: 14px;
+
+  }
+  .cell9198210282561 {
+    font-weight: 300;
+    font-family: var(--font-sunflower);
+    font-size: 14px;
+
+  }
+  .cell919821028256 {
+    margin: 0;
+    font-family: var(--font-sunflower);
+    font-size: 14px;
+
+  }
+  .blankLine9 {
+    font-weight: 300;
+  }
+  .blankLine8 {
+    margin: 0;
+  }
+  .mrTwinkleShah1 {
+    font-weight: 300;
+    font-family: var(--font-sunflower);
+    font-size: 14px;
+
+  }
+  .mrTwinkleShah {
+    margin: 0;
+    font-size: 14px;
+
+  }
+  .cell9188988275881 {
+    font-weight: 300;
+    font-family: var(--font-sunflower);
+    font-size: 14px;
+
+  }
+  .blankLine10 {
+    font-weight: 500;
+  }
+  .cell918898827588 {
+    font-family: var(--font-sunflower);
+    margin: 0;
+    font-size: 14px;
+
+  }
+  .blankLine12 {
+    font-weight: 500;
+  }
+  .blankLine11 {
+    margin: 0;
+  }
+  .blankLine14 {
+    font-weight: 500;
+  }
+  .blankLine13 {
+    margin: 0;
+  }
+  .blankLine16 {
+    font-weight: 500;
+  }
+  .blankLine15 {
+    margin: 0;
+  }
+  .blankLine18 {
+    font-weight: 500;
+  }
+  .blankLine17 {
+    margin: 0;
+  }
+  .blankLine20 {
+    font-weight: 500;
+  }
+  .blankLine19 {
+    margin: 0;
+  }
+  .contactsMrPrashantContainer {
+    height: 170px;
+    width: 173px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    min-width: 173px;
+    z-index: 1;
+  }
+  .frameGroup,
+  .frameWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frameGroup {
+    align-self: stretch;
+    flex-direction: row;
+    gap: var(--gap-20xl);
+  }
+  .frameWrapper {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--padding-xl) 0 0;
+    box-sizing: border-box;
+    min-width: 322px;
+    max-width: 100%;
+  }
+  .rectangleParent {
+    align-self: stretch;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-antiquewhite);
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--padding-lgi) var(--padding-24xl) var(--padding-3xl)
+      var(--padding-27xl);
+    box-sizing: border-box;
+    gap: var(--gap-41xl);
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-sunflower);
+  }
+  .frameParent,
+  .macbookAir16Inner,
+  .rectangleParent {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .frameParent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-41xl);
+  }
+  .macbookAir16Inner {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 var(--padding-49xl);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--font-size-45xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  @media screen and (max-width: 1200px) {
+    .rectangleParent {
+      padding-left: var(--padding-4xl);
+      padding-right: var(--padding-2xl);
+      box-sizing: border-box;
+    }
+    .frameParent,
+    .rectangleParent {
+      gap: var(--gap-11xl);
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .meetUs {
+      font-size: var(--font-size-32xl);
+      line-height: 48px;
+    }
+    .frameItem,
+    .frameWrapper {
+      flex: 1;
+    }
+    .rectangleParent {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .contactsMrPrashantContainer {
+      flex: 1;
+    }
+    .frameGroup {
+      flex-wrap: wrap;
+      gap: var(--gap-lgi);
+    }
+    .rectangleParent {
+      gap: var(--gap-mini);
+    }
+    .macbookAir16Inner {
+      padding-left: var(--padding-15xl);
+      padding-right: var(--padding-15xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .meetUs {
+      font-size: var(--font-size-19xl);
+      line-height: 36px;
+    }
+  }
+  

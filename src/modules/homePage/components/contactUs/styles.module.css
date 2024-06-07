@@ -1,0 +1,216 @@
+.notSureWhat {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-45xl);
+  line-height: 60px;
+  font-weight: 600;
+  font-family: var(--font-inter);
+  display: inline-block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+}
+.notSureWhatYouNeedWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-11xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.ourTeamAt {
+  margin: 0;
+  font-family: var(--font-inter);
+  align-self: stretch;
+  height: 87px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-weight: 300;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.frameGroup,
+.frameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.frameGroup {
+  align-self: stretch;
+  gap: var(--gap-5xl);
+}
+.frameWrapper {
+  width: 451px;
+  padding: var(--padding-46xl) 0 0;
+  box-sizing: border-box;
+  min-width: 451px;
+}
+.frameChild {
+  width: 646px;
+  height: 424px;
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-3xs);
+  background-color: var(--color-antiquewhite);
+  display: none;
+  max-width: 100%;
+}
+.frameItem {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+.frameInner,
+.frameItem {
+  border: 0;
+  background-color: transparent;
+  height: 45px;
+  flex: 1;
+  font-family: var(--font-inria-sans);
+  font-weight: 300;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  min-width: 179px;
+  z-index: 1;
+}
+.frameContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.frameChild1,
+.frameTextfield {
+  border: 0;
+  background-color: transparent;
+  align-self: stretch;
+  height: 45px;
+  font-family: var(--font-inria-sans);
+  font-weight: 300;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  z-index: 1;
+}
+.frameDiv,
+.frameTextarea {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frameTextarea {
+  border: 0;
+  background-color: var(--color-white);
+  height: 151px;
+  width: auto;
+  outline: 0;
+  flex: 1;
+  border-radius: var(--br-3xs);
+  padding: var(--padding-mini) var(--padding-2xl);
+  font-family: var(--font-inria-sans);
+  font-weight: 300;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  z-index: 1;
+}
+.frameDiv {
+  align-self: stretch;
+  padding: 0 0 var(--padding-10xs);
+}
+.groupButton {
+  align-self: stretch;
+  height: 42px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+.frameParent,
+.macbookAir16Inner,
+.rectangleParent {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.rectangleParent {
+  flex: 1;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-3xs);
+  background-color: var(--color-antiquewhite);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-lg) var(--padding-21xl) var(--padding-lgi);
+  box-sizing: border-box;
+  gap: var(--gap-sm);
+  min-width: 420px;
+}
+.frameParent,
+.macbookAir16Inner {
+  flex-direction: row;
+}
+.frameParent {
+  flex: 1;
+  justify-content: flex-start;
+  gap: var(--gap-30xl);
+}
+.macbookAir16Inner {
+  width: 1266px;
+  justify-content: flex-end;
+  padding: 0 var(--padding-41xl) var(--padding-61xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1050px) {
+  .notSureWhat {
+    font-size: var(--font-size-32xl);
+    line-height: 48px;
+  }
+  .frameWrapper {
+    flex: 1;
+  }
+  .frameParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .frameWrapper {
+    min-width: 100%;
+  }
+  .frameContainer {
+    flex-wrap: wrap;
+  }
+  .rectangleParent {
+    min-width: 100%;
+  }
+  .frameParent {
+    gap: var(--gap-5xl);
+  }
+  .macbookAir16Inner {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+    padding-bottom: var(--padding-33xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .notSureWhat {
+    font-size: var(--font-size-19xl);
+    line-height: 36px;
+  }
+  .ourTeamAt {
+    font-size: var(--font-size-lgi);
+  }
+  .groupButton {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
