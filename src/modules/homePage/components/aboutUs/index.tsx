@@ -5,7 +5,7 @@ import styles from "./styles.module.css"
 export function About() {
     return <>
   
-<Grid p={5} width='90%' m='auto' id='about'>
+<Grid container height="85vh" p={5} width='90vw' m='auto' id='about'>
 <Grid container  display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
         {/* <Typography variant="h4">About Us</Typography>
                 <Typography>Who are we?</Typography>

@@ -4,7 +4,7 @@ import styles from "./styles.module.css"
 function OurClients() {
   return (
   
-        <Grid container className={styles.mainGrid} alignItems='center' justifyContent='center' flexDirection='column' m='40px auto'>
+        <Grid container height='85vh' className={styles.mainGrid} alignItems='center' justifyContent='center' flexDirection='column' m='40px auto'>
             <Box textAlign='center'>
                 <h1 className={styles.ourClients} >Our Clients</h1>
                 <Typography className={styles.retailAndOverseas}>Overseas and Retail clients</Typography>

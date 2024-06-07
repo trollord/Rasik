@@ -7,7 +7,7 @@ import '../../../../App.css'
 const testimonials = [
     {
       quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases.’’",
-      author: "somaiya Group",
+      author: "Somaiya Group",
      
     },
     {
@@ -34,7 +34,7 @@ const testimonials = [
 
 function Review() {
   return (
-    <Grid container height='500px' display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
+    <Grid container height='85vh' display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
         <Grid item><Typography variant="h4" style={{fontWeight:'700'}}>What our clients have to say</Typography></Grid>
         
 

@@ -36,7 +36,7 @@ function ContactUs() {
   };
 
   return (
-    <Grid container width='80%' spacing={2} m='auto' height='500px'  p={3} >
+    <Grid container width='80%' spacing={2} m='auto' height='85vh'  p={3} >
       {/* <Grid item md={5} display='flex'  flexDirection='column' justifyContent='center'>
         <Typography variant='h3'>Not sure what you need?</Typography>
         <Typography>Our team at Rasik Communications will be more than happy to listen to you and suggest every idea you haven’t considered.</Typography>
