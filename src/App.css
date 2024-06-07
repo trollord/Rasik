@@ -10,3 +10,19 @@
     flex-direction: "column";
     gap:'10px'
 }
+
+
+.carousel .control-dots .dot {
+    background: #A5A5A5 !important;  /* Change this to your desired color */
+    box-shadow:none !important;
+    margin: 4px 4px;
+  }
+
+  .carousel .control-dots .dot.selected {
+    background: #282828;  /* Change this to your desired color for the selected dot */
+    box-shadow:none !important;
+
+    width: 30px;
+    border-radius: 20px;
+
+  }
