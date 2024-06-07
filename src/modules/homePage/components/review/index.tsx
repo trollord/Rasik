@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel} from 'react-responsive-carousel';
 import { QuotationMark } from "../../../commonComponents/icons";
@@ -41,13 +41,13 @@ function Review() {
         <Grid  item height='300px' width='70%' >
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false}  showStatus={false}>
         {testimonials.map((testimonial, index) => (
-        <div key={index} style={{height:'320px',padding:'5px'}}>
-           <div style={{textAlign:'left'}}><QuotationMark/></div>
-          <p style={{fontSize:'32px',textAlign:'left'}}>{testimonial.quote}</p>
-          <p style={{fontWeight:'700',fontSize:'28px',textAlign:'left',marginTop:'10px'}}>
-            <strong>{testimonial.author}</strong>
-          </p>
-        </div>
+        <Box key={index} style={{height:'320px',padding:'5px'}}>
+           <Box style={{textAlign:'left'}}><QuotationMark/></Box>
+          <Typography style={{fontSize:'32px',textAlign:'left'}}>{testimonial.quote}</Typography>
+          <Typography style={{fontWeight:'700',fontSize:'28px',textAlign:'left',marginTop:'10px'}}>
+            {testimonial.author}
+          </Typography>
+        </Box>
       ))}
               </Carousel>
         </Grid>

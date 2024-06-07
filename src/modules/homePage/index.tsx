@@ -10,9 +10,11 @@ import Review from "./components/review";
 import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
 
+
 export function HomePage() {
+  
     return(
-      <Grid container>
+      <Grid container style={{overflow:'hidden'}}>
       <Header/>
       <Carasouel/>
       <OurClients/>
