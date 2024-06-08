@@ -15,10 +15,10 @@ function MeetUs() {
           <h1 className={styles.meetUs}>Meet Us</h1>
         </div>
 
-   <Grid  spacing={2} p={2} width='1144px'  bgcolor='#EADBC8'  height='251px' m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8'  height='46vh' m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
     
-    <Grid item md={6}  height='210px' width="498px"  borderRadius="15px" overflow="hidden">
+    <Grid item md={6}  height='40vh' width="498px"  borderRadius="15px" overflow="hidden">
 
 
     <GoogleMapReact
@@ -65,7 +65,7 @@ function MeetUs() {
         <Grid height = "170px" width="496.25px">
 
         
-        <div className={styles.frameWrapper}>
+        <div className={styles.frameWrapper} >
             <div className={styles.frameGroup}>
               <div className={styles.office109PrimePlazaJVParent}>
                 <div className={styles.office109PrimeContainer}>
@@ -99,10 +99,17 @@ function MeetUs() {
                 </div>
                 <div className={styles.eMailRasikads43gmailcomPrWrapper}>
                   <div className={styles.eMailRasikads43gmailcomPr}>
-                    <p className={styles.eMail}>
+                    <Grid container height="5vh" width="40vw">
+
+                    
+                    <p className={styles.eMail} >
                       <b>E-Mail</b>
                     </p>
+                    </Grid>
                     <p className={styles.rasikads43gmailcomPrashant}>
+                      <Grid className={styles.rasikEmail} height="4vh" width="40vw">
+
+                      
                       <a
                         className={styles.rasikads43gmailcom}
                         href="mailto:rasikads43@gmail.com"
@@ -114,12 +121,19 @@ function MeetUs() {
                           </span>
                         </span>
                       </a>
+                      </Grid>
+                      <Grid className= {styles.prashantEmail}>
+                      <a className={styles.rasikads43gmailcom}
+                        href="mailto:prashant@rasikcommunications.com"
+                        target="_blank">
                       <span>
                         &nbsp;
                         <span className={styles.prashantrasikcommunicationsc}>
                           prashant@rasikcommunications.com
                         </span>
                       </span>
+                      </a>
+                      </Grid>
                     </p>
                     <p className={styles.blankLine4}>
                       <span>&nbsp;</span>
