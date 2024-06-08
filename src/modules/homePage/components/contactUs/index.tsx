@@ -36,14 +36,14 @@ function ContactUs() {
   };
 
   return (
-    <Grid container width='80%' spacing={2} m='auto' height='85vh'  p={3} id='contactUs' >
+    <Grid container width='80%' spacing={2} m='auto' height='85vh' flexDirection='row' p={3} id='contactUs'>
       {/* <Grid item md={5} display='flex'  flexDirection='column' justifyContent='center'>
         <Typography variant='h3'>Not sure what you need?</Typography>
         <Typography>Our team at Rasik Communications will be more than happy to listen to you and suggest every idea you haven’t considered.</Typography>
 
       </Grid> */}
-      <Grid width="477px">
-      <div className={styles.frameWrapper}>
+      <Grid container width="477px"  >
+        <div className={styles.frameWrapper}>
           <div className={styles.frameGroup}>
             <div className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
@@ -54,8 +54,8 @@ function ContactUs() {
             </p>
           </div>
         </div>
-        </Grid>
-      <Grid item md={7}   height='390px' width='646px' bgcolor='#F1E5D1' display='flex' p={4} borderRadius='10px'>
+      </Grid>
+      <Grid container item md={7}   height='52vh' width='646px' bgcolor='#F1E5D1' display='flex' p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <div style={{display:'flex',gap:'10px'}}>
         

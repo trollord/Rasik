@@ -126,6 +126,7 @@
     flex-shrink: 0;
     max-height: 63px;
     word-break: break-word;
+    padding-top: 5vh;
     z-index: 1;
   }
   .eMailRasikads43gmailcomPrWrapper {
@@ -134,6 +135,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    
     padding: 0 0 0 var(--padding-12xs);
     font-family: var(--font-inria-sans);
   }
