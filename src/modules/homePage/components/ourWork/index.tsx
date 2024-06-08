@@ -27,26 +27,26 @@ const images = [
 function OurWork() {
 
   return (
-    <Grid height='85vh' width='100%' container p={5}  id='ourwork' bgcolor='#000' color='#fff'
+    <Grid height='85vh' width='100%' container id='ourwork' bgcolor='#000' color='#fff'
 
     >
-      <Grid item height="20%" display="flex" alignItems="center" justifyContent="start" flexDirection="column" width="100%">
-        <Typography variant='h2' style={{ fontWeight: '700' }} textAlign='center'>Our Work</Typography>
-        <Typography textAlign='center' variant='h6'>Your Vision, Our Expertise</Typography>
+      <Grid item height="18%" display="flex" alignItems="center" justifyContent="flex-start" pt={2} flexDirection="column" width="100%">
+        <Typography variant='h4' style={{ fontWeight: '700' }} textAlign='center'>Our Work</Typography>
+        <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography>
       </Grid>
-      <Grid container item height="80%">
-        <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
-          <Typography variant='h5' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
-          <Box height='100%' width='70%' bgcolor='rgba(255,255,255,0.2)' p={3} sx={{ borderRadius: '10px' }}
+      <Grid container item height="82%">
+      <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
+          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px' ,paddingTop:2, height:"50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
 
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -55,17 +55,17 @@ function OurWork() {
           </Box>
         </Grid>
         <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
-          <Typography variant='h5' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
-          <Box height='100%' width='70%' bgcolor='rgba(255,255,255,0.2)' p={3} sx={{ borderRadius: '10px' }}
+          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',paddingTop:2 ,justifyContent: 'center', gap: '20px' , height:"50vh"}}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
 
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -73,18 +73,19 @@ function OurWork() {
             </Carousel>
           </Box>
         </Grid>
+
         <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
-          <Typography variant='h5' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
-          <Box height='100%' width='70%' bgcolor='rgba(255,255,255,0.2)' p={3} sx={{ borderRadius: '10px' }}
+          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',paddingTop:2 ,gap: '20px' , height:"50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
 
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box style={{ height: '50%', width: '80%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -92,6 +93,7 @@ function OurWork() {
             </Carousel>
           </Box>
         </Grid>
+
       </Grid>
 
 

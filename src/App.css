@@ -25,7 +25,8 @@
 .carousel .control-dots .dot {
     background: #A5A5A5 !important;  /* Change this to your desired color */
     box-shadow:none !important;
-    margin: 4px 4px;
+    margin: 0 4px !important;
+    /* margin-top: 30px !important; */
   }
 
   .carousel .control-dots .dot.selected {
