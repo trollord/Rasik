@@ -48,11 +48,11 @@ function Footer() {
           </Box>
          </Grid>
          <Grid>
-         <div className={styles.rasikCommunicationsAllRighWrapper}>
-            <div className={styles.rasikCommunicationsAll} >
+         <Box className={styles.rasikCommunicationsAllRighWrapper}>
+            <Box className={styles.rasikCommunicationsAll} >
               ©2024 Rasik Communications. All Rights Reserved
-            </div>
-          </div>
+            </Box>
+          </Box>
          </Grid>
 
         </Grid>

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import GoogleMapReact from  'google-map-react';
 import styles from "./styles.module.css"
 function MeetUs() {
@@ -33,42 +33,13 @@ function MeetUs() {
 
 
     </Grid>
-    {/* <Grid item md={3} >
-        <div>
-            <Typography variant="h5" fontFamily={}>Office</Typography>
-            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
-                 Mumbai- 400 013.</Typography>
-        </div>
-        <div>
-            <Typography variant="h5">Office</Typography>
-            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
-                 Mumbai- 400 013.</Typography></div>
-    </Grid>
-    <Grid item md={3}>
-
-        <Typography variant="h5">Contacts</Typography>
-
-        <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
-        <div>
-             <Typography>Mr. Prashant Shah</Typography>
-             <Typography> Cell : +91-9768128256</Typography>
-      </div>
-        <div>
-             <Typography>Mr. Parth Shah</Typography>
-             <Typography> Cell : +91-9821028256</Typography>
-      </div>
-        <div>
-             <Typography>Mr. Twinkle shah</Typography>
-             <Typography>Cell : +91-8898827588</Typography>
-     </div>
-        </div> */}
         <Grid height = "170px" width="496.25px">
 
         
-        <div className={styles.frameWrapper}>
-            <div className={styles.frameGroup}>
-              <div className={styles.office109PrimePlazaJVParent}>
-                <div className={styles.office109PrimeContainer}>
+        <Box className={styles.frameWrapper}>
+            <Box className={styles.frameGroup}>
+              <Box className={styles.office109PrimePlazaJVParent}>
+                <Box className={styles.office109PrimeContainer}>
                   <p className={styles.office}>
                     <b>OFFICE</b>
                   </p>
@@ -96,9 +67,9 @@ function MeetUs() {
                       <span className={styles.blankLine3}>&nbsp;</span>
                     </span>
                   </p>
-                </div>
-                <div className={styles.eMailRasikads43gmailcomPrWrapper}>
-                  <div className={styles.eMailRasikads43gmailcomPr}>
+                </Box>
+                <Box className={styles.eMailRasikads43gmailcomPrWrapper}>
+                  <Box className={styles.eMailRasikads43gmailcomPr}>
                     <p className={styles.eMail}>
                       <b>E-Mail</b>
                     </p>
@@ -127,10 +98,10 @@ function MeetUs() {
                     <p className={styles.blankLine5}>
                       <span>&nbsp;</span>
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.contactsMrPrashantContainer}>
+                  </Box>
+                </Box>
+              </Box>
+              <Box className={styles.contactsMrPrashantContainer}>
                 <p className={styles.contacts}>
                   <b>Contacts</b>
                 </p>
@@ -210,9 +181,9 @@ function MeetUs() {
                     <span className={styles.blankLine20}>&nbsp;</span>
                   </span>
                 </p>
-              </div>
-            </div>
-          </div>
+              </Box>
+            </Box>
+          </Box>
           </Grid>
 
 

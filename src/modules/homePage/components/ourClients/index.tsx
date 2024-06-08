@@ -6,8 +6,8 @@ function OurClients() {
   
         <Grid container height='85vh' className={styles.mainGrid} alignItems='center' justifyContent='center' flexDirection='column' m='40px auto'>
             <Box textAlign='center'>
-                <h1 className={styles.ourClients} >Our Clients</h1>
-                <Typography className={styles.retailAndOverseas}>Overseas and Retail clients</Typography>
+                <Typography variant='h2' sx={{fontWeight:'600'}}>Our Clients</Typography>
+                <Typography variant='h6'>Overseas and Retail clients</Typography>
             </Box>
 
             <Grid item m={3} className={styles.logoParent}>

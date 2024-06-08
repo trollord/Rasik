@@ -8,7 +8,17 @@
 .carousel{
     display: 'flex';
     flex-direction: "column";
-    gap:'10px'
+    gap:'10px';
+  height: 100% !important;
+
+}
+
+.carousel .slide img.carousal-img-custom {
+  height: 85vh !important;
+}
+
+.carousel-root {
+  height: 100% !important;
 }
 
 
