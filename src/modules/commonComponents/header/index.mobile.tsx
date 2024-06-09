@@ -28,7 +28,15 @@ export function MobileHeader() {
                     </IconButton>
 
 
-                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
+                        anchorOrigin={{
+                            vertical: 60,  // 50px from the top
+                            horizontal: 20,  // 100px from the left
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}>
                         <MenuList>
                             <MenuItem>Services</MenuItem>
                             <MenuItem>Our work</MenuItem>

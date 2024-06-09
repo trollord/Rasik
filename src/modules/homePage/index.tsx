@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import Header from "../commonComponents/header";
+import Header from "../commonComponents/header/index.desktop";
 import Carasouel from "./components/carousal";
 import OurClients from "./components/ourClients";
 import { About } from "./components/aboutUs";
@@ -9,24 +9,24 @@ import OurServices from "./components/ourServices";
 import Review from "./components/review";
 import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
-import MobileHeader from "../commonComponents/mobileHeader";
+import { ResponsiveHeader } from "../commonComponents/header";
 
 
 export function HomePage() {
 
   return (
     <Grid container style={{ overflow: 'hidden' }}>
-      <Header />
-      {/* <MobileHeader></MobileHeader> */}
+      {/* <Header /> */}
+      <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />
       <OurClients />
       <OurServices />
-      <About />
-      <OurWork />
+      {/* <About /> */}
+      {/* <OurWork /> */}
       <Review />
-      <ContactUs />
-      <MeetUs />
-      <Footer />
+      {/* <ContactUs /> */}
+      {/* <MeetUs /> */}
+      {/* <Footer /> */}
     </Grid>
   );
 }
