@@ -12,19 +12,19 @@ import OurWork from "./components/ourWork";
 
 
 export function HomePage() {
-  
-    return(
-      <Grid container style={{overflow:'hidden'}}>
-      <Header/>
-      <Carasouel/>
-      <OurClients/>
-      <OurServices/>
-      <About/>
-      <OurWork/>
-      <Review/>
-      <ContactUs/>
-      <MeetUs/>
-      <Footer/>
-      </Grid>
-    );
+
+  return (
+    <Grid container style={{ overflow: 'hidden' }}>
+      <Header />
+      <Carasouel />
+      <OurClients />
+      <OurServices />
+      {/* <About /> */}
+      {/* <OurWork /> */}
+      <Review />
+      {/* <ContactUs/> */}
+      {/* <MeetUs /> */}
+      {/* <Footer /> */}
+    </Grid>
+  );
 }

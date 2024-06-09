@@ -3,9 +3,11 @@ import { PrintMedia, RadioFM, DigitalMarketing, Ecommerce, Creative, SocialMarke
 import { useNavigate } from 'react-router-dom';
 
 
+
 function OurServices() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
 
   const handleClick = () => {
     navigate('/services')
@@ -16,15 +18,16 @@ function OurServices() {
     <Grid container height='85vh' width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
-      <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' p={5} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-        <Typography mb={3} sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '60px' } }}>Our Services</Typography>
-        <Typography sx={{ fontSize: { xs: '16px', md: '20px' } }}>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
+      <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>
+        <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '60px' }, marginBottom: { xs: '8px', md: '24px' } }}>Our Services</Typography>
+        <Typography sx={{ fontSize: { xs: '15px', md: '20px' } }}>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
       </Grid>
       <Grid container item md={5} display='flex' justifyContent='space-evenly' alignItems='center'>
         <Grid item md={3} >
-          <Box onClick={handleClick} width='160px' height='160px' bgcolor='#fff' color='#000' m={3} border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><PrintMedia /></Box>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} bgcolor='#fff' color='#000' m={3} border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><PrintMedia /></Box>
             <Typography sx={{
+              fontSize: { xs: '14px', md: '17px' },
               textAlign: 'center', margin: '5px',
               overflowWrap: 'break-word',
               wordWrap: 'break-word',
@@ -32,13 +35,14 @@ function OurServices() {
               width: "65%",
             }} >Print media realeses</Typography>
           </Box>
-          <Box onClick={handleClick} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><RadioFM /></Box>
-            <Typography >Radio FM</Typography>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><RadioFM /></Box>
+            <Typography sx={{ fontSize: { xs: '14px', md: '17px' } }}>Radio FM</Typography>
           </Box>
-          <Box onClick={handleClick} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><DigitalMarketing /></Box>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><DigitalMarketing /></Box>
             <Typography sx={{
+              fontSize: { xs: '14px', md: '17px' },
               textAlign: 'center', margin: '5px',
               overflowWrap: 'break-word',
               wordWrap: 'break-word',
@@ -48,23 +52,21 @@ function OurServices() {
           </Box>
         </Grid>
         <Grid item md={3}>
-          <Box onClick={handleClick} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce /></Box>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce /></Box>
             <Typography sx={{
+              fontSize: { xs: '14px', md: '17px' },
               textAlign: 'center', margin: '5px',
-              overflowWrap: 'break-word',
-              wordWrap: 'break-word',
-              wordBreak: 'normal',
-              width: "65%",
+              width: "100%",
             }} >E-commerce Solution</Typography>
           </Box>
-          <Box onClick={handleClick} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Creative /></Box>
-            <Typography >Creative</Typography>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Creative /></Box>
+            <Typography sx={{ fontSize: { xs: '14px', md: '17px' } }}>Creative</Typography>
           </Box>
-          <Box onClick={handleClick} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><SocialMarketing /></Box>
-            <Typography style={{ textAlign: 'center' }} >Social Media Marketing</Typography>
+          <Box onClick={handleClick} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+            <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><SocialMarketing /></Box>
+            <Typography sx={{ fontSize: { xs: '14px', md: '17px' }, textAlign: 'center' }} >Social Media Marketing</Typography>
           </Box>
 
         </Grid>

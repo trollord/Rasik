@@ -18,7 +18,7 @@ export function Header() {
    // to fixed the navbar :-  
 
    return (
-      <Grid container height="15vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" pl={5} pr={3} columnSpacing={8} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'}>
+      <Grid container height="15vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" pl={5} pr={3} columnSpacing={8} bgcolor='#888' position={'fixed'} top='0' left='0' zIndex={'100'}>
 
          <Grid item width={100} height={"82%"} md={2} sx={{ paddingLeft: "90px !important" }}>
             <img src="/image.png" alt="logo" width={"100%"} height={"100%"} />
@@ -26,28 +26,30 @@ export function Header() {
 
 
          <Grid item display='flex' justifyContent='space-around' alignItems='center' md={10} sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Link to='services' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor:"pointer" }}
+            <Link to='services' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
             >
                Services
             </Link>
-            <Link to='ourwork' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor:"pointer" }}>
+            <Link to='ourwork' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                Our work
             </Link>
-            <Link to='testimonials' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600' , cursor:"pointer"}}>
+            <Link to='testimonials' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                Testimonials
             </Link>
-            <Link to='about' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600' , cursor:"pointer"}}>
+            <Link to='about' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                About us
             </Link>
 
-            <Link to='contactUs' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600' , cursor:"pointer"}}>
-               
-            <Button sx={{ fontWeight: '600', fontFamily: 'inter', backgroundColor: '#EB3335', width: '169px', height: '48px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '22px','&:hover':{
-               color: '#000',
-               backgroundColor:'#EB3335'
-            } ,color: "#FFFFFF", textTransform: 'none' }}>
-               Contact us
-            </Button>
+            <Link to='contactUs' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
+
+               <Button sx={{
+                  fontWeight: '600', fontFamily: 'inter', backgroundColor: '#EB3335', width: '169px', height: '48px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '22px', '&:hover': {
+                     color: '#000',
+                     backgroundColor: '#EB3335'
+                  }, color: "#FFFFFF", textTransform: 'none'
+               }}>
+                  Contact us
+               </Button>
             </Link>
          </Grid>
 

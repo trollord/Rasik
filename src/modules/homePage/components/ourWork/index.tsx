@@ -62,7 +62,7 @@ function OurWork() {
         <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography>
       </Grid>
       <Grid container item height="82%">
-        <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
           <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
@@ -81,7 +81,7 @@ function OurWork() {
             </Carousel>
           </Box>
         </Grid>
-        <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
           <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
@@ -101,7 +101,7 @@ function OurWork() {
           </Box>
         </Grid>
 
-        <Grid item md={4} display='flex' alignItems='center' flexDirection='column'>
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
           <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
           >
