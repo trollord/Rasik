@@ -200,7 +200,9 @@
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 450px) {
+  
+@media screen and (max-width: 650px) {
+  
   .notSureWhat {
     font-size: var(--font-size-19xl);
     line-height: 36px;

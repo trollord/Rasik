@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import GoogleMapReact from  'google-map-react';
 import styles from "./styles.module.css"
+import useMediaQuery from '@mui/material/useMediaQuery';
 function MeetUs() {
   const defaultProps = {
     center: {
@@ -9,16 +10,18 @@ function MeetUs() {
     },
     zoom: 11
   };
+
+  const isMobile = useMediaQuery('(max-width:750px)');
   return (
     <div className={styles.frameParent}>
         <div className={styles.meetUsWrapper}>
           <h1 className={styles.meetUs}>Meet Us</h1>
         </div>
 
-   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8'  height='46vh' m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8' height={isMobile ? '60vh' : '46vh'} m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
     
-    <Grid item md={6}  height='40vh' width="498px"  borderRadius="15px" overflow="hidden">
+    <Grid item md={6}  height={isMobile?'25vh':'40vh'} width="498px"  borderRadius="15px" overflow="hidden">
 
 
     <GoogleMapReact
@@ -62,7 +65,7 @@ function MeetUs() {
              <Typography>Cell : +91-8898827588</Typography>
      </div>
         </div> */}
-        <Grid height = "170px" width="496.25px">
+        <Grid height = {isMobile?"50vh":"170px"} width={isMobile?"61vw":"496.25px"}>
 
         
         <div className={styles.frameWrapper} >
