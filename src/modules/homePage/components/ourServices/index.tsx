@@ -16,9 +16,9 @@ function OurServices() {
     <Grid container height='85vh' width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
-      <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' p={5}>
-        <Typography variant='h2' mb={3} style={{ fontWeight: '700' }}>Our Services</Typography>
-        <Typography variant='h6'>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
+      <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' p={5} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+        <Typography mb={3} sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '60px' } }}>Our Services</Typography>
+        <Typography sx={{ fontSize: { xs: '16px', md: '20px' } }}>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
       </Grid>
       <Grid container item md={5} display='flex' justifyContent='space-evenly' alignItems='center'>
         <Grid item md={3} >
