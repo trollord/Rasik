@@ -1,6 +1,7 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import GoogleMapReact from  'google-map-react';
 import styles from "./styles.module.css"
+import useMediaQuery from '@mui/material/useMediaQuery';
 function MeetUs() {
   const defaultProps = {
     center: {
@@ -9,16 +10,18 @@ function MeetUs() {
     },
     zoom: 11
   };
+
+  const isMobile = useMediaQuery('(max-width:750px)');
   return (
     <div className={styles.frameParent}>
         <div className={styles.meetUsWrapper}>
           <h1 className={styles.meetUs}>Meet Us</h1>
         </div>
 
-   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8'  height='46vh' m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8' height={isMobile ? '60vh' : '46vh'} m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
     
-    <Grid item md={6}  height='40vh' width="498px"  borderRadius="15px" overflow="hidden">
+    <Grid item md={6}  height={isMobile?'25vh':'40vh'} width="498px"  borderRadius="15px" overflow="hidden">
 
 
     <GoogleMapReact
@@ -33,7 +36,36 @@ function MeetUs() {
 
 
     </Grid>
-        <Grid height = "170px" width="496.25px">
+    {/* <Grid item md={3} >
+        <div>
+            <Typography variant="h5" fontFamily={}>Office</Typography>
+            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
+                 Mumbai- 400 013.</Typography>
+        </div>
+        <div>
+            <Typography variant="h5">Office</Typography>
+            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
+                 Mumbai- 400 013.</Typography></div>
+    </Grid>
+    <Grid item md={3}>
+
+        <Typography variant="h5">Contacts</Typography>
+
+        <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
+        <div>
+             <Typography>Mr. Prashant Shah</Typography>
+             <Typography> Cell : +91-9768128256</Typography>
+      </div>
+        <div>
+             <Typography>Mr. Parth Shah</Typography>
+             <Typography> Cell : +91-9821028256</Typography>
+      </div>
+        <div>
+             <Typography>Mr. Twinkle shah</Typography>
+             <Typography>Cell : +91-8898827588</Typography>
+     </div>
+        </div> */}
+        <Grid height = {isMobile?"50vh":"170px"} width={isMobile?"61vw":"496.25px"}>
 
         
         <div className={styles.frameWrapper} >

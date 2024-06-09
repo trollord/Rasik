@@ -9,6 +9,7 @@ import OurServices from "./components/ourServices";
 import Review from "./components/review";
 import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
+import MobileHeader from "../commonComponents/mobileHeader";
 
 
 export function HomePage() {
@@ -16,15 +17,16 @@ export function HomePage() {
   return (
     <Grid container style={{ overflow: 'hidden' }}>
       <Header />
+      {/* <MobileHeader></MobileHeader> */}
       <Carasouel />
       <OurClients />
       <OurServices />
-      {/* <About /> */}
-      {/* <OurWork /> */}
+      <About />
+      <OurWork />
       <Review />
-      {/* <ContactUs/> */}
-      {/* <MeetUs /> */}
-      {/* <Footer /> */}
+      <ContactUs />
+      <MeetUs />
+      <Footer />
     </Grid>
   );
 }

@@ -1,7 +1,8 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography , Box} from '@mui/material';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styles from "./styles.module.css"
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -34,28 +35,25 @@ function ContactUs() {
       console.log('FAILED...', err);
     });
   };
-
+  const isMobile = useMediaQuery('(max-width:392px)');
   return (
-    <Grid container width='80%' spacing={2} m='auto' height='85vh' flexDirection='row' p={3} id='contactUs'>
-      {/* <Grid item md={5} display='flex'  flexDirection='column' justifyContent='center'>
-        <Typography variant='h3'>Not sure what you need?</Typography>
-        <Typography>Our team at Rasik Communications will be more than happy to listen to you and suggest every idea you haven’t considered.</Typography>
-
-      </Grid> */}
-      <Grid container width="477px"  >
+    
+    <Grid  container width='90%' spacing={2} m='auto' height='85vh' flexDirection={isMobile ? 'column' : 'row'} p={3} >
+      
+      <Grid  width={isMobile?"80vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <div className={styles.frameWrapper}>
           <div className={styles.frameGroup}>
             <div className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
             </div>
-            <p className={styles.ourTeamAt}>
+            <Grid className={styles.ourTeamAt} width={isMobile? "80vw": "477px"} >
               Our team at Rasik Communications will be more than happy to listen
               to you and suggest every idea you haven’t considered.
-            </p>
+            </Grid>
           </div>
         </div>
       </Grid>
-      <Grid container item md={7}   height='52vh' width='646px' bgcolor='#F1E5D1' display='flex' p={4} borderRadius='10px'>
+      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '40vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <div style={{display:'flex',gap:'10px'}}>
         
