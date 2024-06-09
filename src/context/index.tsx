@@ -1,33 +1,46 @@
-import React, { createContext, useReducer, useContext, ReactNode } from 'react';
-
-const initialState = { };
-const MyContext = createContext();
+import React, { ReactNode, Dispatch, createContext, useReducer } from 'react';
+import { useContext } from 'react';
 
 
-const myReducer = (state, action) => {
-    switch (action.type) {
-        case 'SET_VALUE':
-            return { ...state, value: action.payload };
-        default:
-            return state;
-    }
+// Define the initial state
+const initialState = {
+  servicePage: null,
 };
 
-export const MyProvider = ({ children }: { children : ReactNode}) => {
-    const [state, dispatch] = useReducer(myReducer, initialState);
+interface ContextProps {
+    state: any;
+    dispatch: Dispatch<any>;
+  }
 
-    return (
-        <MyContext.Provider value={{ state, dispatch }}>
-            {children}
-        </MyContext.Provider>
-    );
+  
+// Create the context
+export const MyContext = createContext<ContextProps>({
+    state: initialState,
+    dispatch: () => null,
+  });
+
+// Define the reducer function
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_SERVICE_PAGE':
+      return { ...state, servicePage: action.payload };
+    default:
+      return state;
+  }
 };
 
-export const useMyContext = () => {
-    const context = useContext(MyContext);
-    if (!context) {
-        throw new Error("useMyContext must be used within a MyProvider");
-    }
-    return context;
+// Create a provider component
+export const MyProvider = ({ children }: {children: ReactNode}) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <MyContext.Provider value={{ state, dispatch }}>
+      {children}
+    </MyContext.Provider>
+  );
 };
 
+
+export const stateProvider = () => {
+    return useContext(MyContext);
+}
