@@ -34,11 +34,11 @@ const testimonials = [
 
 function Review() {
   return (
-    <Grid container height='500px' display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' border={5}>
+    <Grid container height='500px' display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
       <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '40px' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
 
 
-      <Grid item height='220px' sx={{ width: { xs: '90%', md: '70%' } }}>
+      <Grid item sx={{ width: { xs: '90%', md: '70%' }, height: { sx: '220px', md: '300px' } }}>
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: '320px', padding: { xs: 'none', md: '5px' } }}>

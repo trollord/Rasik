@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Header from "../commonComponents/header";
+import Header from "../commonComponents/header/index.desktop";
 import { PrintMedia } from "../commonComponents/icons";
 import Footer from "../homePage/components/footer";
 
@@ -42,8 +42,8 @@ export function ServicePage() {
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
                     </Grid>
-                   
-                  
+
+
 
 
 
