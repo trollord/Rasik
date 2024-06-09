@@ -35,11 +35,11 @@ function OurServices() {
               width: "65%",
             }} >Print media realeses</Typography>
           </Box>
-          <Box onClick={() => {handleClick('e-commerce-solution')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+          <Box onClick={() => {handleClick('radio-fm')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><RadioFM /></Box>
             <Typography >Radio FM</Typography>
           </Box>
-          <Box onClick={() => {handleClick('radio-fm')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+          <Box onClick={() => {handleClick('digital-marketing')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><DigitalMarketing /></Box>
             <Typography sx={{
               textAlign: 'center', margin: '5px',
@@ -51,7 +51,7 @@ function OurServices() {
           </Box>
         </Grid>
         <Grid item md={3}>
-          <Box onClick={() => {handleClick('creative')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+          <Box onClick={() => {handleClick('e-commerce-solution')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce /></Box>
             <Typography sx={{
               textAlign: 'center', margin: '5px',
@@ -61,7 +61,7 @@ function OurServices() {
               width: "65%",
             }} >E-commerce Solution</Typography>
           </Box>
-          <Box onClick={() => {handleClick('digital-marketing')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+          <Box onClick={() => {handleClick('creative')}} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box style={{ width: '80px', height: '80px', backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Creative /></Box>
             <Typography >Creative</Typography>
           </Box>
