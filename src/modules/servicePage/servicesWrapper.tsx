@@ -3,8 +3,9 @@ import { ServicePage } from '.';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+type currentPage =  'printMedia' | 'eCommerceSolution' | 'radioFm' | 'creative' | 'digitalMarketing' | 'socialMediaMarketing';
 export function ServicePageWrapper(){
-    const servicesList = ['print-media','e-commerce-solution','radio-fm','creative','digital-marketing', 'social-media-marketing'];
+    const servicesList = ['printMedia','eCommerceSolution','radioFm','creative','digitalMarketing', 'socialMediaMarketing'];
     const [showServicePage , setShowServicePage] = useState<boolean>(false);
     const location = useLocation();
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ export function ServicePageWrapper(){
 
   },[path])
 
-  return showServicePage ? <ServicePage></ServicePage> : ""
+  return showServicePage ? <ServicePage currentPage={path as currentPage}></ServicePage> : ""
 
 
 }
