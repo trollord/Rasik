@@ -26,9 +26,9 @@ export function HomePage() {
       {/* <About /> */}
       <OurWork />
       <Review />
-      {/* <ContactUs /> */}
-      {/* <MeetUs /> */}
-      {/* <Footer /> */}
+      <ContactUs />
+      <MeetUs />
+      <Footer />
     </Grid>
   );
 }
