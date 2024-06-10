@@ -17,18 +17,18 @@ export function HomePage() {
 
   return (
     <Grid container style={{ overflow: 'hidden' }}>
-      {/* <Header /> */}
+
       <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />
       {/* <OurClients /> */}
       <TempOurClient />
       <OurServices />
-      {/* <About /> */}
+      <About />
       <OurWork />
       <Review />
-      {/* <ContactUs /> */}
-      {/* <MeetUs /> */}
-      {/* <Footer /> */}
+      <ContactUs />
+      <MeetUs />
+      <Footer />
     </Grid>
   );
 }

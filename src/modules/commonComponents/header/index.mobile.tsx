@@ -38,11 +38,11 @@ export function MobileHeader() {
                             horizontal: 'left',
                         }}>
                         <MenuList>
-                            <MenuItem>Services</MenuItem>
-                            <MenuItem>Our work</MenuItem>
-                            <MenuItem>Testimonials</MenuItem>
-                            <MenuItem>About us</MenuItem>
-                            <MenuItem>Contact us</MenuItem>
+                            <Link to='services' spy={true} smooth={true} duration={500}><MenuItem>Services</MenuItem></Link>
+                            <Link to='ourwork' spy={true} smooth={true} duration={500}><MenuItem>Our work</MenuItem></Link>
+                            <Link to='testimonials' spy={true} smooth={true} duration={500}> <MenuItem>Testimonials</MenuItem></Link>
+                            <Link to='about' spy={true} smooth={true} duration={500}> <MenuItem>About us</MenuItem></Link>
+
                         </MenuList>
 
                     </Menu>
