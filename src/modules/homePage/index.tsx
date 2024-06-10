@@ -23,7 +23,7 @@ export function HomePage() {
       {/* <OurClients /> */}
       <TempOurClient />
       <OurServices />
-      {/* <About /> */}
+      <About />
       <OurWork />
       <Review />
       <ContactUs />
