@@ -188,13 +188,13 @@
     align-items: flex-start;
     max-width: 100%;
   }
-  .logoParent {
-    width: 1400px;
+  /* .logoParent {
+    width: 80vw;
     padding-top: 30px;
     justify-content: space-between;
     gap: var(--gap-xl);
     
-  }
+  } */
   .frameWrapper2 {
     align-self: stretch;
     justify-content: center;
