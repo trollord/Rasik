@@ -24,7 +24,7 @@ export function HomePage() {
       <TempOurClient />
       <OurServices />
       {/* <About /> */}
-      {/* <OurWork /> */}
+      <OurWork />
       <Review />
       {/* <ContactUs /> */}
       {/* <MeetUs /> */}

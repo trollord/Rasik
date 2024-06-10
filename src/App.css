@@ -9,9 +9,11 @@
     display: 'flex';
     flex-direction: "column";
     gap:'10px';
-  height: 100% !important;
+    height: 100% !important;
 
 }
+
+
 
 
 
@@ -19,11 +21,21 @@
   .carousel .slide img.carousal-img-custom {
     /* height: 85vh !important; */
     height: 500px !important;
+    
   }
   
-  .ourClientImg{
-    width:'90px';
-    height: '50px';
+  
+
+  .our-image{
+    width: 80px;
+    height: 60px;
+  }
+
+  .roop-kala-img{
+    display: none;
+  } 
+  .roopmilan-img{
+    display: none;
   }
 }
 
@@ -33,10 +45,14 @@
   .carousel .slide img.carousal-img-custom {
     height: 85vh !important;
   }
-  .ourClientImg{
-    width:'180px';
-    height: '80px';
+
+ 
+  .our-image{
+    width: 180px;
+    height: 80px;
+    
   }
+  
 }
 
 .carousel-root {
@@ -60,6 +76,4 @@
 
   }
 
-  @media only screen and (max-width: 900px){
-   
-  }  
+ 

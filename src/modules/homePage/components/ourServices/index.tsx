@@ -17,8 +17,9 @@ function OurServices() {
   }
 
   return (
+    // height='85vh'
 
-    <Grid container height='85vh' width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
+    <Grid container className='ourservice-container' sx={{ height: { xs: 'auto', md: '85vh' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
       <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>
@@ -26,7 +27,7 @@ function OurServices() {
         <Typography sx={{ fontSize: { xs: '15px', md: '20px' } }}>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
       </Grid>
       <Grid container item md={5} display='flex' justifyContent='space-evenly' alignItems='center'>
-        <Grid item md={3} >
+        <Grid item md={3} xs={6} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
           <Box onClick={() => { handleClick('printMedia') }} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} bgcolor='#fff' color='#000' m={3} border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><PrintMedia /></Box>
             <Typography sx={{
@@ -54,7 +55,7 @@ function OurServices() {
             }}>Digital Marketing</Typography>
           </Box>
         </Grid>
-        <Grid item md={3}>
+        <Grid item md={3} xs={6} display='flex' justifyContent='center' flexDirection='column' alignItems='center' >
           <Box onClick={() => { handleClick('eCommerceSolution') }} sx={{ width: { xs: '140px', md: '160px' }, height: { xs: '140px', md: '160px' } }} m={3} bgcolor='#fff' color='#000' width='160px' height='160px' border={1} borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
             <Box sx={{ width: { xs: '65px', md: '80px' }, height: { xs: '65px', md: '80px' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce /></Box>
             <Typography sx={{

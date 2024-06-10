@@ -1,8 +1,14 @@
 {
-    "printMedia": ["/assets/amazon.png"],
-    "eCommerceSolution" : [],
-    "radioFm" : [],
-    "creative" : [],
-    "digitalMarketing" : [],
-    "socialMediaMarketing" : []
+    "printMedia": [
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png"
+    ],
+    "eCommerceSolution": [],
+    "radioFm": [],
+    "creative": [],
+    "digitalMarketing": [],
+    "socialMediaMarketing": []
 }

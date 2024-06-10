@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 import { useState } from 'react';
+import { Padding } from '@mui/icons-material';
 
 const images = [
   {
@@ -25,11 +26,11 @@ const images = [
 
 const style = {
   position: 'absolute' as 'absolute',
-  top: '50%',
+  top: '40%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '70vw',
-  height: '70vh',
+  height: '40vh',
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
@@ -43,7 +44,7 @@ function OurWork() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Grid height='85vh' width='100%' container id='ourwork' bgcolor='#000' color='#fff'>
+    <Grid sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff' border={2}>
       <Modal
         open={open}
         onClose={handleClose}
@@ -57,14 +58,16 @@ function OurWork() {
           </Typography>
         </Box>
       </Modal>
-      <Grid item height="18%" display="flex" alignItems="center" justifyContent="flex-start" pt={2} flexDirection="column" width="100%">
+      {/* height of our work heading on desktop is 18% */}
+      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '10px', md: '0' } }} display="flex" alignItems="center" justifyContent="flex-start" pt={2} flexDirection="column" width="100%">
         <Typography variant='h4' style={{ fontWeight: '700' }} textAlign='center'>Our Work</Typography>
         <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography>
       </Grid>
-      <Grid container item height="82%">
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
+      {/* height of img carausl img grid  on desktop is 82% */}
+      <Grid container item sx={{ height: { xs: '90%', md: '82%' } }} >
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
-          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
@@ -81,9 +84,9 @@ function OurWork() {
             </Carousel>
           </Box>
         </Grid>
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
-          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
@@ -101,9 +104,9 @@ function OurWork() {
           </Box>
         </Grid>
 
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column'>
+        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
-          <Box width='70%' bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px' }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
