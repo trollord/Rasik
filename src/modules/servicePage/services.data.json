@@ -1,24 +1,14 @@
 {
-    "serviceClients": {
-        "printMedia": [
-            "/assets/amazon.png",
-            "/assets/amazon.png",
-            "/assets/amazon.png",
-            "/assets/amazon.png",
-            "/assets/amazon.png"
-        ],
-        "eCommerceSolution": [],
-        "radioFm": [],
-        "creative": [],
-        "digitalMarketing": [],
-        "socialMediaMarketing": []
-    },
-    "serviceLogos": {
-        "printMedia": "/printmedia.png",
-        "eCommerceSolution": "eCommerceSolution.png",
-        "radioFm": "/radioFmamazon.png",
-        "creative": "/assets/amazon.png",
-        "digitalMarketing": "/digitalMarketing.png",
-        "socialMediaMarketing": "/socialMediaMarketing.png"
-    }
+    "printMedia": [
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png"
+    ],
+    "eCommerceSolution": [],
+    "radioFm": [],
+    "creative": [],
+    "digitalMarketing": [],
+    "socialMediaMarketing": []
 }
