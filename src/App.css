@@ -20,11 +20,22 @@
     /* height: 85vh !important; */
     height: 500px !important;
   }
+  
+  .ourClientImg{
+    width:'90px';
+    height: '50px';
+  }
 }
+
+
 
 @media only screen and (min-width: 620px) {
   .carousel .slide img.carousal-img-custom {
     height: 85vh !important;
+  }
+  .ourClientImg{
+    width:'180px';
+    height: '80px';
   }
 }
 
@@ -48,3 +59,7 @@
     border-radius: 20px;
 
   }
+
+  @media only screen and (max-width: 900px){
+   
+  }  

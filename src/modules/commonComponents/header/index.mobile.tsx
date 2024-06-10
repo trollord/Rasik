@@ -18,10 +18,10 @@ export function MobileHeader() {
 
 
     return (
-        <Grid container height="8vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" columnSpacing={8} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'}>
+        <Grid container height="8vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" columnSpacing={3.5} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'} pl={2} pr={2}>
 
 
-            <Grid item md={2}>
+            <Grid item xs={2}>
                 <Box>
                     <IconButton size='large' edge='start' onClick={openMenu}>
                         <MenuIcon sx={{ fontSize: 28 }} />
@@ -50,18 +50,19 @@ export function MobileHeader() {
                 </Box>
 
             </Grid>
-            <Grid item width={150} height={"60%"} md={2} sx={{ paddingLeft: "20px !important" }}>
+            <Grid item width={140} height={"60%"} xs={4} sx={{ paddingLeft: "10px !important" }}>
                 <img src="/image.png" alt="logo" width={"100%"} height={"100%"} />
             </Grid>
 
 
-            <Grid item md={8}>
+            <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Link to='contactUs' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
 
                     <Button sx={{
-                        fontWeight: '600', fontFamily: 'inter', backgroundColor: '#EB3335', width: '140px', height: '40px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '16px', '&:hover': {
+                        fontWeight: '500', fontFamily: 'inter', backgroundColor: '#EB3335', width: '110px', height: '35px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '16px', '&:hover': {
                             color: '#000',
-                            backgroundColor: '#EB3335'
+                            backgroundColor: '#EB3335',
+
                         }, color: "#FFFFFF", textTransform: 'none'
                     }}>
                         Contact us
