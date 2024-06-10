@@ -2,8 +2,10 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import Header from "../commonComponents/header/index.desktop";
 import { PrintMedia } from "../commonComponents/icons";
 import Footer from "../homePage/components/footer";
+import serviceData from './services.data.json';
 
-export function ServicePage() {
+export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCommerceSolution' | 'radioFm' | 'creative' | 'digitalMarketing' | 'socialMediaMarketing' }) {
+
     return (
         <Grid container display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
 
@@ -21,7 +23,20 @@ export function ServicePage() {
             <Grid container item display='flex' flexDirection='column' justifyContent='center' alignItems='center' mb={5}>
                 <Typography variant="h5" style={{ fontWeight: '600' }} mb={4}>Our channel partners</Typography>
 
-                <Grid container item p={3} bgcolor='#F1E5D1' width='90%' height='700px' display='flex' justifyContent='space-between' borderRadius='5px'>
+                <Grid container item pt={3} pb={3} bgcolor='#F1E5D1' width='90%' display='flex' justifyContent='center' borderRadius='5px'>
+
+                    {serviceData[currentPage].length > 0 ?
+                        serviceData[currentPage].map((path) => {
+                            return (
+                                <Grid item display='flex' justifyContent="center" md={2.9}>
+                                    <Box height='28.5vh' width='100%' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'>
+                                        <img src={path} width={"100%"} height="100%"></img>
+                                    </Box>
+                                </Grid>
+                            )
+                        }) : ""
+                    }
+                    {/* 
                     <Grid item display='flex' justifyContent="center" width='100%'>
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
@@ -34,19 +49,7 @@ export function ServicePage() {
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
                         <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-                    </Grid>
-
-                    <Grid item display='flex' justifyContent="center" width='100%'>
-                        <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-                        <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-                        <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-                        <Box height='28.5vh' width='20vw' bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040'></Box>
-                    </Grid>
-
-
-
-
-
+                    </Grid> */}
                 </Grid>
 
             </Grid>
