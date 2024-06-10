@@ -10,14 +10,14 @@ function OurClients() {
                 <Typography variant='h6'>Overseas and Retail clients</Typography>
             </Box>
 
-            <Grid item m={3} className={styles.logoParent}>
+            <Grid item m={3} className={styles.logoParent} >
                 <img src='/assets/logo1.png' className={styles.logo}  />
                 <img src='/assets/logo2.png' className={styles.logo} />
                 <img src='/assets/logo3.png' className={styles.logo} />
                 <img src='/assets/logo4.png' className={styles.logo} />
                 <img src='/assets/logo5.png' className={styles.logo} />
             </Grid>
-            <Grid item className={styles.logoGroup}>
+            <Grid item className={styles.logoGroup} >
             <img src='/assets/logo6.png' className={styles.logo} />
             <img src='/assets/logo7.png' className={styles.logo} />
             <img src='/assets/logo8.png' className={styles.logo} />
@@ -30,5 +30,3 @@ function OurClients() {
 }
 
 export default OurClients;
-
-

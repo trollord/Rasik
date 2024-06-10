@@ -19,7 +19,7 @@ function ContactUs() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     emailjs.send(
@@ -35,7 +35,7 @@ function ContactUs() {
       console.log('FAILED...', err);
     });
   };
-  const isMobile = useMediaQuery('(max-width:392px)');
+  const isMobile = useMediaQuery('(max-width:500px)');
   return (
     
     <Grid  container width='90%' spacing={2} m='auto' height='85vh' flexDirection={isMobile ? 'column' : 'row'} p={3} >
@@ -46,7 +46,7 @@ function ContactUs() {
             <div className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
             </div>
-            <Grid className={styles.ourTeamAt} width={isMobile? "80vw": "477px"} >
+            <Grid className={styles.ourTeamAt} width={isMobile? "60vw": "477px"} >
               Our team at Rasik Communications will be more than happy to listen
               to you and suggest every idea you haven’t considered.
             </Grid>
