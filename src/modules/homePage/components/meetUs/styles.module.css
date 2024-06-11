@@ -1,17 +1,19 @@
 .meetUs {
     margin: 0;
     position: relative;
-    /* font-family: var(--font-sunflower); */
+    font-family: var(--font-sunflower);
     /* font-size: inherit; */
     line-height: 60px;
     font-weight: 600;
     font-size: 64px;
+    
     font-family: var(--font-inter);
     /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
   }
   .meetUsWrapper {
     align-self: stretch;
     display: flex;
+    
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
@@ -319,6 +321,7 @@
   }
   .frameParent {
     flex: 1;
+    padding-top: 100px;
     flex-direction: column;
     justify-content: flex-start;
     gap: var(--gap-41xl);

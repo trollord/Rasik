@@ -11,17 +11,18 @@ function MeetUs() {
     zoom: 11
   };
 
-  const isMobile = useMediaQuery('(max-width:750px)');
+  const isMobile = useMediaQuery('(max-width:600px)');
+  console.log(isMobile);
   return (
     <div className={styles.frameParent}>
         <div className={styles.meetUsWrapper}>
           <h1 className={styles.meetUs}>Meet Us</h1>
         </div>
 
-   <Grid  spacing={2} p={2} width='70vw'  bgcolor='#EADBC8' height={isMobile ? '60vh' : '46vh'} m='auto' container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+   <Grid  spacing={2} p={2} width='75vw'  bgcolor='#EADBC8' height={isMobile ? '86vh' : '47vh'} m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
     
-    <Grid item md={6}  height={isMobile?'25vh':'40vh'} width="498px"  borderRadius="15px" overflow="hidden">
+    <Grid container item md={6}  height={isMobile?'25vh':'40vh'} width="55vw"  borderRadius="10px" overflow="hidden">
 
 
     <GoogleMapReact
@@ -36,22 +37,52 @@ function MeetUs() {
 
 
     </Grid>
-    {/* <Grid item md={3} >
+    <Grid item md={3} >
         <div>
-            <Typography variant="h5" fontFamily={}>Office</Typography>
+            <Typography variant="h5" >Office</Typography>
             <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
                  Mumbai- 400 013.</Typography>
         </div>
         <div>
-            <Typography variant="h5">Office</Typography>
-            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
-                 Mumbai- 400 013.</Typography></div>
+            <Typography variant="h5">Email</Typography>
+            {/* <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
+                 Mumbai- 400 013.</Typography> */}
+            <p className={styles.rasikads43gmailcomPrashant}>
+                      <Grid className={styles.rasikEmail} height="4vh" width="40vw">
+
+                      
+                      <a
+                        className={styles.rasikads43gmailcom}
+                        href="mailto:rasikads43@gmail.com"
+                        target="_blank"
+                      >
+                        <span>
+                          <span className={styles.rasikads43gmailcom1}>
+                            rasikads43@gmail.com
+                          </span>
+                        </span>
+                      </a>
+                      </Grid>
+                      <Grid className= {styles.prashantEmail}>
+                      <a className={styles.rasikads43gmailcom}
+                        href="mailto:prashant@rasikcommunications.com"
+                        target="_blank">
+                      <span>
+                        &nbsp;
+                        <span className={styles.prashantrasikcommunicationsc}>
+                          prashant@rasikcommunications.com
+                        </span>
+                      </span>
+                      </a>
+                      </Grid>
+                    </p>
+        </div>
     </Grid>
-    <Grid item md={3}>
+    <Grid container item md={3} justifyContent = 'left' flexDirection='column'>
 
         <Typography variant="h5">Contacts</Typography>
 
-        <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:'10px',justifyContent:'left'}}>
         <div>
              <Typography>Mr. Prashant Shah</Typography>
              <Typography> Cell : +91-9768128256</Typography>
@@ -64,11 +95,10 @@ function MeetUs() {
              <Typography>Mr. Twinkle shah</Typography>
              <Typography>Cell : +91-8898827588</Typography>
      </div>
-        </div> */}
-        <Grid height = {isMobile?"50vh":"170px"} width={isMobile?"61vw":"496.25px"}>
-
-        
-        <div className={styles.frameWrapper} >
+        </div> 
+        </Grid>
+        {/* <Grid height = {isMobile?"50vh":"170px"} width={isMobile?"61vw":"496.25px"}>        
+          <div className={styles.frameWrapper} >
             <div className={styles.frameGroup}>
               <div className={styles.office109PrimePlazaJVParent}>
                 <div className={styles.office109PrimeContainer}>
@@ -230,21 +260,12 @@ function MeetUs() {
               </div>
             </div>
           </div>
-          </Grid>
+        </Grid> */}
 
 
+    </Grid>
 
-
-
-
-
-
-
-       
-
-    {/* </Grid> */}
-
-   </Grid>
+   {/* </Grid> */}
    <div style={{ height: 20 }} />
    </div>
   )
