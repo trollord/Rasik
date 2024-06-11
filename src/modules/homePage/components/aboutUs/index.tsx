@@ -5,7 +5,7 @@ import styles from "./styles.module.css"
 export function About() {
   return <>
 
-    <Grid container height="85vh" p={5} width='90vw' m='auto' id='about'>
+<Grid item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '5px', md: '40px' } }}>
       <Grid container display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
         {/* <Typography variant="h4">About Us</Typography>
                 <Typography>Who are we?</Typography>
@@ -20,7 +20,7 @@ export function About() {
           </Box>
         </Box>
 
-        <Typography className={styles.weAreAmongstContainer} variant="h5" sx={{ fontWeight: '200' }}>
+        <Typography sx={{ fontSize: { xs: '15px', md: '20px' } }}>
           <span
             className={styles.weAreAmongst}
           >{`We are amongst the select few accredited with INS. It empowers us to deal directly with media houses across India. We have an excellent rapport with all the leading publications all over India. Hence you get the best ever rates & deals for your ads releases. You name anything in the world of print, electronic and web advertising and the entire range of services come to you without compromising on quality and without an iota of doubt. Our experience and expertise ensure that you get maximum impact for every Rupee of your media expenditure.`}</span>

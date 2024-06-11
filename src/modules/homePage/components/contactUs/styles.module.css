@@ -24,7 +24,8 @@
   margin: 0;
   font-family: var(--font-inter);
   align-self: stretch;
-  height: 87px;
+  height: 12vh;
+  /* width: 30vw; */
   position: relative;
   font-size: var(--font-size-5xl);
   font-weight: 300;
@@ -209,6 +210,7 @@
   }
   .ourTeamAt {
     font-size: var(--font-size-lgi);
+    width: 80vw;
   }
   .groupButton {
     padding-left: var(--padding-xl);

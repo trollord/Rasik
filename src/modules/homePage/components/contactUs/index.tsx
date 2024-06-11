@@ -35,7 +35,7 @@ function ContactUs() {
       console.log('FAILED...', err);
     });
   };
-  const isMobile = useMediaQuery('(max-width:500px)');
+  const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   return (
     
     <Grid  container width='90%' spacing={2} m='auto' height='85vh' flexDirection={isMobile ? 'column' : 'row'} p={3} >
@@ -46,14 +46,14 @@ function ContactUs() {
             <div className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
             </div>
-            <Grid className={styles.ourTeamAt} width={isMobile? "60vw": "477px"} >
+            <Typography className={styles.ourTeamAt}  >
               Our team at Rasik Communications will be more than happy to listen
               to you and suggest every idea you haven’t considered.
-            </Grid>
+            </Typography>
           </div>
         </div>
       </Grid>
-      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '40vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '43vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <div style={{display:'flex',gap:'10px'}}>
         
