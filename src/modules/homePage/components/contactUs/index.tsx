@@ -36,9 +36,10 @@ function ContactUs() {
     });
   };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
+  console.log(isMobile);
   return (
     
-    <Grid  container width='90%' spacing={2} m='auto' height='85vh' flexDirection={isMobile ? 'column' : 'row'} p={3} >
+    <Grid  container width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
       
       <Grid  width={isMobile?"80vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <div className={styles.frameWrapper}>
@@ -53,7 +54,7 @@ function ContactUs() {
           </div>
         </div>
       </Grid>
-      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '43vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '45vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <div style={{display:'flex',gap:'10px'}}>
         
