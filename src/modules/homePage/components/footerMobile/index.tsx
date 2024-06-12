@@ -66,7 +66,7 @@ function FooterMobile() {
         <Grid item>
              <Typography variant="h5" className={styles.services}>Services</Typography>
              <Typography className={styles.servicesFont}>Print media release</Typography>
-             <Typography className={styles.servicesFont}>Outdoor media</Typography>
+             {/* <Typography className={styles.servicesFont}>Outdoor media</Typography> */}
              <Typography className={styles.servicesFont}>Creatives</Typography>
              <Typography className={styles.servicesFont}>Radio FM</Typography>
              <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
