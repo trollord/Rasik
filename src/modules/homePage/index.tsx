@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import Header from "../commonComponents/header/index.desktop";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Carasouel from "./components/carousal";
 // import OurClients from "./components/ourClients";
 import { About } from "./components/aboutUs";
@@ -9,12 +10,14 @@ import OurServices from "./components/ourServices";
 import Review from "./components/review";
 import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
+import FooterMobile from "./components/footerMobile";
 import { ResponsiveHeader } from "../commonComponents/header";
 import TempOurClient from "./components/ourClients/TempOurClient";
 
 
 
 export function HomePage() {
+  const isMobile = useMediaQuery('(max-width:600px)');
 
 
   return (
@@ -30,7 +33,8 @@ export function HomePage() {
       <Review />
       <ContactUs />
       <MeetUs />
-      <Footer />
+      {!isMobile && <Footer />}
+      {isMobile && <FooterMobile />}
     </Grid>
   );
 }
