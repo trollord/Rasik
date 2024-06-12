@@ -130,8 +130,9 @@
   }
   .companyFont{
     font-family: var(--font-inter);
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
+    margin-bottom: 6px;
   }
   .company {
     margin: 0;

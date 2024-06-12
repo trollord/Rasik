@@ -62,7 +62,8 @@ export function DesktopHeader() {
                 <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
 
                     <Button sx={{
-                        fontWeight: '600', fontFamily: 'inter', backgroundColor: '#EB3335', width: '169px', height: '48px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '22px', '&:hover': {
+                        fontWeight: '600', fontFamily: 'inter', backgroundColor: '#EB3335', width: '169px', height: '48px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '22px',
+                        '&:hover': {
                             color: '#000',
                             backgroundColor: '#EB3335'
                         }, color: "#FFFFFF", textTransform: 'none'

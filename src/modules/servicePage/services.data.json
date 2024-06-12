@@ -6,9 +6,25 @@
         "/assets/amazon.png",
         "/assets/amazon.png"
     ],
-    "eCommerceSolution": [],
-    "radioFm": [],
-    "creative": [],
-    "digitalMarketing": [],
-    "socialMediaMarketing": []
+    "eCommerceSolution": [
+        "/assets/amazon.png",
+        "/assets/amazon.png"
+    ],
+    "radioFm": [
+        "/assets/amazon.png"
+    ],
+    "creative": [
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png"
+    ],
+    "digitalMarketing": [
+        "/assets/amazon.png",
+        "/assets/amazon.png",
+        "/assets/amazon.png"
+    ],
+    "socialMediaMarketing": [
+        "/assets/amazon.png"
+    ]
 }

@@ -2,8 +2,22 @@ import { Grid, Typography, Box } from "@mui/material";
 import { InstaGram, LinkedInIcon } from "../../../commonComponents/icons";
 import styles from './styles.module.css';
 import image from "./image.png";
-import { Link } from "react-scroll"
+import { Link, scroller } from "react-scroll";
+import { useNavigate } from 'react-router-dom';
 function Footer() {
+  const navigate = useNavigate();
+  const navigateAndScroll = (path: string, section: string) => {
+
+    navigate(path);
+    setTimeout(() => {
+      scroller.scrollTo(section, {
+        smooth: true,
+        spy: true,
+        offset: -100,
+        duration: 500,
+      });
+    }, 100); // Adjust the timeout as needed
+  };
   return (
     <Grid container flexDirection='column' height='294px' bgcolor='#F1E5D1' justifyContent='center' sx={{ padding: '10px 70px' }}>
       <Grid container item justifyContent='space-evenly'>
@@ -28,10 +42,10 @@ function Footer() {
 
         <Grid item display='flex' flexDirection='column'>
           <Typography variant="h5" className={styles.company}>Company</Typography>
-          <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About us</Link>
-          <Link to="client" spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
-          <Link to="ourwork" spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
-          <Link to="contactUs" spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact us</Link>
+          <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About us</Link>
+          <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
+          <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
+          <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact us</Link>
           {/* <Typography variant="h5" className={styles.company}>Company</Typography>
           <Typography className={styles.companyFont}>About us</Typography>
           <Typography className={styles.companyFont}>Clients</Typography>

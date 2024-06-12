@@ -73,12 +73,12 @@ function OurWork() {
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -92,12 +92,12 @@ function OurWork() {
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img2} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -112,12 +112,12 @@ function OurWork() {
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>

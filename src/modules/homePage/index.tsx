@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import Header from "../commonComponents/header/index.desktop";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Carasouel from "./components/carousal";
-// import OurClients from "./components/ourClients";
+import OurClients from "./components/ourClients";
 import { About } from "./components/aboutUs";
 import ContactUs from "./components/contactUs";
 import Footer from "./components/footer";
@@ -12,7 +12,7 @@ import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
 import FooterMobile from "./components/footerMobile";
 import { ResponsiveHeader } from "../commonComponents/header";
-import TempOurClient from "./components/ourClients/TempOurClient";
+// import TempOurClient from "./components/ourClients/TempOurClient";
 
 
 
@@ -25,8 +25,8 @@ export function HomePage() {
 
       <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />
-      {/* <OurClients /> */}
-      <TempOurClient />
+      <OurClients />
+      {/* <TempOurClient /> */}
       <OurServices />
       <About />
       <OurWork />
