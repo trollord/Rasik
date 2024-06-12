@@ -16,16 +16,12 @@ function FooterMobile() {
     //                     <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
     //                     <InstaGram />
     //                     </a>
-                        
     //                     <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer"style={{ marginLeft: '25px' }}>
     //                     <LinkedInIcon/>
     //                     </a>
-
     //                 </Box>
     //             </Grid>
     //         </Box>
-         
-         
     //         <Grid container>
     //             <Grid item>
     //             <Typography variant="h5" className={styles.services}>Services</Typography>
@@ -38,8 +34,6 @@ function FooterMobile() {
     //             <Typography className={styles.servicesFont}>Social Media Merketing</Typography>     
     //             </Grid>
     //         </Grid>
-
-         
     //      <Grid item>
     //       <Typography variant="h5" className={styles.company}>Company</Typography>
     //       <Typography className={styles.companyFont}>About us</Typography>
@@ -47,13 +41,7 @@ function FooterMobile() {
     //       <Typography className={styles.companyFont}>Our work</Typography>
     //       <Typography className={styles.companyFont}>Contact us</Typography>
     //      </Grid>
-
-         
-         
-         
-
     //     </Grid>
-
     // </Grid>
     <Grid container  flexDirection='row' height='30vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' paddingTop="20px">
         <Grid container className={styles.firstGrid} flexDirection="row" width="30vw">
@@ -67,15 +55,12 @@ function FooterMobile() {
                         <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                             <InstaGram />
                         </a>
-                        
                         <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer"style={{ marginLeft: '25px' }}>
                             <LinkedInIcon/>
                         </a>
-
                     </Box>
                 </Grid>
             </Box>
-
         </Grid>
         <Grid container width="37vw" paddingLeft="30px">
         <Grid item>
@@ -89,7 +74,6 @@ function FooterMobile() {
              <Typography className={styles.servicesFont}>Social Media Merketing</Typography>     
              </Grid>
         </Grid>
-
         <Grid item width="33vw" paddingLeft="10px" >
             <Typography variant="h5" className={styles.company}>Company</Typography>
             <Typography className={styles.companyFont}>About us</Typography>

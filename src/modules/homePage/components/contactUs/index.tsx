@@ -36,7 +36,7 @@ function ContactUs() {
     });
   };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  console.log(isMobile);
+  // console.log(isMobile);
   return (
     
     <Grid  container width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
@@ -54,27 +54,29 @@ function ContactUs() {
           </div>
         </div>
       </Grid>
-      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '45vh':'52vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '50vh':'50vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
-      <div style={{display:'flex',gap:'10px'}}>
+      <Box height="5vh" style={{display:'flex',gap:'10px'}}>
         
-        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Last name*'style={{padding:'10px 15px',width:'50%',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}} />
-      </div>
+        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',height:"100%",marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
+        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Last name*'style={{padding:'10px 15px',width:'50%',height:"100%",border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}} />
+      </Box>
       
-      <div>
+      <Box height="5vh">
        
-        <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{width:'100%',border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-      </div>
-      <div>
+        <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
+      </Box>
+      <Box height="5vh">
        
-        <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Phone*' style={{width:'100%',border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-      </div>
-      <div>
+        <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Phone*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
+      </Box>
+      <Box height="22vh">
         
-        <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{width:'100%',border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}} rows="8" cols="50"/>
-      </div>
-      <button type="submit" style={{width:'100%',backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
+        <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}} rows="8" cols="50"/>
+      </Box>
+      <Box height="7vh">
+        <button type="submit" style={{width:'100%',height:"70%",backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
+      </Box>
     </form>
       </Grid>
     </Grid>
