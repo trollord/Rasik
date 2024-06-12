@@ -46,7 +46,7 @@ export function MobileHeader() {
 
                     <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
                         anchorOrigin={{
-                            vertical: 60,  // 50px from the top
+                            vertical: 20,  // 50px from the top
                             horizontal: 20,  // 100px from the left
                         }}
                         transformOrigin={{
