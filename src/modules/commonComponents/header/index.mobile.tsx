@@ -13,7 +13,7 @@ export function MobileHeader() {
         setAnchorNav(event.currentTarget)
     }
 
-    const closeMenu = () => {
+    const handleClose = () => {
         setAnchorNav(null)
     }
 
@@ -44,7 +44,7 @@ export function MobileHeader() {
                     </IconButton>
 
 
-                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
+                    <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
                         anchorOrigin={{
                             vertical: 60,  // 50px from the top
                             horizontal: 20,  // 100px from the left
@@ -54,10 +54,10 @@ export function MobileHeader() {
                             horizontal: 'left',
                         }}>
                         <MenuList>
-                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem>Services</MenuItem></Link>
-                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem>Our work</MenuItem></Link>
-                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem>Testimonials</MenuItem></Link>
-                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem>About us</MenuItem></Link>
+                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Services</MenuItem></Link>
+                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Our work</MenuItem></Link>
+                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>Testimonials</MenuItem></Link>
+                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>About us</MenuItem></Link>
 
                         </MenuList>
 

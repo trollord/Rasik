@@ -39,9 +39,9 @@ function ContactUs() {
   console.log(isMobile);
   return (
 
-    <Grid container width='90%' spacing={2} m='auto' height='85vh' sx={{ flexDirection: isMobile ? 'row' : 'row', }} p={3} id='contactUs'>
+    <Grid container width='90%' spacing={2} m='auto' sx={{ flexDirection: isMobile ? 'row' : 'row', padding: { xs: '5px 20px', md: '30px' }, height: { xs: '80vh', md: '85vh' } }} id='contactUs' >
 
-      <Grid width={isMobile ? "80vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
+      <Grid width={isMobile ? "80vw" : "477px"} sx={{ marginBottom: isMobile ? 0 : 0 }} >
         <div className={styles.frameWrapper}>
           <div className={styles.frameGroup}>
             <div className={styles.notSureWhatYouNeedWrapper}>

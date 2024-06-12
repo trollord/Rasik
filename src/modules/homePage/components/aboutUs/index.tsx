@@ -5,13 +5,13 @@ import styles from "./styles.module.css"
 export function About() {
   return <>
 
-<Grid container className={styles.frameParent} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' } }}>
-      <Box  className={styles.secondGrid} width="92vw" height="95vh" display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
+    <Grid container className={styles.frameParent} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' } }} id="about">
+      <Box className={styles.secondGrid} width="92vw" height="95vh" display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
         <Grid className={styles.aboutUs} >About Us</Grid>
-          <Typography >Who are we?</Typography>
-          
-                {/* <Typography sx={{wordWrap:'break-word',textIndent:'50px'}}>We are amongst the select few accredited with INS. It empowers us to deal directly with media houses across India. We have an excellent rapport with all the leading publications all over India. Hence you get the best ever rates & deals for your ads releases. You name anything in the world of print, electronic and web advertising and the entire range of services come to you without compromising on quality and without an iota of doubt. Our experience and expertise ensure that you get maximum impact for every Rupee of your media expenditure.</Typography> */}
-          <Typography sx={{ fontSize: { xs: '15px', md: '20px' } }}>
+        <Typography >Who are we?</Typography>
+
+        {/* <Typography sx={{wordWrap:'break-word',textIndent:'50px'}}>We are amongst the select few accredited with INS. It empowers us to deal directly with media houses across India. We have an excellent rapport with all the leading publications all over India. Hence you get the best ever rates & deals for your ads releases. You name anything in the world of print, electronic and web advertising and the entire range of services come to you without compromising on quality and without an iota of doubt. Our experience and expertise ensure that you get maximum impact for every Rupee of your media expenditure.</Typography> */}
+        <Typography sx={{ fontSize: { xs: '15px', md: '20px' } }}>
           <span
             className={styles.weAreAmongst}
           >{`We are amongst the select few accredited with INS. It empowers us to deal directly with media houses across India. We have an excellent rapport with all the leading publications all over India. Hence you get the best ever rates & deals for your ads releases. You name anything in the world of print, electronic and web advertising and the entire range of services come to you without compromising on quality and without an iota of doubt. Our experience and expertise ensure that you get maximum impact for every Rupee of your media expenditure.`}</span>

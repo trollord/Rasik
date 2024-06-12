@@ -1,6 +1,6 @@
 import { useState, MouseEvent } from 'react';
 import { Button, Grid, Box, IconButton, Menu, MenuItem, MenuList } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import { Link, scroller } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export function DesktopHeader() {
-    const [anchorNav, setAnchorNav] = useState<null | HTMLElement>(null);
+    // const [anchorNav, setAnchorNav] = useState<null | HTMLElement>(null);
     const navigate = useNavigate();
 
     const navigateAndScroll = (path: string, section: string) => {
@@ -24,13 +24,13 @@ export function DesktopHeader() {
         }, 100); // Adjust the timeout as needed
     };
 
-    const openMenu = (event: MouseEvent<HTMLElement>) => {
-        setAnchorNav(event.currentTarget)
-    }
+    // const openMenu = (event: MouseEvent<HTMLElement>) => {
+    //     setAnchorNav(event.currentTarget)
+    // }
 
-    const closeMenu = () => {
-        setAnchorNav(null)
-    }
+    // const closeMenu = () => {
+    //     setAnchorNav(null)
+    // }
 
 
 
@@ -74,7 +74,7 @@ export function DesktopHeader() {
 
 
 
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                 <IconButton size='large' edge='start' onClick={openMenu}>
                     <MenuIcon />
                 </IconButton>
@@ -97,7 +97,7 @@ export function DesktopHeader() {
 
 
 
-            </Box>
+            </Box> */}
 
 
 
