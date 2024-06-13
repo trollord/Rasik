@@ -43,7 +43,7 @@ function Footer() {
         </Grid>
 
 
-        <Grid item display='flex' flexDirection='column'>
+        <Grid item display='flex' flexDirection='column' paddingTop="45px">
           <Typography variant="h5" className={styles.company}>Company</Typography>
           <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About us</Link>
           <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
