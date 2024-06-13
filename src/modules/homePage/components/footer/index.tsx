@@ -39,7 +39,7 @@ function Footer() {
          <Grid item paddingTop="75px">
           <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
           <Typography className={styles.servicesFont}>Digital Marketing</Typography>
-          <Typography className={styles.servicesFont}>Social Media Merketing</Typography>
+          <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
         </Grid>
 
 
