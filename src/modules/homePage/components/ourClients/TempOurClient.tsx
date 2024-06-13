@@ -4,7 +4,7 @@ import '../../../../App.css'
 function TempOurClient() {
     return (
 
-        <Grid container display='flex' alignItems='center' justifyContent='center' flexDirection='column' m='40px 0' className='box'>
+        <Grid container display='flex' alignItems='center' justifyContent='center' flexDirection='column' m='40px 0' className='box' id='client'>
             <Box textAlign='center' mb={3}>
                 <Typography variant="h3" style={{ fontWeight: '600' }}>Our Clients</Typography>
                 <Typography>Retail and Overseas  clients</Typography>

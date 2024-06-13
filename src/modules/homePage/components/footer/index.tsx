@@ -1,10 +1,24 @@
-import { Grid, Typography ,Box} from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import { InstaGram, LinkedInIcon } from "../../../commonComponents/icons";
 import styles from './styles.module.css';
 import image from "./image.png"
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import { Link, scroller } from "react-scroll";
+import { useNavigate } from 'react-router-dom';
 function Footer() {
+  const navigate = useNavigate();
+  const navigateAndScroll = (path: string, section: string) => {
+
+    navigate(path);
+    setTimeout(() => {
+      scroller.scrollTo(section, {
+        smooth: true,
+        spy: true,
+        offset: -100,
+        duration: 500,
+      });
+    }, 100); // Adjust the timeout as needed
+  };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
   return (
@@ -13,7 +27,7 @@ function Footer() {
          <Grid item paddingTop="10px" > 
          <img className={styles.whatsappImage20240516At1Icon} src={image}  alt="logo" width={"70%"} height={"70%"}/>
          </Grid>
-         
+        
          <Grid item paddingTop="45px">
           <Typography variant="h5" className={styles.services}>Services</Typography>
           <Typography className={styles.servicesFont}>Print media release</Typography>
@@ -25,17 +39,22 @@ function Footer() {
          <Grid item paddingTop="75px">
           <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
           <Typography className={styles.servicesFont}>Digital Marketing</Typography>
-          <Typography className={styles.servicesFont}>Social Media Merketing</Typography>     
-         </Grid>
+          <Typography className={styles.servicesFont}>Social Media Merketing</Typography>
+        </Grid>
 
-         
-         <Grid item paddingTop="45px">
+
+        <Grid item display='flex' flexDirection='column'>
           <Typography variant="h5" className={styles.company}>Company</Typography>
+          <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About us</Link>
+          <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
+          <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
+          <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact us</Link>
+          {/* <Typography variant="h5" className={styles.company}>Company</Typography>
           <Typography className={styles.companyFont}>About us</Typography>
           <Typography className={styles.companyFont}>Clients</Typography>
           <Typography className={styles.companyFont}>Our work</Typography>
-          <Typography className={styles.companyFont}>Contact us</Typography>
-         </Grid>
+          <Typography className={styles.companyFont}>Contact us</Typography> */}
+        </Grid>
 
          
          <Grid paddingTop="45px">
@@ -44,9 +63,9 @@ function Footer() {
             <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
               <InstaGram />
             </a>
-             
-            <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer"style={{ marginLeft: '25px' }}>
-              <LinkedInIcon/>
+
+            <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '25px' }}>
+              <LinkedInIcon />
             </a>
 
           </Box>
@@ -60,15 +79,9 @@ function Footer() {
          </Grid>}
 
         </Grid>
-        {/* <Grid item  className={styles.rasikCommunicationsAll}> */}
-                   {/* cjjdxxxxxxxxxxxxxxxxxxxxxxxxxx */}
 
-            {/* <div className={styles.rasikCommunicationsAll}>
-              ©2024 Rasik Communications. All Rights Reserved
-            </div> */}
-        {/* </Grid> */}
+      </Grid>
 
-    </Grid>
   )
 }
 

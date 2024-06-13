@@ -1,4 +1,4 @@
-import { Grid, Typography , Box} from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styles from "./styles.module.css"
@@ -28,12 +28,12 @@ function ContactUs() {
       formData,
       'A2aWUHE6R1nJV1nOh' // Replace with your EmailJS user ID (public key)
     )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-    })
-    .catch((err) => {
-      console.log('FAILED...', err);
-    });
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
   };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });

@@ -1,19 +1,35 @@
 import { useState, MouseEvent } from 'react';
 import { Button, Grid, Box, IconButton, Menu, MenuItem, MenuList } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 
 
 export function MobileHeader() {
     const [anchorNav, setAnchorNav] = useState<null | HTMLElement>(null);
+    const navigate = useNavigate();
 
     const openMenu = (event: MouseEvent<HTMLElement>) => {
         setAnchorNav(event.currentTarget)
     }
 
-    const closeMenu = () => {
+    const handleClose = () => {
         setAnchorNav(null)
     }
+
+
+    const navigateAndScroll = (path: string, section: string) => {
+
+        navigate(path);
+        setTimeout(() => {
+            scroller.scrollTo(section, {
+                smooth: true,
+                spy: true,
+                offset: -100,
+                duration: 500,
+            });
+        }, 100); // Adjust the timeout as needed
+    };
 
 
 
@@ -28,9 +44,9 @@ export function MobileHeader() {
                     </IconButton>
 
 
-                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
+                    <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
                         anchorOrigin={{
-                            vertical: 60,  // 50px from the top
+                            vertical: 20,  // 50px from the top
                             horizontal: 20,  // 100px from the left
                         }}
                         transformOrigin={{
@@ -38,10 +54,10 @@ export function MobileHeader() {
                             horizontal: 'left',
                         }}>
                         <MenuList>
-                            <Link to='services' spy={true} smooth={true} duration={500}><MenuItem>Services</MenuItem></Link>
-                            <Link to='ourwork' spy={true} smooth={true} duration={500}><MenuItem>Our work</MenuItem></Link>
-                            <Link to='testimonials' spy={true} smooth={true} duration={500}> <MenuItem>Testimonials</MenuItem></Link>
-                            <Link to='about' spy={true} smooth={true} duration={500}> <MenuItem>About us</MenuItem></Link>
+                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Services</MenuItem></Link>
+                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Our work</MenuItem></Link>
+                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>Testimonials</MenuItem></Link>
+                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>About us</MenuItem></Link>
 
                         </MenuList>
 
@@ -56,7 +72,7 @@ export function MobileHeader() {
 
 
             <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Link to='contactUs' spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
+                <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
 
                     <Button sx={{
                         fontWeight: '500', fontFamily: 'inter', backgroundColor: '#EB3335', width: '110px', height: '35px', borderRadius: '10px', boxShadow: '0px 4px 4px 0px #00000040', fontSize: '16px', '&:hover': {

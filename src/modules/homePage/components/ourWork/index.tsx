@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 import { useState } from 'react';
-import { Padding } from '@mui/icons-material';
+
 
 const images = [
   {
@@ -29,8 +29,8 @@ const style = {
   top: '40%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '70vw',
-  height: '40vh',
+  width: '60vw',
+  height: '60vh',
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
@@ -40,7 +40,11 @@ const style = {
 
 function OurWork() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const handleOpen = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+    setOpen(true);
+  };
   const handleClose = () => setOpen(false);
 
   return (
@@ -50,12 +54,10 @@ function OurWork() {
         onClose={handleClose}
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+
+          {selectedImage && (
+            <img src={selectedImage} alt="Modal Content" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          )}
         </Box>
       </Modal>
       {/* height of our work heading on desktop is 18% */}
@@ -71,12 +73,12 @@ function OurWork() {
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -85,18 +87,18 @@ function OurWork() {
           </Box>
         </Grid>
         <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
-          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                    <img src={img.img1} style={{ height: '100%', width: '120px' }} />
                   </Box>
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                    <img src={img.img2} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
               ))}
@@ -105,17 +107,17 @@ function OurWork() {
         </Grid>
 
         <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
-          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+          <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {images.map((img, index) => (
-                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: "50vh" }}>
+                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={handleOpen} style={{ height: '50%', width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
