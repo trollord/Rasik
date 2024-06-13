@@ -21,7 +21,7 @@ export function HomePage() {
 
 
   return (
-    <Grid container style={{ overflow: 'hidden' }}>
+    <Grid container gap="10px" style={{ overflow: 'hidden' }}>
 
       <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />

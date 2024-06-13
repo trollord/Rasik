@@ -100,7 +100,7 @@ function FooterMobile() {
                     <Typography className={styles.servicesFont}>Radio FM</Typography>
                     <Typography className={styles.servicesFont}>Creatives</Typography>
                     <Typography className={styles.servicesFont}>Digital Marketing</Typography>
-                    <Typography className={styles.servicesFont}>Social Media Merketing</Typography>
+                    <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
                 </Grid>
             </Grid>
 
