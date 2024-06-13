@@ -1,15 +1,18 @@
-import { useState, MouseEvent } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Button, Grid, Box, IconButton, Menu, MenuItem, MenuList } from '@mui/material';
 // import MenuIcon from '@mui/icons-material/Menu';
-import { Link, scroller } from 'react-scroll';
+import { Link, scroller, Events } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
+import '../../../App.css'
+
 
 
 
 
 export function DesktopHeader() {
-    // const [anchorNav, setAnchorNav] = useState<null | HTMLElement>(null);
+    const [activeLink, setActiveLink] = useState('');
     const navigate = useNavigate();
+
 
     const navigateAndScroll = (path: string, section: string) => {
 
@@ -24,38 +27,57 @@ export function DesktopHeader() {
         }, 100); // Adjust the timeout as needed
     };
 
-    // const openMenu = (event: MouseEvent<HTMLElement>) => {
-    //     setAnchorNav(event.currentTarget)
-    // }
-
-    // const closeMenu = () => {
-    //     setAnchorNav(null)
-    // }
+    const handleSetActive = (text: string) => {
+        setActiveLink(text);
+    };
 
 
 
-    // to fixed the navbar :-  
 
     return (
         <Grid container height="15vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" pl={5} pr={3} columnSpacing={8} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'}>
 
             <Grid item width={100} height={"82%"} md={2} sx={{ paddingLeft: "90px !important" }}>
                 <img src="/image.png" alt="logo" width={"100%"} height={"100%"} />
+                {/* <HeaderLogo width={"100%"} height={"100%"}></HeaderLogo> */}
             </Grid>
 
 
             <Grid item display='flex' justifyContent='space-around' alignItems='center' md={10} sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
+                <Link to='services' className={`underline-link ${activeLink === 'services' ? 'active' : ''}`}
+
+                    onClick={() => {
+
+                        navigateAndScroll('/', 'services')
+                        handleSetActive('services')
+                    }} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
                 >
                     Services
                 </Link>
-                <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
+                <Link to='ourwork' className={`underline-link ${activeLink === 'ourwork' ? 'active' : ''}`}
+
+                    onClick={() => {
+                        navigateAndScroll('/', 'ourwork')
+                        handleSetActive('ourwork')
+                    }} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                     Our work
                 </Link>
-                <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
+                <Link to='testimonials' className={`underline-link ${activeLink === 'testimonials' ? 'active' : ''}`}
+
+                    onClick={() => {
+
+                        navigateAndScroll('/', 'testimonials')
+                        handleSetActive('testimonials')
+                    }} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                     Testimonials
                 </Link>
-                <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
+                <Link to='about' className={`underline-link ${activeLink === 'about' ? 'active' : ''}`}
+
+                    onClick={() => {
+
+                        navigateAndScroll('/', 'about')
+                        handleSetActive('about')
+                    }} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
                     About us
                 </Link>
 

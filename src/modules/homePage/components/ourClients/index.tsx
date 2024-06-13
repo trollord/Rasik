@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
-import '../../../../App.css'
+import '../../../../App.css';
+
 
 function OurClients() {
     return (
@@ -27,6 +28,7 @@ function OurClients() {
 
             </Grid>
         </Grid >
+
 
     )
 }

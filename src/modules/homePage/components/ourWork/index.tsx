@@ -2,7 +2,8 @@ import { Grid, Typography, Box, Modal } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import { useState } from 'react';
+
+import { useState, useRef, useContext } from 'react';
 
 
 const images = [
@@ -26,11 +27,11 @@ const images = [
 
 const style = {
   position: 'absolute' as 'absolute',
-  top: '40%',
+  top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '60vw',
-  height: '60vh',
+  width: '50vw',
+  height: '50vh',
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
@@ -39,6 +40,7 @@ const style = {
 };
 
 function OurWork() {
+
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const handleOpen = (imageSrc: string) => {
@@ -46,6 +48,9 @@ function OurWork() {
     setOpen(true);
   };
   const handleClose = () => setOpen(false);
+
+
+
 
   return (
     <Grid sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff' border={2}>
@@ -75,10 +80,10 @@ function OurWork() {
               {images.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -94,10 +99,10 @@ function OurWork() {
               {images.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
@@ -114,10 +119,10 @@ function OurWork() {
               {images.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} style={{ height: '100%', width: '120px', }} />
                   </Box>
                 </Box>
