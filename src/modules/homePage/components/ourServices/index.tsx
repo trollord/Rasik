@@ -21,7 +21,7 @@ function OurServices() {
   return (
     // height='85vh'
 
-    <Grid container className='ourservice-container' sx={{ height: { xs: 'auto', md: '85vh' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
+    <Grid container sx={{ height: { xs: 'auto', md: '85vh' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
       <Grid item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>

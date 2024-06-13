@@ -53,7 +53,7 @@ function OurWork() {
 
 
   return (
-    <Grid sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff' border={2}>
+    <Grid sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'>
       <Modal
         open={open}
         onClose={handleClose}

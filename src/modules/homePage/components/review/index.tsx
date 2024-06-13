@@ -38,7 +38,7 @@ function Review() {
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
 
   return (
-    <Grid container sx={{ height: { xs: '500px', md: '85vh' } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials'  >
+    <Grid container sx={{ height: { xs: '500px', md: '85vh' } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
       <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '40px' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
 
 
