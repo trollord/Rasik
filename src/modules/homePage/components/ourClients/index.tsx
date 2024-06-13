@@ -5,21 +5,21 @@ import '../../../../App.css';
 function OurClients() {
     return (
 
-        <Grid container display='flex' alignItems='center' flexDirection='column' m='40px 0' sx={{ height: { xs: '50vh', md: '85vh' }, justifyContent: { xs: 'start', md: 'center' } }} className='box' id='client'>
-            <Box textAlign='center' mb={3} >
+        <Grid container display='flex' alignItems='center' flexDirection='column' m='40px 0 0' sx={{ height: { xs: '50vh', md: '85vh' }, justifyContent: { xs: 'start', md: 'center' } }} id='client' bgcolor='#6792A0'>
+            < Box textAlign='center' mb={3} >
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '40px', md: '55px' } }}>Our Clients</Typography>
                 <Typography>Retail and Overseas  clients</Typography>
-            </Box>
+            </Box >
             {/*  */}
 
-            <Grid item m='30px 0' display='flex' justifyContent='space-evenly' width='100%' >
+            < Grid item m='30px 0' display='flex' justifyContent='space-evenly' width='100%' >
                 <img src='/assets/Adenwal jewellers.png' className='our-image' />
                 <img src='/assets/Digi-1.png' className='our-image' />
                 <img src='/assets/LG Hing.png' className='our-image' />
                 <img src='/assets/Milan.png' className='our-image' />
                 <img src='/assets/Roopkala.png' className='our-image roop-kala-img' />
 
-            </Grid>
+            </Grid >
             <Grid m='30px 0' item width='100%' display='flex' justifyContent='space-evenly'>
                 <img src='/assets/Roopmilan.png' className='our-image roopmilan-img' />
                 <img src='/assets/Saucy Affair.png' className='our-image' />

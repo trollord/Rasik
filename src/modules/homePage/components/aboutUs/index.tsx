@@ -5,7 +5,7 @@ import styles from "./styles.module.css"
 export function About() {
   return <>
 
-    <Grid container className={styles.frameParent} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' }, height: { xs: '92vh', md: '85vh' } }} id="about" >
+    <Grid container className={styles.frameParent} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' }, height: { xs: '92vh', md: '85vh' } }} id="about" bgcolor='#6792A0'>
       <Box className={styles.secondGrid} width="92vw" height="95vh" display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
         <Grid className={styles.aboutUs} >About Us</Grid>
         <Typography >Who are we?</Typography>

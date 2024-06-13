@@ -5,7 +5,7 @@
     font-family:sans-serif;
 }
 
-
+/* 
 .underline-link{
   position: relative;
   display: inline-block;
@@ -19,15 +19,41 @@
   bottom: 0;
   left: 0;
   background-color: #000; /* Optional: Match link color */
-  visibility: hidden;
+  /* visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
-}
+} */
 
-.underline-link:hover::after,
+/* .underline-link:hover::after,
 .underline-link.active::after {
   visibility: visible;
   transform: scaleX(1);
+}  */
+
+.underline-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.underline-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #000;
+  transition: width 0.3s;
+  left: 0;
+  bottom: -5px;
+}
+
+.underline-link:hover::after {
+  width: 100%;
+}
+
+.underline-link.active::after {
+  width: 100%;
 }
 
 .carousel{
