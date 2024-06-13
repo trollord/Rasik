@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styles from "./styles.module.css"
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useInView } from 'react-intersection-observer';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -35,6 +36,9 @@ function ContactUs() {
         console.log('FAILED...', err);
       });
   };
+  const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
   // console.log(isMobile);
@@ -42,7 +46,7 @@ function ContactUs() {
     
     <Grid  container width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
       
-      <Grid  width={isMobile?"80vw": isTablet?"35vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
+      <Grid className={`${leftInView ? styles.slideInFromLeft : ''}`} ref={leftRef} width={isMobile?"80vw": isTablet?"35vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <Box className={styles.frameWrapper}>
           <Box className={styles.frameGroup} width={isTablet?"35vw":"100%"}>
             <Box className={styles.notSureWhatYouNeedWrapper}>
@@ -55,7 +59,7 @@ function ContactUs() {
           </Box>
         </Box>
       </Grid>
-      <Grid container className={styles.formGrid} item md={7} display='flex' height={isMobile ? '50vh':'51vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <Grid container className={`${styles.formGrid} ${rightInView ? styles.slideInFromRight : ''}`} ref={rightRef} item md={7} display='flex' height={isMobile ? '50vh':'51vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <Box height="5vh" style={{display:'flex',gap:'10px'}}>
         
