@@ -5,6 +5,31 @@
     font-family:sans-serif;
 }
 
+
+.underline-link{
+  position: relative;
+  display: inline-block;
+}
+
+.underline-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Optional: Match link color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.underline-link:hover::after,
+.underline-link.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 .carousel{
     display: 'flex';
     flex-direction: "column";

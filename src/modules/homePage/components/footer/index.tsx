@@ -19,7 +19,7 @@ function Footer() {
     }, 100); // Adjust the timeout as needed
   };
   return (
-    <Grid container flexDirection='column' height='294px' bgcolor='#F1E5D1' justifyContent='center' sx={{ padding: '10px 70px' }}>
+    <Grid container flexDirection='column' height='294px' bgcolor='#F1E5D1' justifyContent='center' sx={{ padding: '10px 70px' }} id='footer'>
       <Grid container item justifyContent='space-evenly'>
         <Grid item >
           <img className={styles.whatsappImage20240516At1Icon} src={image} alt="logo" width={"70%"} height={"70%"} />

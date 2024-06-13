@@ -6,8 +6,10 @@ import { theme } from './theme';
 // import { ServicePage } from './modules/servicePage';
 import "./global.css";
 import { ServicePageWrapper } from './modules/servicePage/servicesWrapper';
+
 function App() {
   return (
+
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
@@ -18,6 +20,7 @@ function App() {
         </Routes>
       </Router>
     </ThemeProvider>
+
   );
 }
 
