@@ -35,7 +35,7 @@ const testimonials = [
 
 function Review() {
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
+  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
 
   return (
     <Grid container sx={{ height: { xs: '500px', md: '85vh' } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >

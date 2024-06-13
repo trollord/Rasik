@@ -40,7 +40,7 @@ function ContactUs() {
   const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
+  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   // console.log(isMobile);
   return (
     
