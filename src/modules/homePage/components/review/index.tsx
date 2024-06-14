@@ -35,7 +35,7 @@ const testimonials = [
 
 const Review: React.FC = () => {
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
+  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
 
   const [visible, setVisible] = useState(false);
 

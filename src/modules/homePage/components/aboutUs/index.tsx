@@ -1,11 +1,16 @@
 import Header from "../../../commonComponents/header/index.desktop";
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css"
+import { useInView } from 'react-intersection-observer';
 
 export function About() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return <>
 
-    <Grid container className={styles.frameParent} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' }, height: { xs: '92vh', md: '85vh' } }} id="about">
+    <Grid container ref={ref} className={`${styles.frameParent} ${inView ? styles.fadeIn : ''}`} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '5px', md: '40px' }, height: { xs: '92vh', md: '85vh' } }} id="about">
       <Box className={styles.secondGrid} width="92vw" height="95vh" display='flex' flexDirection='column' alignItems='center' justifyContent='center' >
         <Grid className={styles.aboutUs} >About Us</Grid>
         <Typography >Who are we?</Typography>

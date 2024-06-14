@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box !important;
-    font-family:sans-serif;
 }
 
 
@@ -92,17 +91,17 @@
   width: 100%;
 }
 
-.carousel{
-    display: 'flex';
-    flex-direction: "column";
-    gap:'10px';
-    height: 100% !important;
+.carousel {
+  display: 'flex';
+  flex-direction: "column";
+  gap: '10px';
+  height: 100% !important;
 
 }
 
 .css-1sjhuv5-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
 
-      top: 20px !important;
+  top: 20px !important;
 }
 
 
@@ -110,7 +109,7 @@
 @media only screen and (max-width: 600px) {
   .carousel .slide img.carousal-img-custom {
     /* height: 85vh !important; */
-    height: 500px !important;
+    height: auto !important;
     
   }
   
@@ -124,10 +123,11 @@
     height: 50px;
   }
 
-  .roop-kala-img{
+  .roop-kala-img {
     display: none;
-  } 
-  .roopmilan-img{
+  }
+
+  .roopmilan-img {
     display: none;
   }
 }
@@ -149,7 +149,7 @@
   .our-image{
     width: 180px;
     height: 80px;
-    
+
   }
 
   
@@ -163,19 +163,26 @@
 
 
 .carousel .control-dots .dot {
-    background: #A5A5A5 !important;  /* Change this to your desired color */
-    box-shadow:none !important;
-    margin: 0 4px !important;
-    /* margin-top: 30px !important; */
-  }
+  background: #A5A5A5 !important;
+  /* Change this to your desired color */
+  box-shadow: none !important;
+  margin: 0 4px !important;
+  /* margin-top: 30px !important; */
+}
 
-  .carousel .control-dots .dot.selected {
-    background: #282828;  /* Change this to your desired color for the selected dot */
-    box-shadow:none !important;
+.carousel .control-dots .dot.selected {
+  background: #282828;
+  /* Change this to your desired color for the selected dot */
+  box-shadow: none !important;
+  width: 30px;
+  border-radius: 20px;
 
-    width: 30px;
-    border-radius: 20px;
+}
 
-  }
 
- 
+
+
+.mobile-img {
+  object-fit: contain;
+  object-position: center;
+}
