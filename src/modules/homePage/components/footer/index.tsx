@@ -20,7 +20,7 @@ function Footer() {
     }, 100); // Adjust the timeout as needed
   };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1100px)', { noSsr: true });
+  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   return (
     <Grid container  flexDirection='column' height={isTablet?'25vh':'35vh'} bgcolor='#F1E5D1' justifyContent='center' sx={{padding:'10px 70px'}}>
         <Grid container item justifyContent='space-evenly'  gap="6px" width="90vw" sx={{ marginLeft: '0px' }}>
