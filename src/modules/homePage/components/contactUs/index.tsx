@@ -44,7 +44,7 @@ function ContactUs() {
   // console.log(isMobile);
   return (
     
-    <Grid  container width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
+    <Grid container id="contactUs" width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
       
       <Grid className={`${leftInView ? styles.slideInFromLeft : ''}`} ref={leftRef} width={isMobile?"80vw": isTablet?"35vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <Box className={styles.frameWrapper}>
