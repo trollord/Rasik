@@ -67,7 +67,7 @@ export function MobileHeader() {
 
             </Grid>
             <Grid item width={140} height={"60%"} xs={4} sx={{ paddingLeft: "10px !important" }}>
-                <img src="/image.png" alt="logo" width={"100%"} height={"100%"} />
+                <img src="/ras1-removebg-preview.svg" alt="logo" width={"100%"} height={"100%"} />
             </Grid>
 
 
