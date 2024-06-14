@@ -19,30 +19,52 @@
 
 }
 
-/* 
-.underline-link{
-  position: relative;
-  display: inline-block;
+
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.underline-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: #000; /* Optional: Match link color */
-  /* visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-} */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* .underline-link:hover::after,
-.underline-link.active::after {
-  visibility: visible;
-  transform: scaleX(1);
-}  */
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInFromLeft 2s ease-out forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInFromBottom 2s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInFromRight 2s ease-out forwards;
+}
 
 .underline-link {
   position: relative;
