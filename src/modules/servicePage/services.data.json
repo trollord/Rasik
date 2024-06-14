@@ -1,23 +1,43 @@
 {
     "printMedia": [
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png"
+        "/assets/printmedia/printmedia-1.jpg",
+        "/assets/printmedia/printmedia-2.jpg",
+        "/assets/printmedia/printmedia-3.jpg",
+        "/assets/printmedia/printmedia-4.jpg",
+        "/assets/printmedia/printmedia-5.jpg",
+        "/assets/printmedia/printmedia-6.jpg",
+        "/assets/printmedia/printmedia-7.jpg",
+        "/assets/printmedia/printmedia-8.jpg",
+        "/assets/printmedia/printmedia-9.jpg",
+        "/assets/printmedia/printmedia-10.jpg",
+        "/assets/printmedia/printmedia-11.jpg",
+        "/assets/printmedia/printmedia-12.jpg",
+        "/assets/printmedia/printmedia-13.jpg",
+        "/assets/printmedia/printmedia-14.jpg",
+        "/assets/printmedia/printmedia-15.jpg",
+        "/assets/printmedia/printmedia-16.jpg"
     ],
     "eCommerceSolution": [
         "/assets/amazon.png",
         "/assets/amazon.png"
     ],
     "radioFm": [
-        "/assets/amazon.png"
+        "/assets/radiofm/radiofm-1.png",
+        "/assets/radiofm/radiofm-2.png",
+        "/assets/radiofm/radiofm-3.png",
+        "/assets/radiofm/radiofm-4.png",
+        "/assets/radiofm/radiofm-5.png",
+        "/assets/radiofm/radiofm-6.png",
+        "/assets/radiofm/radiofm-7.png",
+        "/assets/radiofm/radiofm-8.png"
     ],
     "creative": [
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png"
+        "/assets/creative/creative-1.png",
+        "/assets/creative/creative-2.png",
+        "/assets/creative/creative-3.png",
+        "/assets/creative/creative-4.png",
+        "/assets/creative/creative-5.png",
+        "/assets/creative/creative-6.png"
     ],
     "digitalMarketing": [
         "/assets/amazon.png",

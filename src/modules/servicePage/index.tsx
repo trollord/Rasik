@@ -101,7 +101,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
                                 // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
                                 <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
                                     <Box sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040' >
-                                        <img src={path} width={"100%"} height="100%"></img>
+                                        <img src={path} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
                                     </Box>
                                 </Grid>
                             )
