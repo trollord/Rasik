@@ -105,7 +105,7 @@
 // export default DesktopHeader;
 
 import { useState, useEffect } from 'react';
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Box } from '@mui/material';
 import { Link, scroller, Events } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 import '../../../App.css';
@@ -116,6 +116,7 @@ export function DesktopHeader() {
     const sections = ['services', 'ourwork', 'testimonials', 'about', 'contactUs'];
 
     const navigateAndScroll = (path: string, section: string) => {
+        // console.log("yes");
         navigate(path);
         setTimeout(() => {
             scroller.scrollTo(section, {
@@ -179,9 +180,10 @@ export function DesktopHeader() {
                         {section.charAt(0).toUpperCase() + section.slice(1).replace(/([A-Z])/g, ' $1')}
                     </Link>
                 ))}
+                <Box>
+                    
                 <Link
-                    to="contactUs"
-                    onClick={() => navigateAndScroll('/', 'contactUs')}
+                    to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')}
                     spy={true}
                     smooth={true}
                     offset={-100}
@@ -210,6 +212,8 @@ export function DesktopHeader() {
                         Contact us
                     </Button>
                 </Link>
+                
+                </Box>
             </Grid>
         </Grid>
     );
