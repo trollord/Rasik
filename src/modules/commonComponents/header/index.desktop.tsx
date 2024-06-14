@@ -162,7 +162,7 @@ export function DesktopHeader() {
         <Grid container height="15vh" alignItems="center" justifyContent="center" direction="row" display="flex" pl={5} pr={3} columnSpacing={8} bgcolor="#fff" position="fixed" top="0" left="0" zIndex="100">
             <Grid item width='100%' height="82%" md={2} sx={{ paddingLeft: "90px !important" }} >
                 {/* <img src="/image.png" alt="logo" width="100%" height="100%" /> */}
-                <img src="/assets/headerlogo.svg" alt="logo" width="100%" height="100%" />
+                <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height="100%" />
             </Grid>
             <Grid item display="flex" justifyContent="space-around" alignItems="center" md={10} sx={{ display: { xs: 'none', md: 'flex' } }} >
                 {['services', 'ourwork', 'testimonials', 'about'].map((section) => (

@@ -42,7 +42,7 @@ function Review() {
       <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '40px' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
 
 
-      <Grid item sx={{ width: { xs: '90%', md: '70%' }, height: { sx: '220px', md: '300px' } }}>
+      <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }}>
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: '320px', padding: { xs: 'none', md: '5px' } }}>

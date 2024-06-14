@@ -1,29 +1,51 @@
 import { Grid, Typography, Box, Modal } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
+import '../../../../App.css';
+import { ourworkBg } from '../../../commonComponents/icons';
 
 import { useState, useRef, useContext } from 'react';
 
 
-const images = [
+const overseasImages = [
   {
-    img1: 'assets/logo.png',
-    img2: 'assets/logo.png'
+    img1: 'assets/overseas-1.png',
+    img2: 'assets/overseas-2.png'
 
   },
   {
-    img1: 'assets/logo.png',
-    img2: 'assets/logo.png'
+    img1: 'assets/overseas-3.png',
+    img2: 'assets/overseas-4.png'
 
   },
   {
-    img1: 'assets/logo.png',
-    img2: 'assets/logo.png'
+    img1: 'assets/overseas-5.png',
+    img2: 'assets/overseas-6.png'
 
   },
 
 ];
+
+const printClientImg = [
+  {
+    img1: 'assets/printwork-1.png',
+    img2: 'assets/printwork-2.png'
+
+  },
+  {
+    img1: 'assets/printwork-3.png',
+    img2: 'assets/printwork-4.png'
+
+  },
+  {
+    img1: 'assets/printwork-5.png',
+    img2: 'assets/printwork-6.png'
+
+  },
+
+];
+
+
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -53,7 +75,9 @@ function OurWork() {
 
 
   return (
-    <Grid sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'>
+    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'>
+
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -77,14 +101,14 @@ function OurWork() {
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
-              {images.map((img, index) => (
+              {printClientImg.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                    <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                   <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                    <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
               ))}
@@ -96,14 +120,14 @@ function OurWork() {
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
-              {images.map((img, index) => (
+              {overseasImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px' }} />
+                    <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                   <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img2} style={{ height: '100%', width: '120px', }} />
+                    <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
               ))}
@@ -116,14 +140,15 @@ function OurWork() {
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
-              {images.map((img, index) => (
+              {overseasImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                    <img src={img.img1} className='ourwork-img' style={{ height: '100%', }} />
+
                   </Box>
                   <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img1} style={{ height: '100%', width: '120px', }} />
+                    <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
               ))}
@@ -131,10 +156,10 @@ function OurWork() {
           </Box>
         </Grid>
 
-      </Grid>
+      </Grid >
 
 
-    </Grid>
+    </Grid >
   )
 }
 
