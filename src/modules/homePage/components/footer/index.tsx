@@ -5,7 +5,19 @@ import image from "./image.png"
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link, scroller } from "react-scroll";
 import { useNavigate } from 'react-router-dom';
+import { stateProvider } from "../../../../context";
+
 function Footer() {
+
+  const { dispatch } = stateProvider();
+
+  // const navigate = useNavigate();
+
+
+  const handleClick = (service: string) => {
+    navigate(`/services/${service}`)
+
+  }
   const navigate = useNavigate();
   const navigateAndScroll = (path: string, section: string) => {
 
@@ -30,16 +42,27 @@ function Footer() {
         
          <Grid item paddingTop="45px">
           <Typography variant="h5" className={styles.services}>Services</Typography>
-          <Typography className={styles.servicesFont}>Print media release</Typography>
-          {/* <Typography className={styles.servicesFont}>Outdoor media</Typography> */}
-          <Typography className={styles.servicesFont}>Creatives</Typography>
-          <Typography className={styles.servicesFont}>Radio FM</Typography>
+          <Box onClick={() => { handleClick('printMedia') }}>
+            <Typography className={styles.servicesFont}>Print media release</Typography>
+          </Box>
+          <Box onClick={() => { handleClick('creative') }}>
+            <Typography className={styles.servicesFont}>Creatives</Typography>
+          </Box>
+          <Box onClick={() => { handleClick('radioFm') }}>
+            <Typography className={styles.servicesFont}>Radio FM</Typography>
+          </Box>
          </Grid>
          
          <Grid item paddingTop="75px">
-          <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
-          <Typography className={styles.servicesFont}>Digital Marketing</Typography>
-          <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
+          <Box onClick={() => { handleClick('eCommerceSolution') }}>
+            <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
+          </Box>
+          <Box onClick={() => { handleClick('digitalMarketing') }}>
+            <Typography className={styles.servicesFont}>Digital Marketing</Typography>
+          </Box>
+          <Box onClick={() => { handleClick('socialMediaMarketing') }}>
+            <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
+          </Box>
         </Grid>
 
 
