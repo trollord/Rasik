@@ -87,7 +87,7 @@
 @media only screen and (max-width: 600px) {
   .carousel .slide img.carousal-img-custom {
     /* height: 85vh !important; */
-    height: 500px !important;
+    height: auto !important;
     
   }
   

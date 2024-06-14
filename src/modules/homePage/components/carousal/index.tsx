@@ -19,11 +19,11 @@ function Carasouel() {
                 </Box>
 
                 <Box>
-                    <img src="/assets/rasik/2.png" height='100%' className="carousal-img-custom" />
+                    <img src="/assets/rasik/2.png" height='100%' className="carousal-img-custom mobile-img" />
                 </Box>
 
                 <Box>
-                    <img src="/assets/rasik/3.png" height='100%' className="carousal-img-custom" />
+                    <img src="/assets/rasik/3.png" height='100%' className="carousal-img-custom mobile-img" />
                 </Box>
                 
             </Carousel>
