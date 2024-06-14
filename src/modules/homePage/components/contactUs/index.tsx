@@ -61,25 +61,25 @@ function ContactUs() {
       </Grid>
       <Grid container className={`${styles.formGrid} ${rightInView ? styles.slideInFromRight : ''}`} ref={rightRef} item md={7} display='flex' height={isMobile ? '50vh':'51vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
       <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
-      <Box height="5vh" style={{display:'flex',gap:'10px'}}>
+      <Box height="5vh" width="48vw" style={{display:'flex',gap:'10px'}}>
         
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',height:"100%",marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Last name*'style={{padding:'10px 15px',width:'50%',height:"100%",border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}} />
       </Box>
       
-      <Box height="5vh">
+      <Box height="5vh" width="48vw">
        
         <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
       </Box>
-      <Box height="5vh">
+      <Box height="5vh" width="48vw">
        
         <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Phone*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
       </Box>
-      <Box height="22vh">
+      <Box height="22vh" width="48vw">
         
         <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}} rows="8" cols="50"/>
       </Box>
-      <Box height="7vh">
+      <Box height="7vh" width="48vw">
         <button type="submit" style={{width:'100%',height:"70%",backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
       </Box>
     </form>
