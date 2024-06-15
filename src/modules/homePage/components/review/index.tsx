@@ -71,18 +71,18 @@ const Review: React.FC = () => {
 
 
   return (
-    <Grid container sx={{ height: { xs: '500px', md: '85vh' } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
-      <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '40px' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
+    <Grid container sx={{ height: { xs: '500px', md: '85vh' , backgroundColor:"#F0F8FF" } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
+      <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '2.5vw' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
 
 
-      <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }} >
+      <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }} pl="2.2vw">
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: '320px', padding: { xs: 'none', md: '5px' } }}>
-              <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark /></Box>
+              <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark width="2vw" height="2vw"/></Box>
 
-              <Typography sx={{ ...fadeStyles(0), fontSize: isMobile ? '15px' : isTablet ? '25px' : '32px', textAlign: 'left' }}>{testimonial.quote}</Typography>
-              <Typography sx={{ ...fadeStyles(200), fontWeight: '700', fontSize: { xs: '18px', md: '28px' }, textAlign: 'left', marginTop: '10px' }}>
+              <Typography sx={{ ...fadeStyles(0), fontSize: isMobile ? '15px' : isTablet ? '25px' : '1.9vw', textAlign: 'left' }}>{testimonial.quote}</Typography>
+              <Typography sx={{ ...fadeStyles(200), fontWeight: '700', fontSize: { xs: '18px', md: '1.9vw' }, textAlign: 'left', marginTop: '10px' }}>
                 {testimonial.author2? testimonial.author2+',' : ''} {testimonial.author}
               </Typography>
             </Box>

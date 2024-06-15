@@ -50,7 +50,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
       }}
     >
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8253260856993!2d144.95772691513995!3d-37.81674127975115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5770c6f26b3ff93!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1623939956722!5m2!1sen!2sau"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15089.175338429783!2d72.8340443!3d19.0067696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8d3693b12b%3A0x27cf82ad5efa9e9a!2sRasik%20Communications!5e0!3m2!1sen!2sin!4v1718456015635!5m2!1sen!2sin"
         style={{
           position: 'absolute',
           top: 0,
@@ -60,7 +60,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
           border: '0'
         }}
         
-        allowFullScreen=""
+        allowFullScreen="true"
         loading="lazy"
       ></iframe>
     </Box>

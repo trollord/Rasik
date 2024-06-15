@@ -10,7 +10,7 @@ function Carasouel() {
     return (
 
 
-        <Grid mt='15vh' sx={{ height: { xs: 'auto', md: '85vh' }, marginTop: { xs: '8vh', md: '15vh' } }} id='carasouel'>
+        <Grid  sx={{ height: { xs: 'auto', lg: '85vh' , sm: "auto" }, marginTop: { xs: '8vh', lg: '15vh' , sm: "8vh" } }} id='carasouel'>
 
             <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
                 
