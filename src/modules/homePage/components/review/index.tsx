@@ -7,29 +7,34 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { useEffect, useState } from 'react';
 const testimonials = [
   {
-    quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases.’’",
-    author: "Somaiya Group",
-
+    "quote": "“We have shared an enduring and endearing business relationship with Rasik – one that helped us believe in the power of advertising to achieve our corporate goals. They have been most cooperative, even when the chips were down.”",
+    "author": "Maruti Herbal",
+    "author2": "Jayesh Mehta"
   },
   {
-    quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases",
-    author: "Jane Smith",
-
+    "quote": "“An absolutely transparent agency that is genuinely interested in the growth of their clients. The advice given by them from time to time has helped us tremendously in overcoming most of our brand communication-related issues and contributed positively to our growth.”",
+    "author": "Ala Mode",
+    "author2": "Vasant Savla"
   },
   {
-    quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases",
-    author: "Jane Smith",
-
+    "quote": "“According to us, Rasik is unmatched when it comes to getting the best rates and best deals from publications. It is their forte, and they are real professionals in their work ethics and commitments. In our long association, we have felt most comfortable dealing with them.”",
+    "author": "Jarden Consumer Solution",
+    "author2": "Sandip Kumar"
   },
   {
-    quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases",
-    author: "Jane Smith",
-
+    "quote": "“Ours has been a very cordial and mutually rewarding association with Rasik for the past two decades. Their personal touch is what impressed us the most. They are highly approachable, readily adapt to change, and empathize with you in a manner that’s rare these days.”",
+    "author": "Digi-1",
+    "author2": "Amit Mulani"
   },
   {
-    quote: "An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach especially when it comes to media releases.",
-    author: "Bob Johnson",
-
+    "quote": "“Give it and forget it. That’s the kind of confidence we have in Rasik’s abilities when it comes to executing our ad releases. Best rates and promptness are what they are reputed for, and we’ve never been disappointed in all the years that we have worked with them.”",
+    "author": "ASMACS",
+    "author2": "Abhay Biswal"
+  },
+  {
+    "quote": "“An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach, especially when it comes to media releases.”",
+    "author": "Somaiya Group",
+    "author2": ""
   }
 ];
 
@@ -78,7 +83,7 @@ const Review: React.FC = () => {
 
               <Typography sx={{ ...fadeStyles(0), fontSize: isMobile ? '15px' : isTablet ? '25px' : '32px', textAlign: 'left' }}>{testimonial.quote}</Typography>
               <Typography sx={{ ...fadeStyles(200), fontWeight: '700', fontSize: { xs: '18px', md: '28px' }, textAlign: 'left', marginTop: '10px' }}>
-                {testimonial.author}
+                {testimonial.author2? testimonial.author2+',' : ''} {testimonial.author}
               </Typography>
             </Box>
           ))}
