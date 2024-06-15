@@ -165,19 +165,19 @@ export function DesktopHeader() {
                 <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height={"90%"} />
             </Grid>
             <Grid item display="flex" justifyContent="space-around" alignItems="center" lg={10} sm ={9} sx={{ display: { xs: 'none', lg: 'flex', sm: 'flex' } }} >
-                {['services', 'Our Work', 'testimonials', 'about Us'].map((section) => (
+                {[{ label:'services' , id:'services'}, { label:'Our Work' , id:'ourwork'}, { label:'testimonials' , id:'testimonials'}, { label:'About Us' , id:'about'}].map((section) => (
                     <Link
-                        key={section}
-                        to={section}
-                        onClick={() => navigateAndScroll('/', section)}
+                        key={section.id}
+                        to={section.id}
+                        onClick={() => navigateAndScroll('/', section.id)}
                         spy={true}
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className={`underline-link ${activeLink === section ? 'active' : ''}`}
+                        className={`underline-link ${activeLink === section.id ? 'active' : ''}`}
                         style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '1.6vw', fontWeight: '600', cursor: "pointer" }}
                     >
-                        {section.charAt(0).toUpperCase() + section.slice(1).replace(/([A-Z])/g, ' $1')}
+                        {section.label.charAt(0).toUpperCase() + section.label.slice(1).replace(/([A-Z])/g, ' $1')}
                     </Link>
                 ))}
                 <Box>
