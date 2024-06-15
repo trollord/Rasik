@@ -1,5 +1,4 @@
 import { Box, Grid, Typography } from "@mui/material";
-import GoogleMapReact from 'google-map-react';
 import styles from "./styles.module.css"
 import useMediaQuery from '@mui/material/useMediaQuery';
 function MeetUs() {
@@ -17,11 +16,6 @@ function MeetUs() {
 
 
         <Grid container item md={6} height={isMobile ? '25vh' : '40vh'} width="55vw" borderRadius="10px" overflow="hidden">
-
-
-       
-
-
 
 <Box
       sx={{
@@ -43,8 +37,7 @@ function MeetUs() {
           height: '100%',
           border: '0'
         }}
-        
-        allowFullScreen="true"
+        allowFullScreen={true}
         loading="lazy"
       ></iframe>
     </Box>

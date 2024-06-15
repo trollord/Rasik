@@ -44,7 +44,7 @@ function Footer() {
           <Grid item paddingTop="15px">
             <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600,fontSize:"4vh" }}>Services</Typography>
             <Box paddingTop="1vh" onClick={() => { handleClick('printMedia') }}>
-              <Typography className={styles.servicesFont} >Print media release</Typography>
+              <Typography className={styles.servicesFont} >Print Media Release</Typography>
             </Box>
             <Box onClick={() => { handleClick('digitalMarketing') }}>
               <Typography className={styles.servicesFont}>Digital Marketing</Typography>
@@ -53,7 +53,7 @@ function Footer() {
               <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
             </Box>
             <Box onClick={() => { handleClick('eCommerceSolution') }}>
-              <Typography className={styles.servicesFont}>E-commerce solutions</Typography>
+              <Typography className={styles.servicesFont}>E-commerce Solutions</Typography>
             </Box>
             <Box onClick={() => { handleClick('creative') }}>
               <Typography className={styles.servicesFont}>Creatives</Typography>
@@ -70,10 +70,10 @@ function Footer() {
           <Grid item display='flex' flexDirection='column' paddingTop="15px">
             <Typography paddingBottom="10px" variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontSize:"4vh",fontWeight: 600 }}>Company</Typography>
 
-            <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >About us</Link>
+            <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >About Us</Link>
             <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
-            <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
-            <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact us</Link>
+            <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our Work</Link>
+            <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact Us</Link>
 
 
           </Grid>
