@@ -77,7 +77,7 @@ function FooterMobile() {
         //     </Grid>
 
         // </Grid>
-        <Grid container flexDirection='row' height='30vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' paddingTop="20px">
+        <Grid container flexDirection='row' height='34vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' paddingTop="20px">
             <Grid container className={styles.firstGrid} flexDirection="row" width="30vw">
                 <Box flexDirection="column">
                     <Grid item width={350} height={"30%"} xs={4} paddingLeft="0px">

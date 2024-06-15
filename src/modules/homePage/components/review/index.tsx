@@ -43,7 +43,7 @@ function Review() {
 
 
       <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }}>
-        <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
+        <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} transitionTime={1000}>
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: '320px', padding: { xs: 'none', md: '5px' } }}>
               <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark /></Box>
