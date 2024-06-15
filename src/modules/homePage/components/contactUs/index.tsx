@@ -38,29 +38,29 @@ function ContactUs() {
   };
   const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
+  // className={`${leftInView ? styles.slideInFromLeft : ''}`}
+  // className={`${styles.formGrid} ${rightInView ? styles.slideInFromRight : ''}`}
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   // console.log(isMobile);
   return (
     
-    <Grid container id="contactUs" width='90%' spacing={2} m='auto' height='85vh' sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
+    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height='85vh' justifyContent="center" alignItems="center" sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
       
-      <Grid className={`${leftInView ? styles.slideInFromLeft : ''}`} ref={leftRef} width={isMobile?"80vw": isTablet?"35vw":"477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
+      <Grid  ref={leftRef}   width={isMobile?"80vw": isTablet?"35vw":"477px"}  sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <Box className={styles.frameWrapper}>
           <Box className={styles.frameGroup} width={isTablet?"35vw":"100%"}>
             <Box className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
             </Box>
-            <Typography className={styles.ourTeamAt} width={isTablet?"35vw":"100%"} >
-              Our team at Rasik Communications will be more than happy to listen
-              to you and suggest every idea you haven’t considered.
+            <Typography className={styles.ourTeamAt} width={isTablet?"35vw":"100%"} fontSize="3vh" >
+              Drop your message and our team is happy to help!
             </Typography>
           </Box>
         </Box>
       </Grid>
-      <Grid container className={`${styles.formGrid} ${rightInView ? styles.slideInFromRight : ''}`} ref={rightRef} item md={7} display='flex' height={isMobile ? '50vh':'51vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
-      <form onSubmit={handleSubmit} style={{width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
+      <Grid container   ref={rightRef} item md={7} display='flex' height={isMobile ? '50vh':'53vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <form onSubmit={handleSubmit} style={{paddingLeft:'0.3vw',paddingTop:"0.3vw",paddingBottom:"0.3vw",  width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
       <Box height="5vh" style={{display:'flex',gap:'10px'}}>
         
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',height:"100%",marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>

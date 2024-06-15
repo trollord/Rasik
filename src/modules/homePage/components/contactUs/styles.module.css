@@ -11,6 +11,10 @@
   max-width: 100%;
  
 }
+
+.mainGrid{
+  background-color: #fffde7;
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
