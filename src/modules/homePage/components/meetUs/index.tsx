@@ -13,7 +13,7 @@ function MeetUs() {
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 
-      <Grid spacing={2} p={2} width='75vw' bgcolor='#EADBC8' height={isMobile ? '86vh' : '47vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '86vh' : '47vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
         <Grid container item md={6} height={isMobile ? '25vh' : '40vh'} width="55vw" borderRadius="10px" overflow="hidden">
