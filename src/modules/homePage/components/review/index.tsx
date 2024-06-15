@@ -79,7 +79,7 @@ const Review: React.FC = () => {
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: '320px', padding: { xs: 'none', md: '5px' } }}>
-              <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark width="2vw" height="2vw"/></Box>
+              <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark /></Box>
 
               <Typography sx={{ ...fadeStyles(0), fontSize: isMobile ? '15px' : isTablet ? '25px' : '1.9vw', textAlign: 'left' }}>{testimonial.quote}</Typography>
               <Typography sx={{ ...fadeStyles(200), fontWeight: '700', fontSize: { xs: '18px', md: '1.9vw' }, textAlign: 'left', marginTop: '10px' }}>
