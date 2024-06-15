@@ -32,13 +32,16 @@ function Footer() {
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   return (
-    <Grid container  flexDirection='column' height={isTablet?'25vh':'40vh'} bgcolor='#F1E5D1' justifyContent='center' sx={{padding:'10px 0px'}}>
+    <Grid container >
+
+    
+    <Grid container  flexDirection='column' height={isTablet?'25vh':'35vh'} bgcolor='#F1E5D1' justifyContent='center' sx={{padding:'10px 0px'}}>
         <Grid container item className={styles.mainGrid} justifyContent='space-evenly'  gap="20px" width="90vw" sx={{ marginLeft: '50px' }}>
          <Grid item paddingTop="1vh" > 
             <img className={styles.whatsappImage20240516At1Icon} src={image}  alt="logo" width={"70%"} height={"70%"}/>
          </Grid>
         
-          <Grid item paddingTop="45px">
+          <Grid item paddingTop="15px">
             <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600,fontSize:"4vh" }}>Services</Typography>
             <Box paddingTop="1vh" onClick={() => { handleClick('printMedia') }}>
               <Typography className={styles.servicesFont} >Print media release</Typography>
@@ -64,7 +67,7 @@ function Footer() {
           </Grid>
 
 
-          <Grid item display='flex' flexDirection='column' paddingTop="45px">
+          <Grid item display='flex' flexDirection='column' paddingTop="15px">
             <Typography paddingBottom="10px" variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontSize:"4vh",fontWeight: 600 }}>Company</Typography>
 
             <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >About us</Link>
@@ -76,7 +79,7 @@ function Footer() {
           </Grid>
 
          
-         <Grid paddingTop="45px" flexDirection="column">
+         <Grid paddingTop="15px" flexDirection="column">
           <Grid>
             <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"4vh" }}>Connect With Us</Typography>
             <Box style={{ marginTop: '10px' }}>
@@ -102,7 +105,7 @@ function Footer() {
 
           </Grid>
          </Grid>
-         
+
          {/* {!isMobile && !isTablet && <Grid>
          <Box className={styles.rasikCommunicationsAllRighWrapper}>
             <Box className={styles.rasikCommunicationsAll} >
@@ -111,7 +114,11 @@ function Footer() {
           </Box>
          </Grid>} */}
           
-          <Grid paddingTop="20px" justifyContent="center" textAlign="center">
+        </Grid>
+        
+      </Grid>
+
+      <Grid  paddingTop="0px" justifyContent="center" textAlign="center">
             <Box className={styles.rasikCommunicationsAllRighWrapper} width="100vw" >
                 <Grid className={styles.rasikCommunicationsAll} justifyContent="center" paddingLeft="20vw" textAlign="center"  >
 
@@ -120,10 +127,7 @@ function Footer() {
                 </Grid>
               </Box>
           </Grid>
-        </Grid>
-        
       </Grid>
-
   )
 }
 
