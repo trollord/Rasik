@@ -2,10 +2,9 @@ import { Grid, Typography, Box, Modal } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../../../../App.css';
-import { ourworkBg } from '../../../commonComponents/icons';
 
-import { useState, useRef, useContext } from 'react';
 
+import { useState, useEffect } from 'react';
 
 const overseasImages = [
   {
@@ -61,17 +60,65 @@ const style = {
   borderRadius: '10px'
 };
 
+
+
+
+
+
+
+
+
 function OurWork() {
 
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [visibleFirst, setVisibleFirst] = useState(false);
+  const [visibleSecond, setVisibleSecond] = useState(false);
+  const [visibleThird, setVisibleThird] = useState(false);
   const handleOpen = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setOpen(true);
   };
   const handleClose = () => setOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const firstCarousel = document.getElementById('first-carousel');
+      const secondCarousel = document.getElementById('second-carousel');
+      const thirdCarousel = document.getElementById('third-carousel');
 
+      if (firstCarousel) {
+        const rect = firstCarousel.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+          console.log('First carousel visible');
+          setVisibleFirst(true);
+        }
+      }
+
+      if (secondCarousel) {
+        const rect = secondCarousel.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+          console.log('Second carousel visible');
+          setVisibleSecond(true);
+        }
+      }
+
+      if (thirdCarousel) {
+        const rect = thirdCarousel.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+          console.log('Third carousel visible');
+          setVisibleThird(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   return (
@@ -96,8 +143,10 @@ function OurWork() {
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
       <Grid container item sx={{ height: { xs: '90%', md: '82%' } }} >
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
+
+        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
+
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
@@ -114,8 +163,12 @@ function OurWork() {
               ))}
             </Carousel>
           </Box>
+
         </Grid>
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
+
+
+
+        <Grid item id="second-carousel" className={visibleSecond ? 'fade-in-bottom' : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
@@ -135,7 +188,9 @@ function OurWork() {
           </Box>
         </Grid>
 
-        <Grid item md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
+
+
+        <Grid item className={visibleThird ? 'fade-in-right' : ''} id="third-carousel" md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
