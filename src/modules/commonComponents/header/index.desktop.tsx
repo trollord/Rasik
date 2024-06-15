@@ -165,7 +165,7 @@ export function DesktopHeader() {
                 <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height={"90%"} />
             </Grid>
             <Grid item display="flex" justifyContent="space-around" alignItems="center" lg={10} sm ={9} sx={{ display: { xs: 'none', lg: 'flex', sm: 'flex' } }} >
-                {['services', 'ourwork', 'testimonials', 'about'].map((section) => (
+                {['services', 'Our Work', 'testimonials', 'about Us'].map((section) => (
                     <Link
                         key={section}
                         to={section}
@@ -215,7 +215,7 @@ export function DesktopHeader() {
                             textTransform: 'none'
                         }}
                     >
-                        Contact us
+                        Contact Us
                     </Button>
                 </Link>
                 
