@@ -5,7 +5,7 @@ import '../../../../App.css';
 function OurClients() {
     return (
 
-        <Grid container display='flex' alignItems='center' flexDirection='column' m='40px 0 0' sx={{ height: { xs: '50vh', md: '85vh' }, justifyContent: { xs: 'start', md: 'center' } }} id='client' >
+        <Grid container display='flex' alignItems='center' flexDirection='column'  sx={{ height: { xs: '50vh', md: '85vh'}, justifyContent: { xs: 'start', md: 'center' },margin:{md:'40px 0 0'} }} id='client' >
             < Box textAlign='center' mb={3} >
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '40px', md: '55px' } }}>Our Clients</Typography>
                 <Typography>Retail and Overseas  clients</Typography>

@@ -144,7 +144,7 @@ function OurWork() {
       {/* height of img carausl img grid  on desktop is 82% */}
       <Grid container item sx={{ height: { xs: '90%', md: '82%' } }} >
 
-        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
+        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6}  sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
