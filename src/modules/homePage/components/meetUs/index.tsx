@@ -119,7 +119,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
               <Typography> Phone : +91-9821028256</Typography>
             </Box>
             <Box>
-              <Typography>Mrs. Twinkle shah</Typography>
+              <Typography>Ms. Twinkle Shah</Typography>
               <Typography>Phone : +91-8898827588</Typography>
             </Box>
           </Box>
