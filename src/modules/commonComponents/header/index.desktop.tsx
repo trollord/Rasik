@@ -186,7 +186,7 @@ export function DesktopHeader() {
                     to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={0}
                     duration={500}
 
                     style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
