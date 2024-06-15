@@ -71,7 +71,7 @@ const Review: React.FC = () => {
 
 
   return (
-    <Grid container sx={{ height: { xs: '500px', md: '85vh' , backgroundColor:"#F0F8FF" } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
+    <Grid container sx={{ height: { xs: '500px', md: '85vh'  } }} display='flex' flexDirection='column' alignItems='center' justifyContent='center' id='testimonials' >
       <Grid item><Typography sx={{ fontWeight: '900', fontSize: { xs: '23px', md: '2.5vw' }, marginBottom: { xs: '20px', md: 'none' } }}>What our clients have to say</Typography></Grid>
 
 
