@@ -26,7 +26,8 @@ export function About() {
           <span
             className={styles.withALegacy}
           >
-            {`With over six decades of accomplishments and progress, Rasik proudly upholds our founding principles of `} <span style={{ textDecoration: 'underline', fontWeight: 'bold' }}>integrity, service, and commitment.</span>{` By blending traditional wisdom with modern thinking and ethical conduct, we have earned an impeccable reputation among our clients and associates. This trust and support have helped us thrive, even during challenging times.  `}
+            {/* `} <span style={{ textDecoration: 'underline', fontWeight: 'bold' }}>integrity, service, and commitment.</span>{` */}
+            {`With over six decades of accomplishments and progress, Rasik proudly upholds our founding principles of integrity, service, and commitment. By blending traditional wisdom with modern thinking and ethical conduct, we have earned an impeccable reputation among our clients and associates. This trust and support have helped us thrive, even during challenging times.  `}
             </span>
           <span className={styles.blankLine1}>&nbsp;</span>
         </Typography>

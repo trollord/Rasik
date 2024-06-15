@@ -14,12 +14,12 @@ function MeetUs() {
   const isMobile = useMediaQuery('(max-width:600px)');
   console.log(isMobile);
   return (
-    <div className={styles.frameParent} id="meetus">
-      <div className={styles.meetUsWrapper}>
+    <Box className={styles.frameParent} id="meetus">
+      <Box className={styles.meetUsWrapper}>
         <h1 className={styles.meetUs}>Meet Us</h1>
-      </div>
+      </Box>
 
-      <Grid spacing={2} p={2} width='75vw' bgcolor='#EADBC8' height={isMobile ? '86vh' : '47vh'} m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} width='75vw' bgcolor='#EADBC8' height={isMobile ? '86vh' : '47vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
         <Grid container item md={6} height={isMobile ? '25vh' : '40vh'} width="55vw" borderRadius="10px" overflow="hidden">
@@ -59,20 +59,21 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
           height: '100%',
           border: '0'
         }}
+        
         allowFullScreen=""
         loading="lazy"
       ></iframe>
     </Box>
 
         </Grid>
-        <Grid item md={3} >
-          <div>
-            <Typography variant="h5" >Office</Typography>
-            <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W)
+        <Grid container item md={3} >
+          <Box flexDirection="column" >
+            <Typography fontWeight="600" variant="h5" >Office</Typography>
+            <Typography>109, Prime Plaza, J. V. Patel ITI Compound,Opp. Prabhadevi Railway Station, Prabhadevi Station (W)
               Mumbai- 400 013.</Typography>
-          </div>
-          <div>
-            <Typography variant="h5">Email</Typography>
+          </Box>
+          <Box>
+            <Typography fontWeight="600" variant="h5">Email</Typography>
             {/* <Typography>109, Prime Plaza, J. V. Patel IT Compound,Opp. Prabhadevi Railway Station, Prabhadevi (W) 
                  Mumbai- 400 013.</Typography> */}
             <p className={styles.rasikads43gmailcomPrashant}>
@@ -84,52 +85,50 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                   href="mailto:rasikads43@gmail.com"
                   target="_blank"
                 >
-                  <span>
-                    <span className={styles.rasikads43gmailcom1}>
+                    <Typography className={styles.rasikads43gmailcom1}>
                       rasikads43@gmail.com
-                    </span>
-                  </span>
+                    </Typography>
+
                 </a>
               </Grid>
               <Grid className={styles.prashantEmail}>
                 <a className={styles.rasikads43gmailcom}
                   href="mailto:prashant@rasikcommunications.com"
-                  target="_blank">
-                  <span>
-                    &nbsp;
-                    <span className={styles.prashantrasikcommunicationsc}>
+                  target="_blank"
+                  >
+                    <Typography className={styles.prashantrasikcommunicationsc}>
                       prashant@rasikcommunications.com
-                    </span>
-                  </span>
+                    </Typography>
+                  
                 </a>
               </Grid>
             </p>
-          </div>
+          </Box>
         </Grid>
         <Grid container item md={3} justifyContent='left' flexDirection='column'>
 
-          <Typography variant="h5">Contacts</Typography>
+          <Typography fontWeight="600" variant="h5">Contacts</Typography>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }}>
-            <div>
+          <Box style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }}>
+            <Box>
               <Typography>Mr. Prashant Shah</Typography>
-              <Typography> Cell : +91-9768128256</Typography>
-            </div>
-            <div>
+              <Typography> Phone : +91-9768128256</Typography>
+            </Box>
+            <Box>
               <Typography>Mr. Parth Shah</Typography>
-              <Typography> Cell : +91-9821028256</Typography>
-            </div>
-            <div>
-              <Typography>Mr. Twinkle shah</Typography>
-              <Typography>Cell : +91-8898827588</Typography>
-            </div>
-          </div>
+              <Typography> Phone : +91-9821028256</Typography>
+            </Box>
+            <Box>
+              <Typography>Mrs. Twinkle shah</Typography>
+              <Typography>Phone : +91-8898827588</Typography>
+            </Box>
+          </Box>
         </Grid>
         {/* <Grid height = {isMobile?"50vh":"170px"} width={isMobile?"61vw":"496.25px"}>        
-          <div className={styles.frameWrapper} >
-            <div className={styles.frameGroup}>
-              <div className={styles.office109PrimePlazaJVParent}>
-                <div className={styles.office109PrimeContainer}>
+          <Box className={styles.frameWrapper} >
+            <Box className={styles.frameGroup}>
+              <Box className={styles.office109PrimePlazaJVParent}>
+                <Box className={styles.office109PrimeContainer}>
                   <p className={styles.office}>
                     <b>OFFICE</b>
                   </p>
@@ -157,9 +156,9 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                       <span className={styles.blankLine3}>&nbsp;</span>
                     </span>
                   </p>
-                </div>
-                <div className={styles.eMailRasikads43gmailcomPrWrapper}>
-                  <div className={styles.eMailRasikads43gmailcomPr}>
+                </Box>
+                <Box className={styles.eMailRasikads43gmailcomPrWrapper}>
+                  <Box className={styles.eMailRasikads43gmailcomPr}>
                     <Grid container height="5vh" width="40vw">
 
                     
@@ -202,10 +201,10 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                     <p className={styles.blankLine5}>
                       <span>&nbsp;</span>
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.contactsMrPrashantContainer}>
+                  </Box>
+                </Box>
+              </Box>
+              <Box className={styles.contactsMrPrashantContainer}>
                 <p className={styles.contacts}>
                   <b>Contacts</b>
                 </p>
@@ -285,17 +284,17 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                     <span className={styles.blankLine20}>&nbsp;</span>
                   </span>
                 </p>
-              </div>
-            </div>
-          </div>
+              </Box>
+            </Box>
+          </Box>
         </Grid> */}
 
 
       </Grid>
 
       {/* </Grid> */}
-      <div style={{ height: 20 }} />
-    </div>
+      <Box style={{ height: 20 }} />
+    </Box>
   )
 }
 
