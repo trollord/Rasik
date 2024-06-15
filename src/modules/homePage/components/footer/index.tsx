@@ -118,13 +118,13 @@ function Footer() {
         
       </Grid>
 
-      <Grid  paddingTop="0px" justifyContent="center" textAlign="center">
-            <Box className={styles.rasikCommunicationsAllRighWrapper} width="100vw" >
-                <Grid className={styles.rasikCommunicationsAll} justifyContent="center" paddingLeft="20vw" textAlign="center"  >
+      <Grid display="flex" justifyContent="center" direction={"column"}  width="100vw" >
+            <Box className={styles.rasikCommunicationsAllRighWrapper2} height="5vh" display={"flex"} flexDirection={"column"} justifyContent="center" textAlign="center" >
+                <Typography className={styles.rasikCommunicationsAll}   >
 
                   ©2024 Rasik Communications. All Rights Reserved 
 
-                </Grid>
+                </Typography>
               </Box>
           </Grid>
       </Grid>
