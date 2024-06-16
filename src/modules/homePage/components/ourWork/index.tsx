@@ -153,12 +153,12 @@ function OurWork() {
       {/* height of our work heading on desktop is 18% */}
       <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '10px', md: '0' } }} display="flex" alignItems="center" justifyContent="flex-start" pt={2} flexDirection="column" width="100%">
         <Typography variant='h4' style={{ fontWeight: '700' }} textAlign='center'>Our Work</Typography>
-        <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography>
+        {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
       <Grid container item sx={{ height: { xs: '90%', md: '82%' } }} >
 
-        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
+        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6}  sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}

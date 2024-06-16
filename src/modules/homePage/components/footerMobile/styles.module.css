@@ -6,8 +6,15 @@
     display: none;
     max-width: 100%;
   }
-  .firstGrid{
-    
+  .rasikCommunicationsAllRighWrapper2 {
+    background-color: #000;
+    font-size: var(--font-size-xl);
+    font-family: 'Inter', sans-serif;
+  }
+  .rasikCommunicationsAll {
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
   }
   .whatsappImage20240516At1Icon {
     height: 15vh;

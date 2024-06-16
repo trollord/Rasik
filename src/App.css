@@ -120,29 +120,34 @@
 
 
 @media only screen and (max-width: 600px) {
-  .carousel .slide img.carousal-img-custom {
-    /* height: 85vh !important; */
-    height: auto !important;
-    
-  }
+.carousel .slide img.carousal-img-custom {
+  /* height: 85vh !important; */
+  height: auto !important;
   
-   .ourwork-img{
-    width: 100%;
-    border-radius: 10px;
-  } 
+}
 
-  .our-image{
-    width: 70px;
-    height: 50px;
-  }
+ .ourwork-img{
+  width: 100%;
+  border-radius: 10px;
+} 
 
-  .roop-kala-img {
-    display: none;
-  }
+.our-image{
+  width: 70px;
+  height: 50px;
+}
 
-  .roopmilan-img {
-    display: none;
-  } 
+.roop-kala-img {
+  display: none;
+}
+
+.roopmilan-img {
+  display: none;
+}
+
+.mobile-img {
+object-fit: contain;
+object-position: center;
+}
 }
 
 
@@ -192,10 +197,3 @@
 
 }
 
-
-
-
-.mobile-img {
-  object-fit: contain;
-  object-position: center;
-}

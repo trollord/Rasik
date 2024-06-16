@@ -159,25 +159,25 @@ export function DesktopHeader() {
         };
     }, []);
     return (
-        <Grid container height="15vh" alignItems="center" justifyContent="center" direction="row" display="flex" pl={5} pr={3} columnSpacing={8} bgcolor="#fff" position="fixed" top="0" left="0" zIndex="100">
-            <Grid item width='100%' height="82%" md={2} sx={{ paddingLeft: "90px !important" }} >
+        <Grid container sx={{height: {sm:'8vh',lg:'15vh'}}} alignItems="center" justifyContent="center" direction="row" display="flex" pl={5} pr={3} columnSpacing={8} bgcolor="#fff" position="fixed" top="0" left="0" zIndex="100">
+            <Grid item  height="82%" lg={2} sm={3} sx={{ paddingLeft: "40px !important" }}>
                 {/* <img src="/image.png" alt="logo" width="100%" height="100%" /> */}
-                <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height="100%" />
+                <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height={"90%"} />
             </Grid>
-            <Grid item display="flex" justifyContent="space-around" alignItems="center" md={10} sx={{ display: { xs: 'none', md: 'flex' } }} >
-                {['services', 'ourwork', 'testimonials', 'about'].map((section) => (
+            <Grid item display="flex" justifyContent="space-around" alignItems="center" lg={10} sm ={9} sx={{ display: { xs: 'none', lg: 'flex', sm: 'flex' } }} >
+                {[{ label:'services' , id:'services'}, { label:'Our Work' , id:'ourwork'}, { label:'testimonials' , id:'testimonials'}, { label:'About Us' , id:'about'}].map((section) => (
                     <Link
-                        key={section}
-                        to={section}
-                        onClick={() => navigateAndScroll('/', section)}
+                        key={section.id}
+                        to={section.id}
+                        onClick={() => navigateAndScroll('/', section.id)}
                         spy={true}
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className={`underline-link ${activeLink === section ? 'active' : ''}`}
-                        style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
+                        className={`underline-link ${activeLink === section.id ? 'active' : ''}`}
+                        style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '1.6vw', fontWeight: '600', cursor: "pointer" }}
                     >
-                        {section.charAt(0).toUpperCase() + section.slice(1).replace(/([A-Z])/g, ' $1')}
+                        {section.label.charAt(0).toUpperCase() + section.label.slice(1).replace(/([A-Z])/g, ' $1')}
                     </Link>
                 ))}
                 <Box>
@@ -186,7 +186,7 @@ export function DesktopHeader() {
                     to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={0}
                     duration={500}
 
                     style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
@@ -196,11 +196,17 @@ export function DesktopHeader() {
                             fontWeight: '600',
                             fontFamily: 'inter',
                             backgroundColor: '#EB3335',
-                            width: '169px',
-                            height: '48px',
+                            width: {
+                                sm: '12.5vw',
+                                lg: '11vw',
+                            },
+                            height: {
+                                sm: '3.5vh',
+                                lg: '7vh',
+                            },
                             borderRadius: '10px',
                             boxShadow: '0px 4px 4px 0px #00000040',
-                            fontSize: '22px',
+                            fontSize: '1.6vw',
                             '&:hover': {
                                 color: '#000',
                                 backgroundColor: '#EB3335'
@@ -209,7 +215,7 @@ export function DesktopHeader() {
                             textTransform: 'none'
                         }}
                     >
-                        Contact us
+                        Contact Us
                     </Button>
                 </Link>
                 
