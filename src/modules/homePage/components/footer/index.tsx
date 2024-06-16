@@ -126,7 +126,7 @@ function Footer() {
 
                 </Typography>
               </Box>
-          </Grid>
+        </Grid>
       </Grid>
   )
 }

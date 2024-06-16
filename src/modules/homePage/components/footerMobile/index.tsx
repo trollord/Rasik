@@ -26,8 +26,9 @@ function FooterMobile() {
         }, 100); // Adjust the timeout as needed
     };
     return (
+        <Grid>
         <Grid container flexDirection='column' height='60vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' >
-            <Grid container  height="40vw" flexDirection="row" width="100vw" paddingTop="1vh">
+            <Grid container  height="40vw" flexDirection="row" width="100vw" paddingTop="2vh">
                 {/* <Box flexDirection="column">
                     <Grid item width={350} height={"30%"} xs={4} paddingLeft="0px">
                         <img src="/imagenew.png" alt="logo" width={"120%"} height={"100%"} />
@@ -111,6 +112,16 @@ function FooterMobile() {
                 </Grid>
 
             
+        </Grid>
+        <Grid display="flex" justifyContent="center" direction={"column"}  width="100vw" >
+            <Box className={styles.rasikCommunicationsAllRighWrapper2} height="5vh" display={"flex"} flexDirection={"column"} justifyContent="center" textAlign="center" >
+                <Typography className={styles.rasikCommunicationsAll}   >
+
+                ©2024 Rasik Communications. All Rights Reserved 
+
+                </Typography>
+            </Box>
+        </Grid>
         </Grid>
     )
 }
