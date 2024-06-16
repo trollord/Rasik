@@ -27,7 +27,7 @@ function FooterMobile() {
     };
     return (
         <Grid container flexDirection='column' height='60vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' >
-            <Grid container  height="40vw" flexDirection="row" width="100vw">
+            <Grid container  height="40vw" flexDirection="row" width="100vw" paddingTop="1vh">
                 {/* <Box flexDirection="column">
                     <Grid item width={350} height={"30%"} xs={4} paddingLeft="0px">
                         <img src="/imagenew.png" alt="logo" width={"120%"} height={"100%"} />
@@ -46,7 +46,7 @@ function FooterMobile() {
                         </Box>
                     </Grid>
                 </Box> */}
-                <Grid container width="50vw"  paddingLeft="30px" flexDirection='column'>
+                <Grid container width="50vw"  paddingLeft="9vw" flexDirection='column'>
                     <Grid item>
                         <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Services</Typography>
                         <Box onClick={() => { handleClick('printMedia') }}>
@@ -78,7 +78,7 @@ function FooterMobile() {
                 </Grid>
 
             </Grid>
-            <Grid height="40vw" container width="100vw"  paddingLeft="30px" flexDirection='row' paddingTop="6vh">
+            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="7vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
                     <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh" }}>
@@ -97,7 +97,7 @@ function FooterMobile() {
                                 <InstaGram />
                             </a>
 
-                            <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '25px' }}>
+                            <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '3vw' }}>
                                 <LinkedInIcon />
                             </a>
 
