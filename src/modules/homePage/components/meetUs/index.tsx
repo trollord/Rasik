@@ -85,7 +85,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                   href="mailto:rasikads43@gmail.com"
                   target="_blank"
                 >
-                    <Typography className={styles.rasikads43gmailcom1}>
+                    <Typography className={styles.rasikads43gmailcom1} fontSize="14px">
                       rasikads43@gmail.com
                     </Typography>
 
@@ -96,7 +96,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60313.62604998036!2d7
                   href="mailto:prashant@rasikcommunications.com"
                   target="_blank"
                   >
-                    <Typography className={styles.prashantrasikcommunicationsc}>
+                    <Typography className={styles.prashantrasikcommunicationsc} fontSize="14px">
                       prashant@rasikcommunications.com
                     </Typography>
                   
