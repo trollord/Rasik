@@ -5,6 +5,7 @@ import { QuotationMark } from "../../../commonComponents/icons";
 import '../../../../App.css'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { useEffect, useState } from 'react';
+
 const testimonials = [
   {
     "quote": "“We have shared an enduring and endearing business relationship with Rasik – one that helped us believe in the power of advertising to achieve our corporate goals. They have been most cooperative, even when the chips were down.”",
@@ -76,7 +77,7 @@ const Review: React.FC = () => {
 
 
       <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }} pl="2.2vw">
-        <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
+        <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={3000} transitionTime={2000} >
           {testimonials.map((testimonial, index) => (
             <Box key={index} sx={{ height: { xs: '28vh', md: '320px' }, padding: { xs: 'none', md: '5px' } }}>
               <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark /></Box>
