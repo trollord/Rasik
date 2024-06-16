@@ -73,7 +73,7 @@ function OurServices() {
 
       <Grid item md={5}  display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>
         <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '24px' } }}>Our Services</Typography>
-        <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}>At Rasik Communications, when you entrust your work to us, it’s all about building a bond. A bond of trust. A bond of goodwill. A bond of togetherness. A fact endorsed by our ever-growing list of clients. We believe that every client has come to us with the assurance that he will get only the best.</Typography>
+        <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography>
       </Grid>
 
 

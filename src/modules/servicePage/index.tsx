@@ -131,7 +131,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
                     color: '#000',
                     backgroundColor: '#EB3335'
                 }
-            }}>Enqiure now!</Button></Link>
+            }}>Enquire Now</Button></Link>
 
 
             {!isMobile && <Footer />}
