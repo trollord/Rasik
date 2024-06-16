@@ -51,7 +51,7 @@ function FooterMobile() {
                     <Grid item>
                         <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Services</Typography>
                         <Box onClick={() => { handleClick('printMedia') }}>
-                            <Typography className={styles.servicesFont}>Print media </Typography>
+                            <Typography className={styles.servicesFont}>Print Media </Typography>
                         </Box>
                         <Box onClick={() => { handleClick('eCommerceSolution') }}>
                             <Typography className={styles.servicesFont}>E-Commerce</Typography>              
@@ -70,16 +70,16 @@ function FooterMobile() {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid item width="50vw" paddingLeft="55px" display='flex' flexDirection='column' >
+                <Grid item width="50vw" paddingLeft="55px" display='flex' flexDirection='column' >  
                     <Typography variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Company</Typography>
-                    <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About us</Link>
+                    <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About Us</Link>
                     <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
                     <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
                     <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact us</Link>
                 </Grid>
 
             </Grid>
-            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="7vh">
+            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="8vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
                     <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh" }}>
