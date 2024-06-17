@@ -136,7 +136,7 @@ function OurWork() {
 
 
   return (
-    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '120vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff' >
+    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '120vh' }, padding: { xs: '30px 10px 80px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'  >
 
 
       <Modal
@@ -151,26 +151,26 @@ function OurWork() {
         </Box>
       </Modal>
       {/* height of our work heading on desktop is 18% */}
-      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '10px', md: '0' } }} display="flex" alignItems="center" justifyContent="flex-start" pt={"10vh"}  flexDirection="column" width="100%">
-        <Typography  style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
+      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '5px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%">
+        <Typography style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
         {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
-      <Grid container item sx={{ height: { xs: '90%', md: '82%' }, pt: "15vh" }} >
+      <Grid container item sx={{ height: { xs: '90%', md: '82%' }, paddingTop: { xs: '5px', md: '15vh' } }} >
 
-        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6}  sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
+        <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} >
               {printClientImg.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
@@ -182,18 +182,18 @@ function OurWork() {
 
 
         {/* className={visibleSecond ? 'fade-in-bottom' : ''} */}
-        <Grid item id="second-carousel" className={visibleSecond ? (isMobile ? 'fade-in-right' : 'fade-in-bottom') : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
+        <Grid item id="second-carousel" className={visibleSecond ? (isMobile ? 'fade-in-right' : 'fade-in-bottom') : ''} md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {overseasImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
@@ -204,19 +204,19 @@ function OurWork() {
 
 
 
-        <Grid item className={visibleThird ? (isMobile ? 'fade-in-bottom' : 'fade-in-right') : ''} id="third-carousel" md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
+        <Grid item className={visibleThird ? (isMobile ? 'fade-in-left' : 'fade-in-right') : ''} id="third-carousel" md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' } }}  >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
+          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
               {overseasImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%', }} />
 
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '37%', md: '50%' }, width: '77%', backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
