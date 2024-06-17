@@ -46,45 +46,45 @@ function ContactUs() {
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   // console.log(isMobile);
   return (
-    
-    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height={isMobile?'90vh':'85vh'} justifyContent="center" alignItems="center" sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
-      
-      <Grid  ref={leftRef}   width={isMobile?"80vw": isTablet?"35vw":"477px"}  sx={{ marginBottom: isMobile ? 7 : 0 }}  >
+
+    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height={isMobile ? '90vh' : '85vh'} justifyContent="center" alignItems="center" sx={{ flexDirection: isMobile ? 'row' : 'row', }} p={3} >
+
+      <Grid ref={leftRef} width={isMobile ? "80vw" : isTablet ? "35vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <Box className={styles.frameWrapper}>
-          <Box className={styles.frameGroup} width={isTablet?"35vw":"100%"}>
+          <Box className={styles.frameGroup} width={isTablet ? "35vw" : "100%"}>
             <Box className={styles.notSureWhatYouNeedWrapper}>
               <h1 className={styles.notSureWhat}>Not sure what you need?</h1>
             </Box>
-            <Typography className={styles.ourTeamAt} width={isTablet?"35vw":"100%"} fontSize="3vh" >
+            <Typography className={styles.ourTeamAt} width={isTablet ? "35vw" : "100%"} fontSize="3vh" >
               Drop your message and our team is happy to help!
             </Typography>
           </Box>
         </Box>
       </Grid>
-      <Grid container   ref={rightRef} item md={7} display='flex' height={isMobile ? '53vh':'53vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
-      <form onSubmit={handleSubmit} style={{paddingLeft:'1.2vw',paddingTop:"0.3vw",paddingBottom:"0.3vw",  width:'100%',height:"100%",display:'flex',gap:'10px',flexDirection:'column'}} >
-      <Box height="5vh"  style={{display:'flex',gap:'10px'}}>
-        
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',height:"100%",marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last name*'style={{padding:'10px 15px',width:'50%',height:"100%",border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}} />
-      </Box>
-      
-      <Box height="5vh" >
-       
-        <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-      </Box>
-      <Box height="5vh">
-       
-        <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder='Phone*' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
-      </Box>
-      <Box height="22vh" >
-        
-        <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}} rows="8" cols="50"/>
-      </Box>
-      <Box height="7vh" paddingTop="1vh">
-        <button type="submit" style={{width:'100%',height:isMobile ? '90%' : '100%',backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
-      </Box>
-    </form>
+      <Grid container ref={rightRef} item md={7} display='flex' height={isMobile ? '53vh' : '53vh'} width={isMobile ? "77vw" : "646px"} bgcolor='#F1E5D1' p={4} borderRadius='10px'>
+        <form onSubmit={handleSubmit} style={{ paddingLeft: '1.2vw', paddingTop: "0.3vw", paddingBottom: "0.3vw", width: '100%', height: "100%", display: 'flex', gap: '10px', flexDirection: 'column' }} >
+          <Box height="5vh" style={{ display: 'flex', gap: '10px' }}>
+
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First name*' style={{ padding: '10px 15px', width: '50%', height: "100%", marginRight: '10px', border: 'none', borderRadius: '10px', fontFamily: "Inria Sans" }} />
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last name*' style={{ padding: '10px 15px', width: '50%', height: "100%", border: 'none', borderRadius: '10px', fontFamily: "Inria Sans" }} />
+          </Box>
+
+          <Box height="5vh" >
+
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{ width: '100%', height: "100%", border: 'none', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} />
+          </Box>
+          <Box height="5vh">
+
+            <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder='Phone*' style={{ width: '100%', height: "100%", border: 'none', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} />
+          </Box>
+          <Box height="22vh" >
+
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{ width: '100%', height: "100%", border: 'none', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} rows="8" cols="50" />
+          </Box>
+          <Box height="7vh" paddingTop="1vh">
+            <button type="submit" style={{ width: '100%', height: isMobile ? '90%' : '100%', backgroundColor: '#000', color: '#fff', padding: '7px 10px', borderRadius: '10px', cursor: 'pointer' }}>Send</button>
+          </Box>
+        </form>
       </Grid>
     </Grid>
   )
