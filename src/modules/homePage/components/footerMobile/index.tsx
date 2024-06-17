@@ -87,7 +87,7 @@ function FooterMobile() {
                   href="mailto:prashant@rasikcommunications.com"
                   target="_blank"
                   >
-                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh", color:"black" }}>
+                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"1.45vh", color:"black" }}>
                     prashant@rasikcommunications.com
                     </Typography>
                     </a>
@@ -100,7 +100,7 @@ function FooterMobile() {
                 href="mailto:rasikads43@gmail.com"
                 target="_blank"
                 >
-                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh", color:"black" }}>
+                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"1.45vh", color:"black" }}>
                     rasikads43@gmail.com
                     </Typography>
                     </a>
