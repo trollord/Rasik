@@ -110,7 +110,7 @@ function Footer() {
                   href="mailto:prashant@rasikcommunications.com"
                   target="_blank"
                   >
-            <Typography className={styles.ellipses} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh",color:"black"}}>
+            <Typography className={isTabletPortrait?styles.ellipses:''} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh",color:"black"}}>
               prashant@rasikcommunications.com
             </Typography>
             </a>
@@ -123,7 +123,7 @@ function Footer() {
                   href="mailto:rasikads43@gmail.com"
                   target="_blank"
                 >
-            <Typography className={styles.ellipses} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh", color:"black" }}>
+            <Typography className={isTabletPortrait?styles.ellipses:''} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh", color:"black" }}>
               rasikads43@gmail.com
             </Typography>
             
