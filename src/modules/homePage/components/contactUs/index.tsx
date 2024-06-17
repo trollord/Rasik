@@ -45,7 +45,7 @@ function ContactUs() {
   // console.log(isMobile);
   return (
     
-    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height='85vh' justifyContent="center" alignItems="center" sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
+    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height={isMobile?'90vh':'85vh'} justifyContent="center" alignItems="center" sx={{flexDirection: isMobile ? 'row' : 'row',}} p={3} >
       
       <Grid  ref={leftRef}   width={isMobile?"80vw": isTablet?"35vw":"477px"}  sx={{ marginBottom: isMobile ? 7 : 0 }}  >
         <Box className={styles.frameWrapper}>
@@ -59,9 +59,9 @@ function ContactUs() {
           </Box>
         </Box>
       </Grid>
-      <Grid container   ref={rightRef} item md={7} display='flex' height={isMobile ? '50vh':'53vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
-      <form onSubmit={handleSubmit} style={{paddingLeft:'0.3vw',paddingTop:"0.3vw",paddingBottom:"0.3vw",  width:'100%',display:'flex',gap:'10px',flexDirection:'column'}} >
-      <Box height="5vh" style={{display:'flex',gap:'10px'}}>
+      <Grid container   ref={rightRef} item md={7} display='flex' height={isMobile ? '53vh':'53vh'} width={isMobile?"77vw":"646px"} bgcolor='#F1E5D1'  p={4} borderRadius='10px'>
+      <form onSubmit={handleSubmit} style={{paddingLeft:'1.2vw',paddingTop:"0.3vw",paddingBottom:"0.3vw",  width:'100%',height:"100%",display:'flex',gap:'10px',flexDirection:'column'}} >
+      <Box height="5vh"  style={{display:'flex',gap:'10px'}}>
         
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='First name*' style={{padding:'10px 15px',width:'50%',height:"100%",marginRight:'10px',border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}}/>
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Last name*'style={{padding:'10px 15px',width:'50%',height:"100%",border:'none',borderRadius:'10px', fontFamily:"Inria Sans"}} />
@@ -79,8 +79,8 @@ function ContactUs() {
         
         <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{width:'100%',height:"100%",border:'none',padding:'10px 15px',borderRadius:'10px', fontFamily:"Inria Sans"}} rows="8" cols="50"/>
       </Box>
-      <Box height="7vh" >
-        <button type="submit" style={{width:'100%',height:"70%",backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
+      <Box height="7vh" paddingTop="1vh">
+        <button type="submit" style={{width:'100%',height:isMobile ? '90%' : '100%',backgroundColor:'#000',color:'#fff',padding:'7px 10px',borderRadius:'10px'}}>Send</button>
       </Box>
     </form>
       </Grid>

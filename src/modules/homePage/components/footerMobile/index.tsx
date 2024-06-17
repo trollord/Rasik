@@ -28,7 +28,7 @@ function FooterMobile() {
     return (
         <Grid>
         <Grid container flexDirection='column' height='60vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' >
-            <Grid container  height="26vh" flexDirection="row" width="100vw" paddingTop="2vh">
+            <Grid container  height="26vh" flexDirection="row" width="100vw" paddingTop="1.5vh">
                 {/* <Box flexDirection="column">
                     <Grid item width={350} height={"30%"} xs={4} paddingLeft="0px">
                         <img src="/imagenew.png" alt="logo" width={"120%"} height={"100%"} />
