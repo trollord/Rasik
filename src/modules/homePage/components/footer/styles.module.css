@@ -113,7 +113,11 @@
     font-size: var(--font-size-xl);
     font-family: 'Inter', sans-serif;
   }
-
+  .customeA{
+    text-decoration: underline;
+    text-decoration-color: black; /* This sets the underline color */
+    /* text-decoration-thickness: 2px; */
+  }
   .frameGroup {
     flex: 1;
     flex-direction: column;
@@ -122,13 +126,13 @@
   }
   .servicesFont {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    /* font-weight: 400; */
     cursor: pointer;
   }
   
   .companyFont {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2.5vh;
     cursor: pointer;
   }

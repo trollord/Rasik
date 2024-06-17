@@ -7,13 +7,13 @@ function OurClients() {
 
         <Grid container display='flex' alignItems='center' flexDirection='column' sx={{ height: { xs: '50vh', md: '85vh'}, justifyContent: { xs: 'center', md: 'center' },margin:{md:'40px 0 0'} }} id='client' >
             <Box width="100%" >
-            < Box textAlign='center' mb={3} >
+            < Box textAlign='center' mb={3}  >
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '40px', md: '55px', fontFamily: 'Inter, sans-serif' } }}>Our Clients</Typography>
                
             </Box >
             {/*  */}
-
-            < Grid item m='30px 0' display='flex' justifyContent='space-evenly' width='100%' >
+            {/* <Grid border= '2px solid black'> */}
+            < Grid item m='30px 0' display='flex' justifyContent='space-evenly' width='100%' gap="2vw" >
                 <img src='/assets/Adenwal jewellers.png' className='our-image' />
                 <img src='/assets/Digi-1.png' className='our-image' />
                 <img src='/assets/LG Hing.png' className='our-image' />
@@ -21,13 +21,14 @@ function OurClients() {
                 <img src='/assets/Roopkala.png' className='our-image roop-kala-img' />
 
             </Grid >
-            <Grid m='30px 0' item width='100%' display='flex' justifyContent='space-evenly'>
+            <Grid m='30px 0' item width='100%' display='flex' justifyContent='space-evenly' gap="2vw">
                 <img src='/assets/Roopmilan.png' className='our-image roopmilan-img' />
                 <img src='/assets/Saucy Affair.png' className='our-image' />
                 <img src='/assets/Somaiya.png' className='our-image' />
                 <img src='/assets/Tit Bit.png' className='our-image' />
 
             </Grid>
+            {/* </Grid> */}
             </Box>
         </Grid >
 

@@ -44,22 +44,22 @@ function Footer() {
           <Grid item paddingTop="15px">
             <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600,fontSize:"4vh" }}>Services</Typography>
             <Box paddingTop="1vh" onClick={() => { handleClick('printMedia') }}>
-              <Typography className={styles.servicesFont} >Print Media Release</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Print Media Release</Typography>
             </Box>
             <Box onClick={() => { handleClick('digitalMarketing') }}>
-              <Typography className={styles.servicesFont}>Digital Marketing</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Digital Marketing</Typography>
             </Box>
             <Box onClick={() => { handleClick('socialMediaMarketing') }}>
-              <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Social Media Marketing</Typography>
             </Box>
             <Box onClick={() => { handleClick('eCommerceSolution') }}>
-              <Typography className={styles.servicesFont}>E-commerce Solutions</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>E-commerce Solutions</Typography>
             </Box>
             <Box onClick={() => { handleClick('creative') }}>
-              <Typography className={styles.servicesFont}>Creatives</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Creatives</Typography>
             </Box>
             <Box onClick={() => { handleClick('radioFm') }}>
-              <Typography className={styles.servicesFont}>Radio FM</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Radio FM</Typography>
             </Box>
             
             
@@ -70,10 +70,18 @@ function Footer() {
           <Grid item display='flex' flexDirection='column' paddingTop="15px">
             <Typography paddingBottom="10px" variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontSize:"4vh",fontWeight: 600 }}>Company</Typography>
 
-            <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >About Us</Link>
-            <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
-            <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our Work</Link>
-            <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact Us</Link>
+            <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize:"2.2vh" }}>About Us</Typography>
+            </Link>
+            <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize:"2.2vh" }}>Clients</Typography>
+            </Link>
+            <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize:"2.2vh" }}>Our Work</Typography>
+            </Link>
+            <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize:"2.2vh" }}>Contact Us</Typography>
+            </Link>
 
 
           </Grid>
@@ -95,14 +103,30 @@ function Footer() {
           </Grid>
           <Grid>
             <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"4vh" }}>Email</Typography>
-            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"2vh" }}>
+            <Grid className={styles.prashantEmail}>
+                <a className={styles.customeA}
+                  href="mailto:prashant@rasikcommunications.com"
+                  target="_blank"
+                  >
+            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh",color:"black" }}>
               prashant@rasikcommunications.com
             </Typography>
-            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"2vh" }}>
+            </a>
+            </Grid>
+            <Grid className={styles.rasikEmail} >
+
+
+                <a
+                  className={styles.customeA}
+                  href="mailto:rasikads43@gmail.com"
+                  target="_blank"
+                >
+            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh", color:"black" }}>
               rasikads43@gmail.com
             </Typography>
             
-
+            </a>
+              </Grid>
           </Grid>
          </Grid>
 

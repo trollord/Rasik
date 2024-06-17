@@ -21,7 +21,7 @@ export function About() {
         <Typography  textAlign={isMobile?"left":"center"} sx={{ fontSize: { xs: '15px', md: '20px' } }}>
           <span 
             className={styles.weAreAmongst}
-          >{`At Rasik, we are one of the select few accredited with INS, allowing us to work directly with media houses across India. Our strong relationships with leading publications nationwide ensure the best rates and deals for your ad releases. From print to electronic and web advertising, we offer a comprehensive range of services without compromising on quality. With our extensive experience and expertise, we guarantee maximum impact for every Rupee of your media expenditure.`}</span>
+          >{`At Rasik, we are one of the select few accredited with INS, allowing us to work directly with media houses across India. Our strong relationships with leading publications nationwide ensure the best rates and deals for your ad releases. From print to electronic and web advertising, we offer a comprehensive range of services without compromising on quality. With our extensive experience and expertise, we guarantee maximum impact for every rupee of your media expenditure.`}</span>
           <span className={styles.blankLine}>&nbsp;</span>
           <span
             className={styles.withALegacy}
