@@ -205,11 +205,15 @@ export function DesktopHeader() {
                                     lg: '7vh',
                                 },
                                 borderRadius: '10px',
-                                boxShadow: '0px 4px 4px 0px #00000040',
+                                // boxShadow: '0px 4px 4px 0px #00000040',
                                 fontSize: '1.6vw',
                                 '&:hover': {
-                                    color: '#000',
-                                    backgroundColor: '#EB3335'
+                                    border: '2.5px solid #EB3335',
+                                    transition: "1s ease-out",
+                                    background: '#fff',
+                                    color: '#EB3335',
+                                    borderRadius: '30px',
+                                    
                                 },
                                 color: "#FFFFFF",
                                 textTransform: 'none'
