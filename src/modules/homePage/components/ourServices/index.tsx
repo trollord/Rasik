@@ -68,23 +68,23 @@ function OurServices() {
 
 
   return (
-    <Grid container className='our-service' sx={{ height: { xs: 'auto', md: '100vh'} ,padding:{md:'0 0 0',xs:'0'}}} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
+    <Grid container className='our-service' sx={{ height: { xs: 'auto', md: '100vh' }, padding: { md: '0 0 0', xs: '0' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
-      <Grid item md={5}  display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>
-        <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '24px' } }}>Our Services</Typography>
-        <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography>
+      <Grid item md={12} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '20px', md: '0' } }} >
+        <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '5px' } }}>Our Services</Typography>
+        {/* <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography> */}
       </Grid>
 
 
-      <Grid container item md={5}  display='flex' justifyContent='center' alignItems='center'>
-        
-        <Grid item md={3} xs={5} display='flex' justifyContent="start" flexDirection='column' alignItems='center'  sx={{marginRight:{xs:'0',md:'3vw'}}} >
+      <Grid container item md={12} display='flex' justifyContent='center' alignItems='center' sx={{ marginBottom: { xs: '0', md: '60px' } }}>
+
+        <Grid item md={7} xs={5} display='flex' justifyContent="center" flexDirection='column' alignItems='center' sx={{ flexDirection: { xs: 'column', md: 'row' } }} >
           <FadeInBox direction="left" delay={200}>
-            <Box  onClick={() => { handleClick('printMedia') }} sx={{ width: { xs: '140px', md: '9.904vw' }, marginBottom: {xs : '7vw', md: "3vw"}, height: { xs: '140px', md: '9.904vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000'  borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-            <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><PrintMedia width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('printMedia') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, marginRight: { xs: '0', md: '4vw' }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><PrintMedia width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{
-                fontSize: { xs: '14px', md: '1.1vw'},
+                fontSize: { xs: '14px', md: '1.1vw' },
                 textAlign: 'center', margin: '5px',
                 overflowWrap: 'break-word',
                 wordWrap: 'break-word',
@@ -94,29 +94,29 @@ function OurServices() {
             </Box>
           </FadeInBox>
           <FadeInBox direction="left" delay={200}>
-            <Box onClick={() => { handleClick('radioFm') }} sx={{ width: { xs: '140px',  md: '9.904vw' },marginBottom: {xs : '7vw', md: "3vw"}, height: { xs: '140px', md: '9.904vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-              <Box sx={{ width: { xs: '65px', md: '5vw'}, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><RadioFM width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('radioFm') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, marginRight: { xs: '0', md: '4vw' }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><RadioFM width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{ fontSize: { xs: '14px', md: '1.1vw' } }}>Radio FM</Typography>
             </Box>
           </FadeInBox>
           <FadeInBox direction="left" delay={200}>
-            <Box onClick={() => { handleClick('digitalMarketing') }} sx={{ width: { xs: '140px',  md: '9.904vw' }, marginBottom: {xs : '7vw', md: "0"}, height: { xs: '140px',  md: '9.904vw' }, cursor: 'pointer' }}  bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><DigitalMarketing width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('digitalMarketing') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><DigitalMarketing width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{
-                fontSize: { xs: '14px', md: '1.1vw'  },
+                fontSize: { xs: '14px', md: '1.1vw' },
                 textAlign: 'center', margin: '5px',
                 overflowWrap: 'break-word',
                 wordWrap: 'break-word',
-                wordBreak: 'normal',          
+                wordBreak: 'normal',
               }}>Digital Marketing</Typography>
             </Box>
           </FadeInBox>
         </Grid>
 
-        <Grid item md={3} xs={5} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+        <Grid item md={7} xs={5} display='flex' justifyContent='center' flexDirection='column' alignItems='center' sx={{ flexDirection: { xs: 'column', md: 'row' } }} >
           <FadeInBox direction="right" delay={200}>
-            <Box onClick={() => { handleClick('eCommerceSolution') }} sx={{ width: { xs: '140px',  md: '9.904vw' }, marginBottom: {xs : '7vw', md: "3vw"}, height: { xs: '140px',  md: '9.904vw' }, cursor: 'pointer' }}  bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw'}, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('eCommerceSolution') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, marginRight: { xs: '0', md: '4vw' }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Ecommerce width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{
                 fontSize: { xs: '14px', md: '1.1vw' },
                 textAlign: 'center', margin: '5px',
@@ -125,14 +125,14 @@ function OurServices() {
             </Box>
           </FadeInBox>
           <FadeInBox direction="right" delay={200}>
-            <Box onClick={() => { handleClick('creative') }} sx={{ width: { xs: '140px', md: '9.904vw' },marginBottom: {xs : '7vw', md: "3vw"}, height: { xs: '140px', md: '9.904vw'}, cursor: 'pointer' }}  bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-              <Box sx={{ width: { xs: '65px', md: '5vw'}, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Creative width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('creative') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, marginRight: { xs: '0', md: '4vw' }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><Creative width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{ fontSize: { xs: '14px', md: '1.1vw' } }}>Creative</Typography>
             </Box>
           </FadeInBox>
           <FadeInBox direction="right" delay={200}>
-            <Box onClick={() => { handleClick('socialMediaMarketing') }} sx={{ width: { xs: '140px', md: '9.904vw'},  marginBottom: {xs : '7vw', md: "0"}, height: { xs: '140px', md: '9.904vw'}, cursor: 'pointer' }}  bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
-              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><SocialMarketing width={isMobile ? '40px': "50px"} height={isMobile ? '40px': "50px"} /></Box>
+            <Box onClick={() => { handleClick('socialMediaMarketing') }} sx={{ width: { xs: '140px', md: '11vw' }, marginBottom: { xs: '7vw', md: "0" }, height: { xs: '140px', md: '11vw' }, cursor: 'pointer' }} bgcolor='#fff' color='#000' width='160px' height='160px' borderRadius='10px' display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='4px'>
+              <Box sx={{ width: { xs: '65px', md: '5vw' }, height: { xs: '65px', md: '5vw' }, backgroundColor: '#F1E5D1', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}><SocialMarketing width={isMobile ? '40px' : "50px"} height={isMobile ? '40px' : "50px"} /></Box>
               <Typography sx={{ fontSize: { xs: '14px', md: '1.1vw' }, textAlign: 'center' }} >Social Media Marketing</Typography>
             </Box>
           </FadeInBox>
