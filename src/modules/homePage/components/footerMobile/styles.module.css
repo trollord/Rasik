@@ -130,6 +130,11 @@
     gap: var(--gap-sm);
     min-width: 365px;
   }
+  .customeA{
+    text-decoration: underline;
+    text-decoration-color: black; /* This sets the underline color */
+    /* text-decoration-thickness: 2px; */
+  }
   .servicesFont{
     font-family: var(--font-inter);
     font-size: 2vh;

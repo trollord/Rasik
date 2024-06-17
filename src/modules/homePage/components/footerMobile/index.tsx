@@ -82,12 +82,29 @@ function FooterMobile() {
             <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
-                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh" }}>
+                    <Grid className={styles.prashantEmail}>
+                <a className={styles.customeA}
+                  href="mailto:prashant@rasikcommunications.com"
+                  target="_blank"
+                  >
+                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh", color:"black" }}>
                     prashant@rasikcommunications.com
                     </Typography>
-                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh" }}>
+                    </a>
+              </Grid>
+              <Grid className={styles.rasikEmail} height="4vh" width="40vw">
+
+
+                <a
+                className={styles.customeA}
+                href="mailto:rasikads43@gmail.com"
+                target="_blank"
+                >
+                    <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh", color:"black" }}>
                     rasikads43@gmail.com
                     </Typography>
+                    </a>
+              </Grid>
                     
 
                 </Grid>
