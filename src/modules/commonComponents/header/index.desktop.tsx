@@ -113,7 +113,7 @@ import '../../../App.css';
 export function DesktopHeader() {
     const [activeLink, setActiveLink] = useState('');
     const navigate = useNavigate();
-    const sections = ['services', 'ourwork', 'testimonials', 'about', 'contactUs'];
+    const sections = ['services', 'about', 'ourwork', 'testimonials', 'contactUs'];
 
     const navigateAndScroll = (path: string, section: string) => {
         // console.log("yes");
@@ -159,13 +159,13 @@ export function DesktopHeader() {
         };
     }, []);
     return (
-        <Grid container sx={{height: {sm:'8vh',lg:'15vh'}}} alignItems="center" justifyContent="center" direction="row" display="flex" pl={5} pr={3} columnSpacing={8} bgcolor="#fff" position="fixed" top="0" left="0" zIndex="100">
-            <Grid item  height="82%" lg={2} sm={3} sx={{ paddingLeft: "40px !important" }}>
+        <Grid container sx={{ height: { sm: '8vh', lg: '15vh' } }} alignItems="center" justifyContent="center" direction="row" display="flex" pl={5} pr={3} columnSpacing={8} bgcolor="#fff" position="fixed" top="0" left="0" zIndex="100">
+            <Grid item height="82%" lg={2} sm={3} sx={{ paddingLeft: "40px !important" }}>
                 {/* <img src="/image.png" alt="logo" width="100%" height="100%" /> */}
                 <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height={"90%"} />
             </Grid>
-            <Grid item display="flex" justifyContent="space-around" alignItems="center" lg={10} sm ={9} sx={{ display: { xs: 'none', lg: 'flex', sm: 'flex' } }} >
-                {[{ label:'services' , id:'services'}, { label:'Our Work' , id:'ourwork'}, { label:'testimonials' , id:'testimonials'}, { label:'About Us' , id:'about'}].map((section) => (
+            <Grid item display="flex" justifyContent="space-around" alignItems="center" lg={10} sm={9} sx={{ display: { xs: 'none', lg: 'flex', sm: 'flex' } }} >
+                {[{ label: 'services', id: 'services' }, { label: 'About Us', id: 'about' }, { label: 'Our Work', id: 'ourwork' }, { label: 'testimonials', id: 'testimonials' }].map((section) => (
                     <Link
                         key={section.id}
                         to={section.id}
@@ -181,44 +181,44 @@ export function DesktopHeader() {
                     </Link>
                 ))}
                 <Box>
-                    
-                <Link
-                    to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')}
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
 
-                    style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
-                >
-                    <Button
-                        sx={{
-                            fontWeight: '600',
-                            fontFamily: 'inter',
-                            backgroundColor: '#EB3335',
-                            width: {
-                                sm: '12.5vw',
-                                lg: '11vw',
-                            },
-                            height: {
-                                sm: '3.5vh',
-                                lg: '7vh',
-                            },
-                            borderRadius: '10px',
-                            boxShadow: '0px 4px 4px 0px #00000040',
-                            fontSize: '1.6vw',
-                            '&:hover': {
-                                color: '#000',
-                                backgroundColor: '#EB3335'
-                            },
-                            color: "#FFFFFF",
-                            textTransform: 'none'
-                        }}
+                    <Link
+                        to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')}
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+
+                        style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}
                     >
-                        Contact Us
-                    </Button>
-                </Link>
-                
+                        <Button
+                            sx={{
+                                fontWeight: '600',
+                                fontFamily: 'inter',
+                                backgroundColor: '#EB3335',
+                                width: {
+                                    sm: '12.5vw',
+                                    lg: '11vw',
+                                },
+                                height: {
+                                    sm: '3.5vh',
+                                    lg: '7vh',
+                                },
+                                borderRadius: '10px',
+                                boxShadow: '0px 4px 4px 0px #00000040',
+                                fontSize: '1.6vw',
+                                '&:hover': {
+                                    color: '#000',
+                                    backgroundColor: '#EB3335'
+                                },
+                                color: "#FFFFFF",
+                                textTransform: 'none'
+                            }}
+                        >
+                            Contact Us
+                        </Button>
+                    </Link>
+
                 </Box>
             </Grid>
         </Grid>

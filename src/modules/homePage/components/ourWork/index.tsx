@@ -75,6 +75,10 @@ function OurWork() {
   const [visibleFirst, setVisibleFirst] = useState(false);
   const [visibleSecond, setVisibleSecond] = useState(false);
   const [visibleThird, setVisibleThird] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+
   const handleOpen = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setOpen(true);
@@ -82,6 +86,10 @@ function OurWork() {
   const handleClose = () => setOpen(false);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
     const handleScroll = () => {
       const firstCarousel = document.getElementById('first-carousel');
       const secondCarousel = document.getElementById('second-carousel');
@@ -90,7 +98,7 @@ function OurWork() {
       if (firstCarousel) {
         const rect = firstCarousel.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.75) {
-          console.log('First carousel visible');
+
           setVisibleFirst(true);
         }
       }
@@ -98,7 +106,7 @@ function OurWork() {
       if (secondCarousel) {
         const rect = secondCarousel.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.75) {
-          console.log('Second carousel visible');
+
           setVisibleSecond(true);
         }
       }
@@ -106,19 +114,25 @@ function OurWork() {
       if (thirdCarousel) {
         const rect = thirdCarousel.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.75) {
-          console.log('Third carousel visible');
+
           setVisibleThird(true);
         }
       }
     };
 
+    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
+
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+
     };
   }, []);
+
+
 
 
   return (
@@ -167,8 +181,8 @@ function OurWork() {
         </Grid>
 
 
-
-        <Grid item id="second-carousel" className={visibleSecond ? 'fade-in-bottom' : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
+        {/* className={visibleSecond ? 'fade-in-bottom' : ''} */}
+        <Grid item id="second-carousel" className={visibleSecond ? (isMobile ? 'fade-in-right' : 'fade-in-bottom') : ''} md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
@@ -190,7 +204,7 @@ function OurWork() {
 
 
 
-        <Grid item className={visibleThird ? 'fade-in-right' : ''} id="third-carousel" md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
+        <Grid item className={visibleThird ? (isMobile ? 'fade-in-bottom' : 'fade-in-right') : ''} id="third-carousel" md={4} xs={6} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
