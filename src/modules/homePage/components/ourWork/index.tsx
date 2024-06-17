@@ -151,12 +151,12 @@ function OurWork() {
         </Box>
       </Modal>
       {/* height of our work heading on desktop is 18% */}
-      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '5px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%">
-        <Typography style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
+      <Grid item sx={{ height: { xs: '5%', md: '18%' }, marginBottom: { xs: '5px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%" >
+        <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px' } }} textAlign='center'>Our Work</Typography>
         {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
-      <Grid container item sx={{ height: { xs: '90%', md: '82%' }, paddingTop: { xs: '5px', md: '15vh' } }} >
+      <Grid container item sx={{ height: { xs: '90%', md: '82%' }, paddingTop: { xs: '0', md: '15vh' } }} >
 
         <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
