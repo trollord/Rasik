@@ -5,7 +5,7 @@ import '../../../../App.css';
 function OurClients() {
     return (
 
-        <Grid container display='flex' alignItems='center' flexDirection='column' sx={{ height: { xs: '50vh', md: '110vh'}, justifyContent: { xs: 'center', md: 'center' },margin:{md:'20px 0 0'} }} id='client' >
+        <Grid container display='flex' alignItems='center' flexDirection='column' sx={{ height: { xs: '50vh', md: '85vh'}, justifyContent: { xs: 'center', md: 'center' },margin:{md:'20px 0 0'} }} id='client' >
             <Box width="100%" >
             < Box textAlign='center' mb={3}  >
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '40px', md: '64px', fontFamily: 'Inter, sans-serif' },  pb:"15vh" }}>Our Clients</Typography>
@@ -15,17 +15,17 @@ function OurClients() {
             {/* <Grid border= '2px solid black'> */}
             < Grid item m='30px 0' display='flex' justifyContent='space-evenly' width='100%' gap="2vw" >
                 <img src='/assets/Adenwal jewellers.png' className='our-image' />
-                <img src='/assets/Digi-1.png' className='our-image' />
-                <img src='/assets/LG Hing.png' className='our-image' />
-                <img src='/assets/Milan.png' className='our-image' />
+                <img src='/assets/Digi-1.svg' className='our-image' />
+                <img src='/assets/LG Hing.svg' className='our-image' />
+                <img src='/assets/Milan fancy fabric.svg' className='our-image' />
                 <img src='/assets/Roopkala.png' className='our-image roop-kala-img' />
 
             </Grid >
             <Grid m='30px 0' item width='100%' display='flex' justifyContent='space-evenly' gap="2vw">
-                <img src='/assets/Roopmilan.png' className='our-image roopmilan-img' />
-                <img src='/assets/Saucy Affair.png' className='our-image' />
-                <img src='/assets/Somaiya.png' className='our-image' />
-                <img src='/assets/Tit Bit.png' className='our-image' />
+                <img src='/assets/Roopmilan.svg' className='our-image roopmilan-img' />
+                <img src='/assets/Saucy Affair.svg' className='our-image' />
+                <img src='/assets/Somaiya.svg' className='our-image' />
+                <img src='/assets/Tit Bit.svg' className='our-image' />
 
             </Grid>
             {/* </Grid> */}
