@@ -136,7 +136,7 @@ function OurWork() {
 
 
   return (
-    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '85vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'>
+    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '120vh' }, padding: { xs: '10px 10px 60px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff' >
 
 
       <Modal
@@ -151,19 +151,19 @@ function OurWork() {
         </Box>
       </Modal>
       {/* height of our work heading on desktop is 18% */}
-      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '10px', md: '0' } }} display="flex" alignItems="center" justifyContent="flex-start" pt={2} flexDirection="column" width="100%">
-        <Typography variant='h4' style={{ fontWeight: '700' }} textAlign='center'>Our Work</Typography>
+      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '10px', md: '0' } }} display="flex" alignItems="center" justifyContent="flex-start" pt={"10vh"}  flexDirection="column" width="100%">
+        <Typography  style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
         {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
-      <Grid container item sx={{ height: { xs: '90%', md: '82%' } }} >
+      <Grid container item sx={{ height: { xs: '90%', md: '82%' }, pt: "15vh" }} >
 
         <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} xs={6}  sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ marginBottom: '20px', md: '0' }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '90%', md: '70%' } }}
           >
-            <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
+            <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} >
               {printClientImg.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
