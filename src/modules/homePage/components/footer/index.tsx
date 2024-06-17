@@ -30,14 +30,16 @@ function Footer() {
     }, 100); // Adjust the timeout as needed
   };
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
-  const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
+  const isTablet = useMediaQuery('(min-width:900px) and (max-width:1370px)', { noSsr: true });
+  const isTabletPortrait = useMediaQuery('(min-width:600px) and (max-width:900px)', { noSsr: true });
+
   return (
     <Grid container >
 
     
-    <Grid container  flexDirection='column' height={isTablet?'25vh':'35vh'} bgcolor='#F1E5D1' justifyContent='center' sx={{padding:'10px 0px'}}>
-        <Grid container item className={styles.mainGrid} justifyContent='space-evenly'  gap="20px" width="90vw" sx={{ marginLeft: '50px' }}>
-         <Grid item paddingTop="1vh" > 
+    <Grid container  flexDirection='column' height={isTablet?'45vh': isTabletPortrait?'55vh':'35vh'} bgcolor='#F1E5D1' justifyContent='center' sx={{padding:'10px 0px'}}>
+        <Grid container item className={styles.mainGrid} justifyContent='space-evenly'  gap={isTablet?"5px":"20px"} width={isTablet?"100vw":"90vw"} sx={{ marginLeft: isTablet?'0px':'50px' }}>
+         <Grid item paddingTop="1vh"  > 
             <img className={styles.whatsappImage20240516At1Icon} src={image}  alt="logo" width={"70%"} height={"70%"}/>
          </Grid>
         
@@ -87,9 +89,9 @@ function Footer() {
           </Grid>
 
          
-         <Grid paddingTop="15px" flexDirection="column">
+         <Grid paddingTop="15px" paddingLeft="40px" flexDirection="column">
           <Grid>
-            <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"4vh" }}>Connect With Us</Typography>
+            <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"4vh" }}>{isTabletPortrait ? "Connect" : "Connect With Us"}</Typography>
             <Box style={{ marginTop: '10px' }}>
               <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                 <InstaGram />
@@ -108,7 +110,7 @@ function Footer() {
                   href="mailto:prashant@rasikcommunications.com"
                   target="_blank"
                   >
-            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh",color:"black" }}>
+            <Typography className={styles.ellipses} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh",color:"black"}}>
               prashant@rasikcommunications.com
             </Typography>
             </a>
@@ -121,7 +123,7 @@ function Footer() {
                   href="mailto:rasikads43@gmail.com"
                   target="_blank"
                 >
-            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh", color:"black" }}>
+            <Typography className={styles.ellipses} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500,fontSize:"2.2vh", color:"black" }}>
               rasikads43@gmail.com
             </Typography>
             
