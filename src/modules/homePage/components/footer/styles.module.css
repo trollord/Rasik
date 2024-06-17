@@ -114,7 +114,7 @@
     font-family: 'Inter', sans-serif;
   }
   .ellipses{
-    width: 250px; /* Set the width of the container */
+    width: 350px; /* Set the width of the container */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide the overflowed text */
   text-overflow: ellipsis; /* Display an ellipsis to represent the hidden text */
