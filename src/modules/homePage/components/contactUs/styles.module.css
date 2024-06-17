@@ -58,7 +58,7 @@
 }
 .ourTeamAt {
   margin: 0;
-  font-family: var(--font-inter);
+  font-family: 'Inter', sans-serif;
   align-self: stretch;
   /* height: 1vh; */
   /* width: 30vw; */

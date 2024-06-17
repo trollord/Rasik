@@ -68,7 +68,7 @@ function OurServices() {
 
 
   return (
-    <Grid container className='our-service' sx={{ height: { xs: 'auto', md: '85vh'} ,padding:{md:'0 0 0',xs:'0'}}} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
+    <Grid container className='our-service' sx={{ height: { xs: 'auto', md: '100vh'} ,padding:{md:'0 0 0',xs:'0'}}} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
     >
 
       <Grid item md={5}  display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'left' }, padding: { xs: '20px', md: '40px' } }}>

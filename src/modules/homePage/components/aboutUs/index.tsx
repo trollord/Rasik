@@ -12,7 +12,7 @@ export function About() {
   const isMobile = useMediaQuery('(max-width:600px)');
   return <>
 
-    <Grid container ref={ref} className={`${styles.frameParent} ${inView ? styles.fadeIn : ''}`} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' } ,padding: { xs: '2vw', md: '0px' },height: { xs: '92vh', md: '85vh' } }} id="about">
+    <Grid container ref={ref} className={`${styles.frameParent} ${inView ? styles.fadeIn : ''}`} item md={5} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' } ,padding: { xs: '2vw', md: '0px' },height: { xs: '92vh', md: '110vh' } }} id="about">
       <Box className={styles.secondGrid} paddingTop="5vh" paddingBottom="5vh" width="92vw" height="95vh" display='flex'gap="3vh" flexDirection='column' alignItems='center' justifyContent='center' >
         <Grid className={styles.aboutUs} textAlign="center" >About Us</Grid>
         {/* <Typography >Who are we?</Typography> */}
