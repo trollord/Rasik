@@ -89,7 +89,7 @@ function FooterMobile() {
                 </Grid>
 
             </Grid>
-            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
+            <Grid height="30vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
                     <Grid className={styles.prashantEmail}>

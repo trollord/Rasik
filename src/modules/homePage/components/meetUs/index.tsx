@@ -9,7 +9,7 @@ function MeetUs() {
   // console.log(isMobile);
   return (
     <Box className={styles.frameParent} id="meetus">
-      <Box className={styles.meetUsWrapper}>
+      <Box className={styles.meetUsWrapper} >
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 

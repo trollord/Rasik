@@ -151,7 +151,7 @@ function OurWork() {
         </Box>
       </Modal>
       {/* height of our work heading on desktop is 18% */}
-      <Grid item sx={{ height: { xs: '10%', md: '18%' }, marginBottom: { xs: '5px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%">
+      <Grid item sx={{ height: { xs: '6%', md: '18%' }, marginBottom: { xs: '0px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%">
         <Typography style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
         {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
