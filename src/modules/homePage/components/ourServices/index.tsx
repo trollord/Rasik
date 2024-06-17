@@ -73,7 +73,7 @@ function OurServices() {
 
       <Grid item md={12} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '20px', md: '0' } }} >
         <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '40px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '5px' } }}>Our Services</Typography>
-        <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography>
+        {/* <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography> */}
       </Grid>
 
 
