@@ -28,7 +28,7 @@ function FooterMobile() {
     return (
         <Grid>
         <Grid container flexDirection='column' height='60vh' width="100vw" bgcolor='#F1E5D1' justifyContent='center' >
-            <Grid container  height="40vw" flexDirection="row" width="100vw" paddingTop="2vh">
+            <Grid container  height="26vh" flexDirection="row" width="100vw" paddingTop="1.5vh">
                 {/* <Box flexDirection="column">
                     <Grid item width={350} height={"30%"} xs={4} paddingLeft="0px">
                         <img src="/imagenew.png" alt="logo" width={"120%"} height={"100%"} />
@@ -47,20 +47,11 @@ function FooterMobile() {
                         </Box>
                     </Grid>
                 </Box> */}
-                <Grid container width="50vw"  paddingLeft="9vw" flexDirection='column'>
+                <Grid container width="50vw" height="" paddingLeft="9vw" flexDirection='column'>
                     <Grid item>
-                        <Typography variant="h5" className={styles.services} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Services</Typography>
+                        <Typography variant="h5"  sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Services</Typography>
                         <Box onClick={() => { handleClick('printMedia') }}>
                             <Typography className={styles.servicesFont}>Print Media </Typography>
-                        </Box>
-                        <Box onClick={() => { handleClick('eCommerceSolution') }}>
-                            <Typography className={styles.servicesFont}>E-Commerce</Typography>              
-                        </Box>
-                        <Box onClick={() => { handleClick('radioFm') }}>
-                            <Typography className={styles.servicesFont}>Radio FM</Typography>
-                        </Box>
-                        <Box onClick={() => { handleClick('creative') }}>
-                            <Typography className={styles.servicesFont}>Creatives</Typography>
                         </Box>
                         <Box onClick={() => { handleClick('digitalMarketing') }}>
                             <Typography className={styles.servicesFont}>Digital Marketing</Typography>
@@ -68,10 +59,19 @@ function FooterMobile() {
                         <Box onClick={() => { handleClick('socialMediaMarketing') }}>
                             <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
                         </Box>
+                        <Box onClick={() => { handleClick('eCommerceSolution') }}>
+                            <Typography className={styles.servicesFont}>E-Commerce </Typography>              
+                        </Box>
+                        <Box onClick={() => { handleClick('creative') }}>
+                            <Typography className={styles.servicesFont}>Creatives</Typography>
+                        </Box>
+                        <Box onClick={() => { handleClick('radioFm') }}>
+                            <Typography className={styles.servicesFont}>Radio FM</Typography>
+                        </Box>
                     </Grid>
                 </Grid>
                 <Grid item width="50vw" paddingLeft="55px" display='flex' flexDirection='column' >  
-                    <Typography variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Company</Typography>
+                    <Typography variant="h5"  sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Company</Typography>
                     <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About Us</Link>
                     <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
                     <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our work</Link>
@@ -79,7 +79,7 @@ function FooterMobile() {
                 </Grid>
 
             </Grid>
-            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="8vh">
+            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
                     <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 450,fontSize:"1.45vh" }}>
@@ -105,7 +105,7 @@ function FooterMobile() {
                         </Box>
                 </Grid>
             </Grid>
-            <Grid container width="100vw" height = "17vh" paddingLeft="31vw">
+            <Grid container width="100vw" height = "12vh" paddingLeft="31vw">
                 <Grid item width="10vw" height={"80%"} xs={4} >
                             <img src="/imagenew.png" alt="logo" width={"180%"} height={"100%"} />
                         </Grid>

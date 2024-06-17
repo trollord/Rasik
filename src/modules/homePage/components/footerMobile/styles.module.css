@@ -132,12 +132,12 @@
   }
   .servicesFont{
     font-family: var(--font-inter);
-    font-size: 12px;
+    font-size: 2vh;
     font-weight: 400;
   }
   .companyFont{
     font-family: var(--font-inter);
-    font-size: 18px;
+    font-size: 2vh;
     font-weight: 400;
     margin-bottom: 6px;
   }
