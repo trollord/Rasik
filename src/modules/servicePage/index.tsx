@@ -13,24 +13,31 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
     const navigate = useNavigate();
     let componentToRender;
     let textToRender;
+    let description;
     switch (currentPage) {
         case 'printMedia':
             componentToRender = <PrintMedia />;
+            description = "Our tremendous clout with the leading publication/media houses helps leverage the visibility of your brand. Our forte lies in giving you the best deals so that you get the optimum reach within your target audience at the right price, which means maximum value for your ad spends and timely execution.";
             break;
         case 'eCommerceSolution':
             componentToRender = <Ecommerce />;
+            description = "Elevate your online business with Rasik Communications' E-commerce Solutions. We provide tailored strategies and innovative technologies to enhance your digital storefront, driving traffic and boosting sales. Transform your e-commerce presence and achieve unprecedented growth with our expert guidance."
             break;
         case 'radioFm':
             componentToRender = <RadioFM />;
+            description="Amplify your brand's voice with Rasik Communications' Radio FM services. We create captivating radio campaigns that resonate with listeners, ensuring your message reaches a wide and diverse audience. Tune in to success with expertly crafted ads that make an impact."
             break;
         case 'creative':
             componentToRender = <Creative />;
+            description = "Unleash your brand's potential with Rasik Communications' Creatives. Our innovative design solutions captivate audiences and communicate your message with impact. From striking visuals to compelling narratives, we bring your vision to life, ensuring your brand stands out in a crowded marketplace."
             break;
         case 'digitalMarketing':
             componentToRender = <DigitalMarketing />;
+            description = "Elevate your brand's online presence with Rasik Communications' cutting-edge digital marketing strategies. Engage your audience through tailored campaigns, boost conversions, and achieve unparalleled growth. Experience the power of data-driven marketing with our expert team."
             break;
         case 'socialMediaMarketing':
             componentToRender = <SocialMarketing />;
+            description = "Transform your social media presence with Rasik Communications. Our expert team crafts compelling content and targeted campaigns to enhance engagement, build your brand, and drive results. Connect with your audience on a deeper level and watch your community grow."
             break;
         default:
             componentToRender = 'no logo';
@@ -87,7 +94,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
                     {/* <PrintMedia /> */}
                 </Box>
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '30px', md: '35px' }, marginBottom: { xs: '8px', md: '0' } }} >{textToRender}</Typography>
-                <Typography textAlign='center' >Our tremendous clout with the leading publication/media houses helps leverage the visibility of your brand. Our forte lies in giving you the best deals so that you get the optimum reach within your target audience at the right price. Which means maximum value for your ad spends and timely execution.</Typography>
+                <Typography textAlign='center' >{description}</Typography>
             </Grid>
 
             <Grid container item display='flex' flexDirection='column' justifyContent='center' alignItems='center' mb={5} >
