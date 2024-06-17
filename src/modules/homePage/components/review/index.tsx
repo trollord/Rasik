@@ -79,8 +79,8 @@ const Review: React.FC = () => {
       <Grid item sx={{ width: { xs: '90%', md: '90%' }, height: { sx: '220px', md: '300px' } }} pl="2.2vw">
         <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={3000} transitionTime={2000} >
           {testimonials.map((testimonial, index) => (
-            <Box key={index} sx={{ height: { xs: '28vh', md: '320px' }, padding: { xs: 'none', md: '5px' } }}>
-              <Box sx={{ textAlign: 'left', display: { xs: 'none', md: 'block' } }}><QuotationMark /></Box>
+            <Box key={index} sx={{ height: { xs: '36vh', md: '320px' }, padding: { xs: 'none', md: '5px' } }}>
+              <Box sx={{ textAlign: 'left', display: { xs: 'block', md: 'block', } }}><QuotationMark /></Box>
 
               <Typography sx={{ ...fadeStyles(0), fontSize: isMobile ? '15px' : isTablet ? '25px' : '1.9vw', textAlign: 'left' }}>{testimonial.quote}</Typography>
               <Typography sx={{ ...fadeStyles(200), fontWeight: '700', fontSize: { xs: '18px', md: '1.9vw' }, textAlign: 'left', marginTop: '10px' }}>
