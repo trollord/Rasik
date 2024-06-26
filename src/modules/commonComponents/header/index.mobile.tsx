@@ -3,6 +3,8 @@ import { Button, Grid, Box, IconButton, Menu, MenuItem, MenuList } from '@mui/ma
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, scroller } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import { InstaGram, LinkedInIcon } from '../icons';
 
 
 export function MobileHeader() {
@@ -12,6 +14,8 @@ export function MobileHeader() {
     const openMenu = (event: MouseEvent<HTMLElement>) => {
         setAnchorNav(event.currentTarget)
     }
+
+
 
     const handleClose = () => {
         setAnchorNav(null)
@@ -34,30 +38,56 @@ export function MobileHeader() {
 
 
     return (
-        <Grid container height="8vh" alignItems={"center"} justifyContent="center" direction={"row"} display="flex" columnSpacing={3.5} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'} pl={2} pr={2}>
+        <Grid container height="8vh" alignItems={"center"} justifyContent="space-between" direction={"row"} display="flex" columnSpacing={3.5} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'} pl={2} pr={2}>
 
+
+            <Grid item width={140} height={"70%"} ml={2} xs={4} sx={{ paddingLeft: "10px !important" }}>
+                <img src="/ras1-removebg-preview.svg" alt="logo" width={"100%"} height={"100%"} />
+            </Grid>
 
             <Grid item xs={2}>
                 <Box>
                     <IconButton size='large' edge='start' onClick={openMenu}>
-                        <MenuIcon sx={{ fontSize: 28 }} />
+                        <MenuIcon sx={{ fontSize: 28, color: '#EB3335' }} />
                     </IconButton>
 
 
-                    <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{ display: { xs: 'flex', md: 'none' }, '& .MuiMenu-list': { width: '180px' } }}
+                    <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{
+                        width: '100vw', height: '100vh', display: { xs: 'flex', md: 'none' }, top: 0, left: 0, position: 'fixed', '& .MuiPaper-root': {
+                            width: '100vw',
+                            height: '100vh',
+                            margin: 0,
+                            borderRadius: 0,
+                        }
+                    }}
                         anchorOrigin={{
-                            vertical: 20,  // 50px from the top
-                            horizontal: 20,  // 100px from the left
+                            vertical: 'top',  // 50px from the top
+                            horizontal: 'left',  // 100px from the left
                         }}
                         transformOrigin={{
                             vertical: 'top',
                             horizontal: 'left',
                         }}>
-                        <MenuList>
-                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Services</MenuItem></Link>
-                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose}>Our Work</MenuItem></Link>
-                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>Testimonials</MenuItem></Link>
-                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose}>About Us</MenuItem></Link>
+
+                        <IconButton size='large' edge='start' onClick={handleClose} sx={{ position: 'absolute', top: '0', right: '1vw' }}>
+                            <CloseIcon sx={{ fontSize: 30, color: '#EB3335' }} />
+                        </IconButton>
+                        <MenuList sx={{ position: 'relative', width: '80%' }}>
+
+
+                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Services</MenuItem></Link>
+                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Work</MenuItem></Link>
+                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>About Us</MenuItem></Link>
+                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Testimonials</MenuItem></Link>
+                            <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Get in touch</MenuItem></Link>
+                            <Box sx={{ marginLeft: '5vw', marginTop: '9vw' }}>
+                                <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                                    <InstaGram width='40px' height='40px' />
+                                </a>
+                                <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '10vw' }}>
+                                    <LinkedInIcon width='40px' height='40px' />
+                                </a>
+                            </Box>
 
                         </MenuList>
 
@@ -66,12 +96,10 @@ export function MobileHeader() {
                 </Box>
 
             </Grid>
-            <Grid item width={140} height={"70%"} xs={4} sx={{ paddingLeft: "10px !important" }}>
-                <img src="/ras1-removebg-preview.svg" alt="logo" width={"100%"} height={"100%"} />
-            </Grid>
 
 
-            <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+            {/* <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} style={{ color: '#000', fontFamily: 'sans-serif', fontSize: '22px', fontWeight: '600', cursor: "pointer" }}>
 
                     <Button sx={{
@@ -84,7 +112,7 @@ export function MobileHeader() {
                         Contact us
                     </Button>
                 </Link>
-            </Grid>
+            </Grid> */}
 
 
 
