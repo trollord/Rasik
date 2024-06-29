@@ -12,6 +12,7 @@ import MeetUs from "./components/meetUs";
 import OurWork from "./components/ourWork";
 import FooterMobile from "./components/footerMobile";
 import { ResponsiveHeader } from "../commonComponents/header";
+import OurClientsCarousel from "./components/ourClientsCarousel";
 // import TempOurClient from "./components/ourClients/TempOurClient";
 
 
@@ -25,7 +26,8 @@ export function HomePage() {
 
       <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />
-      <OurClients />
+      {/* <OurClients /> */}
+      <OurClientsCarousel />
       {/* <TempOurClient /> */}
       <OurServices />
       <About />

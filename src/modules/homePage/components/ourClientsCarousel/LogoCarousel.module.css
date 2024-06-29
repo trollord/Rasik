@@ -1,0 +1,17 @@
+/* LogoCarousel.module.css */
+.carouselContainer {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .logoSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logoImage {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
