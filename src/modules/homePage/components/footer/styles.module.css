@@ -113,6 +113,12 @@
     font-size: var(--font-size-xl);
     font-family: 'Inter', sans-serif;
   }
+  .ellipses{
+    width: 350px; /* Set the width of the container */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflowed text */
+  text-overflow: ellipsis; /* Display an ellipsis to represent the hidden text */
+  }
   .customeA{
     text-decoration: underline;
     text-decoration-color: black; /* This sets the underline color */

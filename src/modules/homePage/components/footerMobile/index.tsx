@@ -72,14 +72,24 @@ function FooterMobile() {
                 </Grid>
                 <Grid item width="50vw" paddingLeft="55px" display='flex' flexDirection='column' >  
                     <Typography variant="h5"  sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Company</Typography>
-                    <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>About Us</Link>
-                    <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Clients</Link>
-                    <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Our Work</Link>
-                    <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} className={styles.companyFont}>Contact Us</Link>
+                    <Link to="about" onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500} >
+                        <Typography className={styles.servicesFont}>About Us</Typography>
+                    </Link>
+                    <Link to="client" onClick={() => navigateAndScroll('/', 'client')} spy={true} smooth={true} offset={-100} duration={500} >
+                        <Typography className={styles.servicesFont}>Clients</Typography>
+                    </Link>
+                    <Link to="ourwork" onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} offset={-100} duration={500} >
+                        <Typography className={styles.servicesFont}>Our Work</Typography>
+                    </Link>
+                    <Link to="contactUs" onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500} >
+                        <Typography className={styles.servicesFont}>
+                        Contact Us
+                        </Typography>
+                    </Link>
                 </Grid>
 
             </Grid>
-            <Grid height="40vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
+            <Grid height="30vw" container width="100vw"  paddingLeft="9vw" flexDirection='row' paddingTop="3vh">
                 <Grid width="40vw">
                     <Typography variant="h5" className={styles.connect} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize:"3vh" }}>Email</Typography>
                     <Grid className={styles.prashantEmail}>
