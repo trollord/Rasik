@@ -1,19 +1,18 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import Slider from 'react-infinite-logo-slider';
 import '../../../../App.css';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 function ourClientsCarousel(){
+  const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
     
     return (
-      <Grid height = "70vh" width = "100vw">
-        <Grid paddingTop="7vh">
-          <Typography variant="h1" sx={{textAlign:'center'}}>
-            Our Clients
-          </Typography>
-        </Grid>
-        <Grid paddingTop="15vh">
-
-        
+      <Grid height = {isMobile? "50vh":"60vh"} width = "100vw" >
+        < Box height={isMobile?"20vh":"30vh"} textAlign='center' mb={3} paddingTop={isMobile? "5vh":"10vh"} paddingBottom="5vh">
+          <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px', fontFamily: 'Inter, sans-serif' }, pb: "15vh" }}>Our Clients</Typography>
+        </Box>
+        <Box height="40vh">
         <Slider
             width="250px"
             duration={20}
@@ -50,7 +49,7 @@ function ourClientsCarousel(){
             </Slider.Slide>
             
         </Slider>
-        </Grid>
+        </Box>
         </Grid>
     )
 }
