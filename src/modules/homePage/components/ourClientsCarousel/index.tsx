@@ -6,17 +6,17 @@ function ourClientsCarousel(){
     
     return (
       <Grid height = "70vh" width = "100vw">
-        <Grid >
+        <Grid paddingTop="7vh">
           <Typography variant="h1" sx={{textAlign:'center'}}>
             Our Clients
           </Typography>
         </Grid>
-        <Grid paddingTop="20vh">
+        <Grid paddingTop="15vh">
 
         
         <Slider
             width="250px"
-            duration={40}
+            duration={20}
             pauseOnHover={true}
             blurBorders={false}
             blurBoderColor={'#fff'}
