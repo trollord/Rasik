@@ -4,6 +4,22 @@
     box-sizing: border-box !important;
 }
 
+.css-1sjhuv5-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+    
+     max-height:none !important;
+     /* height: 100vh !important; */
+     top: 30px !important;
+     bottom: 30px !important;
+    overflow:  hidden !important;
+    padding: 5px;
+    border: '2px solid red' !important;
+     /* max-width:calc(100% - 55px) !important; */
+ 
+  
+}
+
+
+
 
 .our-work{
   background-image: url('/our-work-background-image.svg');

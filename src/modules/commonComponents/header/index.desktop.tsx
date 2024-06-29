@@ -112,6 +112,7 @@ import { useNavigate } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import { InstaGram, LinkedInIcon } from '../icons';
 import '../../../App.css';
+import DotGrid from './DotGrid';
 
 export function DesktopHeader() {
     const [activeLink, setActiveLink] = useState('');
@@ -207,12 +208,14 @@ export function DesktopHeader() {
                     </IconButton>
 
 
-                    <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{
-                        width: '100vw', height: '100vh', display: 'flex', top: 0, left: 0, position: 'fixed', '& .MuiPaper-root': {
+                    <Menu anchorEl={anchorNav} open={Boolean(anchorNav)} onClose={handleClose} sx={{
+                        width: '100vw', height: '100vh', display: 'flex', top: 0, left: 0, position: 'fixed',
+                        '& .MuiPaper-root': {
                             width: '100vw',
-                            height: '100vh',
+                            // height: '100vh',
                             margin: 0,
                             borderRadius: 0,
+
                         }
                     }}
                         anchorOrigin={{
@@ -222,34 +225,48 @@ export function DesktopHeader() {
                         transformOrigin={{
                             vertical: 'top',
                             horizontal: 'left',
-                        }}>
+                        }}
+
+
+
+                    >
                         <IconButton size='large' edge='start' onClick={handleClose} sx={{ position: 'absolute', top: '0', right: '5px' }}>
                             <CloseIcon sx={{ fontSize: 30, color: '#EB3335' }} />
                         </IconButton>
-                        <MenuList sx={{ position: 'relative', width: '90%', marginLeft: '30px' }}>
+                        <MenuList sx={{
+                            position: 'relative', width: '90%', marginLeft: '30px', display: 'flex', overflowY: 'hidden', height: '93vh',
 
+                        }}>
 
-                            <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Services</MenuItem></Link>
-                            <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Work</MenuItem></Link>
-                            <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>About Us</MenuItem></Link>
-                            <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Testimonials</MenuItem></Link>
-                            <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000' }}>Get in touch</MenuItem></Link>
-                            <Box sx={{ marginLeft: '1vw', marginTop: '3vw' }}>
-                                <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                                    <InstaGram width='40px' height='40px' />
-                                </a>
-                                <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '2vw' }}>
-                                    <LinkedInIcon width='40px' height='40px' />
-                                </a>
+                            <Box width='60%'>
+                                <Link to='services' onClick={() => navigateAndScroll('/', 'services')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000', marginBottom: '10px' }}>Services</MenuItem></Link>
+                                <Link to='ourwork' onClick={() => navigateAndScroll('/', 'ourwork')} spy={true} smooth={true} duration={500}><MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000', marginBottom: '10px' }}>Work</MenuItem></Link>
+                                <Link to='about' onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000', marginBottom: '10px' }}>About Us</MenuItem></Link>
+                                <Link to='testimonials' onClick={() => navigateAndScroll('/', 'testimonials')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000', marginBottom: '10px' }}>Testimonials</MenuItem></Link>
+                                <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} duration={500}> <MenuItem onClick={handleClose} sx={{ fontSize: '28px', fontWeight: '600', color: '#000', marginBottom: '10px' }}>Get in touch</MenuItem></Link>
+                                <Box sx={{ marginLeft: '1vw', marginTop: '3vw' }}>
+                                    <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                                        <InstaGram width='40px' height='40px' />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/rasikcommunications/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '2vw' }}>
+                                        <LinkedInIcon width='40px' height='40px' />
+                                    </a>
+                                </Box>
+                            </Box>
+
+                            <Box width='40%' height='94vh' sx={{ overflowY: 'hidden' }}>
+                                <DotGrid rows={19} columns={9} dotSize={8} spacing={5} />
                             </Box>
 
                         </MenuList>
+
+
 
                     </Menu>
 
                 </Box>
             </Grid>
-        </Grid>
+        </Grid >
     );
 }
 
