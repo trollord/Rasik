@@ -3,6 +3,7 @@ import Header from "../commonComponents/header/index.desktop";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Carasouel from "./components/carousal";
 import OurClients from "./components/ourClients";
+import LogoSlider from "./components/ourClientsCarousel/LogoCarousel";
 import { About } from "./components/aboutUs";
 import ContactUs from "./components/contactUs";
 import Footer from "./components/footer";
@@ -27,7 +28,8 @@ export function HomePage() {
       <ResponsiveHeader></ResponsiveHeader>
       <Carasouel />
       {/* <OurClients /> */}
-      <OurClientsCarousel />
+      {!isMobile && <OurClientsCarousel />}
+      {isMobile && <LogoSlider/>}
       {/* <TempOurClient /> */}
       <OurServices />
       <About />
