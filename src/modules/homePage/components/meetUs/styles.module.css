@@ -321,7 +321,7 @@
   }
   .frameParent {
     flex: 1;
-    padding-top: 100px;
+    padding-top: 7vh;
     flex-direction: column;
     justify-content: flex-start;
     gap: var(--gap-41xl);
