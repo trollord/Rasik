@@ -35,7 +35,7 @@ const LogoSlider = () => {
       <Box height="20vh" textAlign='center' mb={3} paddingTop="5vh" paddingBottom="0vh">
       <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px', fontFamily: 'Inter, sans-serif' }, pb: "15vh" }}>Our Clients</Typography>
       </Box>
-      <Grid item height="70vh" paddingLeft="0vw">
+      <Grid item height="75vh" paddingLeft="0vw">
       <Slider {...settings} >
         {logos.map(logo => (
           <div key={logo.id} className={styles.slide}>
