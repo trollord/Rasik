@@ -68,11 +68,11 @@ function OurServices() {
 
 
   return (
-    <Grid container className='our-service' sx={{ height: { xs: 'auto', md: '100vh' }, padding: { md: '0 0 0', xs: '0' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' bgcolor='#000' color='#fff'
+    <Grid container bgcolor='#FFF6E7' className='our-service' sx={{ height: { xs: 'auto', md: '100vh' }, padding: { md: '0 0 0', xs: '0' } }} width='100%' id='services' display='flex' justifyContent='space-evenly' color='#000'
     >
 
       <Grid item md={12} display='flex' flexDirection='column' justifyContent='center' sx={{ textAlign: { xs: 'center', md: 'center' }, padding: { xs: '20px', md: '0' } }} >
-        <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '45px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '5px' } }}>Our Services</Typography>
+        <Typography sx={{ fontWeight: { xs: '700', md: '700' }, fontSize: { xs: '45px', md: '4.2vw' }, marginBottom: { xs: '8px', md: '5px' }, fontFamily: 'Playfair Display' }}>Our Services</Typography>
         {/* <Typography sx={{ fontSize: { xs: '15px', md: '1.4vw' } }}> Check out our diverse range of services!</Typography> */}
       </Grid>
 

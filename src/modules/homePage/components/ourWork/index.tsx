@@ -136,7 +136,7 @@ function OurWork() {
 
 
   return (
-    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '120vh' }, padding: { xs: '30px 10px 80px', md: '0' } }} width='100%' container id='ourwork' bgcolor='#000' color='#fff'  >
+    <Grid className='our-work' sx={{ height: { xs: 'auto', md: '120vh' }, padding: { xs: '30px 10px 80px', md: '0' } }} width='100%' container id='ourwork' color='#000' bgcolor='#FFF6E7' >
 
 
       <Modal
@@ -152,7 +152,7 @@ function OurWork() {
       </Modal>
       {/* height of our work heading on desktop is 18% */}
       <Grid item sx={{ height: { xs: '6%', md: '18%' }, marginBottom: { xs: '0px', md: '0' }, paddingTop: { xs: '0', md: '10vh' } }} display="flex" alignItems="center" justifyContent="flex-start" flexDirection="column" width="100%">
-        <Typography style={{ fontWeight: '600', fontSize: '64px' }} textAlign='center'>Our Work</Typography>
+        <Typography style={{ fontWeight: '600', fontSize: '64px', fontFamily: 'Playfair Display' }} textAlign='center'>Our Work</Typography>
         {/* <Typography textAlign='center' fontSize="16px" >Your Vision, Our Expertise</Typography> */}
       </Grid>
       {/* height of img carausl img grid  on desktop is 82% */}
@@ -161,7 +161,7 @@ function OurWork() {
         <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
+          <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
               {printClientImg.map((img, index) => (
@@ -184,7 +184,7 @@ function OurWork() {
         {/* className={visibleSecond ? 'fade-in-bottom' : ''} */}
         <Grid item id="second-carousel" className={visibleSecond ? (isMobile ? 'fade-in-right' : 'fade-in-bottom') : ''} md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
+          <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
               {overseasImages.map((img, index) => (
@@ -206,7 +206,7 @@ function OurWork() {
 
         <Grid item className={visibleThird ? (isMobile ? 'fade-in-left' : 'fade-in-right') : ''} id="third-carousel" md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' } }}  >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
-          <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
+          <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
               {overseasImages.map((img, index) => (
