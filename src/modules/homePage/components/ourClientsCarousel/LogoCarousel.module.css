@@ -1,0 +1,54 @@
+.slider-container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.slide img {
+  max-height: 80px;
+  max-width: 100%;
+}
+
+.our_image {
+  max-height: 90px;
+  max-width: 200px;
+  padding-left: 25vw;
+}
+.roopmilan_img {
+  display: none;
+  padding-left: 0vw;
+}
+.somaiya_img{
+  padding-left: 17vw;
+}
+.titbit_img{
+  padding-left: 30vw;
+}
+.adenwal_img{
+  padding-left: 20vw;
+}
+.digi1_img{
+  padding-left: 26vw;
+}
+.lg_img{
+  padding-left: 37vw;
+}
+.saucy_img{
+  padding-left: 40vw;
+}
+
+.roopkala_img{
+  padding-left: 35vw;
+}
