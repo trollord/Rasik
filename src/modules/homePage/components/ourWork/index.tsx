@@ -8,18 +8,36 @@ import { useState, useEffect } from 'react';
 
 const overseasImages = [
   {
-    img1: 'assets/overseas-1.png',
-    img2: 'assets/overseas-2.png'
+    img1: 'assets/overseas/active_consultant.svg',
+    img2: 'assets/overseas/ajeet_manpower.svg'
 
   },
   {
-    img1: 'assets/overseas-3.png',
-    img2: 'assets/overseas-4.png'
+    img1: 'assets/overseas/arafa_travels.svg',
+    img2: 'assets/overseas/ASMACS.svg'
 
   },
   {
-    img1: 'assets/overseas-5.png',
-    img2: 'assets/overseas-6.png'
+    img1: 'assets/overseas/bhatia_employ.svg',
+    img2: 'assets/overseas/dhaid_travels.svg'
+
+  },
+  {
+    img1: 'assets/overseas/prerna.svg',
+    img2: 'assets/overseas/tradesmen.svg'
+
+  },
+
+];
+const digitalImages = [
+  {
+    img1: 'assets/digitalclients/digi1.svg',
+    img2: 'assets/digitalclients/saucyaffair.svg'
+
+  },
+  {
+    img1: 'assets/digitalclients/somaiya.svg',
+    img2: 'assets/digitalclients/titbit.svg'
 
   },
 
@@ -27,18 +45,38 @@ const overseasImages = [
 
 const printClientImg = [
   {
-    img1: 'assets/printwork-1.png',
-    img2: 'assets/printwork-2.png'
+    img1: 'assets/printclients/adenwal_jewellers.svg',
+    img2: 'assets/printclients/bhatia_employ.svg'
 
   },
   {
-    img1: 'assets/printwork-3.png',
-    img2: 'assets/printwork-4.png'
+    img1: 'assets/printclients/digi1.svg',
+    img2: 'assets/printclients/lghing.svg'
 
   },
   {
-    img1: 'assets/printwork-5.png',
-    img2: 'assets/printwork-6.png'
+    img1: 'assets/printclients/milan_fabric.svg',
+    img2: 'assets/printclients/osaka.svg'
+
+  },
+  {
+    img1: 'assets/printclients/prerna.svg',
+    img2: 'assets/printclients/roopkala.svg'
+
+  },
+  {
+    img1: 'assets/printclients/roopmilan.svg',
+    img2: 'assets/printclients/somaiya.svg'
+
+  },
+  {
+    img1: 'assets/printclients/stayon.svg',
+    img2: 'assets/printclients/titbit.svg'
+
+  },
+  {
+    img1: 'assets/printclients/tradesmen.svg',
+    img2: 'assets/printclients/varsha.svg'
 
   },
 
@@ -187,7 +225,7 @@ function OurWork() {
           <Box bgcolor='rgba(255,255,255,0.2)' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
-              {overseasImages.map((img, index) => (
+              {digitalImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
