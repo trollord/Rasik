@@ -8,7 +8,7 @@ function OurClients() {
         <Grid container display='flex' alignItems='center' flexDirection='column' sx={{ height: { xs: '50vh', md: '85vh' }, justifyContent: { xs: 'center', md: 'center' }, margin: { md: '20px 0 0' } }} id='client' >
             <Box width="100%" >
                 < Box textAlign='center' mb={3}  >
-                    <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px' }, pb: "15vh", fontFamily: 'Playfair Display, serif' }}>Our Clients</Typography>
+                    <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px' }, pb: "15vh" }}>Our Clients</Typography>
 
                 </Box >
                 {/*  */}
