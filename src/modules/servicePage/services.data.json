@@ -18,8 +18,10 @@
         "/assets/printmedia/printmedia-16.jpg"
     ],
     "eCommerceSolution": [
-        "/assets/amazon.png",
-        "/assets/amazon.png"
+        "/assets/ecommerce/meesho.svg",
+        "/assets/ecommerce/myntra.svg",
+        "/assets/ecommerce/amazon.svg",
+        "/assets/ecommerce/flipkart.svg"
     ],
     "radioFm": [
         "/assets/radiofm/radiofm.svg",
@@ -62,9 +64,10 @@
             "modalImage":"/assets/creative/stayon.jpg"}
     ],
     "digitalMarketing": [
-        "/assets/amazon.png",
-        "/assets/amazon.png",
-        "/assets/amazon.png"
+        "/assets/digitalmarketing/meta.svg",
+        "/assets/digitalmarketing/whatsapp.svg",
+        "/assets/digitalmarketing/twitter.svg",
+        "/assets/digitalmarketing/google.svg"
     ],
     "socialMediaMarketing": [
         "/assets/amazon.png"
