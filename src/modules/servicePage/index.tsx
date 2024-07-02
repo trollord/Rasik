@@ -88,9 +88,9 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
 
             <Grid item width='80%' sx={{ width: { xs: '100%', md: '80%' }, padding: { xs: '18px', md: '40px' } }} display='flex' flexDirection='column' justifyContent='center' alignItems='center'   >
                 {/* width='200px' height='200px' print media box height and width */}
-                <Box sx={{ width: { xs: '170px', md: '200px' }, height: { xs: '170px', md: '200px' } }} bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center' boxShadow='0px 4px 4px 0px #00000040'>
+                <Box sx={{ width: { xs: '140px', md: '170px' }, height: { xs: '140px', md: '170px' } }} bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center' boxShadow='0px 4px 4px 0px #00000040'>
                     {/* height='130px' width='130px' this is height and widt of logo */}
-                    <Box sx={{ height: { xs: '120px', md: '130px' }, width: { xs: '120px', md: '130px' } }} >{componentToRender}</Box>
+                    <Box sx={{ height: { xs: '90px', md: '120px' }, width: { xs: '90px', md: '120px' } }} >{componentToRender}</Box>
                     {/* <PrintMedia /> */}
                 </Box>
                 <Typography sx={{ fontWeight: '600', fontSize: { xs: '30px', md: '35px' }, marginBottom: { xs: '8px', md: '0' } }} >{textToRender}</Typography>
@@ -136,7 +136,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
 
             {/* , boxShadow: '0px 4px 4px 0px #00000040' */}
             <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500}><Button size="medium" sx={{
-                backgroundColor: '#EB3335', width: '190px', height: '40px', color: "#FFFFFF", marginBottom: '30px', textTransform: 'none', fontSize: '20px', display: { xs: 'none', md: 'block' }, padding: '4px', '&:hover': {
+                backgroundColor: '#EB3335', width: '190px', height: '40px', color: "#FFFFFF", marginBottom: '30px', textTransform: 'none', fontSize: '20px', display: { xs: 'block', md: 'block' }, padding: '4px', '&:hover': {
                     color: '#000',
                     backgroundColor: '#EB3335'
                 }
