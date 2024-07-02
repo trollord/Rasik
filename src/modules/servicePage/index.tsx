@@ -21,23 +21,23 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             break;
         case 'eCommerceSolution':
             componentToRender = <Ecommerce />;
-            description = "Elevate your online business with Rasik Communications' E-commerce Solutions. We provide tailored strategies and innovative technologies to enhance your digital storefront, driving traffic and boosting sales. Transform your e-commerce presence and achieve unprecedented growth with our expert guidance."
+            description = "Elevate your online business with Rasik's E-commerce Solutions. We provide tailored strategies and innovative technologies to enhance your digital storefront, driving traffic and boosting sales. Transform your e-commerce presence and achieve unprecedented growth with our expert guidance."
             break;
         case 'radioFm':
             componentToRender = <RadioFM />;
-            description="Amplify your brand's voice with Rasik Communications' Radio FM services. We create captivating radio campaigns that resonate with listeners, ensuring your message reaches a wide and diverse audience. Tune in to success with expertly crafted ads that make an impact."
+            description="Elevate your brand's visibility with Rasik's Outdoor Advertising. Reach your audience through a dynamic mix of Radio FM, bus ads, kiosks, theatres, railways, and eye-catching hoardings. Maximize your impact with comprehensive, multi-channel outdoor solutions. Tune in to success with expertly crafted ads that make an impact."
             break;
         case 'creative':
             componentToRender = <Creative />;
-            description = "Unleash your brand's potential with Rasik Communications' Creatives. Our innovative design solutions captivate audiences and communicate your message with impact. From striking visuals to compelling narratives, we bring your vision to life, ensuring your brand stands out in a crowded marketplace."
+            description = "Unleash your brand's potential with Rasik's Creatives. Our innovative design solutions captivate audiences and communicate your message with impact. From striking visuals to compelling narratives, we bring your vision to life, ensuring your brand stands out in a crowded marketplace."
             break;
         case 'digitalMarketing':
             componentToRender = <DigitalMarketing />;
-            description = "Elevate your brand's online presence with Rasik Communications' cutting-edge digital marketing strategies. Engage your audience through tailored campaigns, boost conversions, and achieve unparalleled growth. Experience the power of data-driven marketing with our expert team."
+            description = "Elevate your brand's online presence with Rasik's cutting-edge digital marketing strategies. Engage your audience through tailored campaigns, boost conversions, and achieve unparalleled growth. Experience the power of data-driven marketing with our expert team."
             break;
         case 'socialMediaMarketing':
             componentToRender = <SocialMarketing />;
-            description = "Transform your social media presence with Rasik Communications. Our expert team crafts compelling content and targeted campaigns to enhance engagement, build your brand, and drive results. Connect with your audience on a deeper level and watch your community grow."
+            description = "Transform your social media presence with Rasik . Our expert team crafts compelling content and targeted campaigns to enhance engagement, build your brand, and drive results. Connect with your audience on a deeper level and watch your community grow."
             break;
         default:
             componentToRender = 'no logo';
@@ -51,7 +51,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             textToRender = 'Ecommerce Solution';
             break;
         case 'radioFm':
-            textToRender = 'Radio FM';
+            textToRender = 'Outdoor Advertising';
             break;
         case 'creative':
             textToRender = 'Creative';
@@ -98,7 +98,8 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             </Grid>
 
             <Grid container item display='flex' flexDirection='column' justifyContent='center' alignItems='center' mb={5} >
-                <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Our channel partners</Typography>
+                {currentPage!="creative" && <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Our Channel Partners</Typography>}
+                {currentPage=="creative" && <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Some of our Creatives</Typography>}
 
                 <Grid container item pt={3} pb={3} bgcolor='#F1E5D1' width='90%' display='flex' justifyContent='center' borderRadius='5px'>
 

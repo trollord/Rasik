@@ -22,22 +22,22 @@
         "/assets/amazon.png"
     ],
     "radioFm": [
-        "/assets/radiofm/radiofm-1.png",
-        "/assets/radiofm/radiofm-2.png",
-        "/assets/radiofm/radiofm-3.png",
-        "/assets/radiofm/radiofm-4.png",
-        "/assets/radiofm/radiofm-5.png",
-        "/assets/radiofm/radiofm-6.png",
-        "/assets/radiofm/radiofm-7.png",
-        "/assets/radiofm/radiofm-8.png"
+        "/assets/radiofm/radiofm.svg",
+        "/assets/radiofm/buses.svg",
+        "/assets/radiofm/kiosks.svg",
+        "/assets/radiofm/theatre.svg",
+        "/assets/radiofm/railway.svg",
+        "/assets/radiofm/hoarding.svg"
     ],
     "creative": [
-        "/assets/creative/creative-1.png",
-        "/assets/creative/creative-2.png",
-        "/assets/creative/creative-3.png",
-        "/assets/creative/creative-4.png",
-        "/assets/creative/creative-5.png",
-        "/assets/creative/creative-6.png"
+        "/assets/creative/roopkala.jpg",
+        "/assets/creative/adenwala.jpg",
+        "/assets/creative/milan.jpg",
+        "/assets/creative/digi1.jpg",
+        "/assets/creative/titbit.jpg",
+        "/assets/creative/zepair.jpg",
+        "/assets/creative/tradesmen.jpg",
+        "/assets/creative/stayon.jpg"
     ],
     "digitalMarketing": [
         "/assets/amazon.png",

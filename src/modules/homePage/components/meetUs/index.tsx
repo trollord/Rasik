@@ -16,33 +16,33 @@ function MeetUs() {
       <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '88vh' : isTablet?'67vh':'47vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
-        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'40vh'} width="55vw" borderRadius="10px" overflow="hidden">
+        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'40vh'}  width={isMobile? "65vw":"55vw"} borderRadius="10px" overflow="hidden">
 
-<Box
-      sx={{
-        borderRadius: '10px',
-        width: '100%',
-        height: '100%',
-        border: 'none',
-        overflow: 'hidden',
-        position: 'relative',
-        paddingTop: '56.25%', // 16:9 aspect ratio
-      }}
-    >
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15089.175338429783!2d72.8340443!3d19.0067696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8d3693b12b%3A0x27cf82ad5efa9e9a!2sRasik%20Communications!5e0!3m2!1sen!2sin!4v1718456015635!5m2!1sen!2sin"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          border: '0'
-        }}
-        allowFullScreen={true}
-        loading="lazy"
-      ></iframe>
-    </Box>
+          <Box
+                sx={{
+                  borderRadius: '10px',
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  overflow: 'hidden',
+                  position: 'relative',
+                  paddingTop: '56.25%', // 16:9 aspect ratio
+                }}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15089.175338429783!2d72.8340443!3d19.0067696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8d3693b12b%3A0x27cf82ad5efa9e9a!2sRasik%20Communications!5e0!3m2!1sen!2sin!4v1718456015635!5m2!1sen!2sin"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: '0'
+                  }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                ></iframe>
+              </Box>
 
         </Grid>
         <Grid container item md={3} >
