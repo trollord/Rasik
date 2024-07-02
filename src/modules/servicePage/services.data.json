@@ -30,14 +30,36 @@
         "/assets/radiofm/hoarding.svg"
     ],
     "creative": [
-        "/assets/creative/roopkala.jpg",
-        "/assets/creative/adenwala.jpg",
-        "/assets/creative/milan.jpg",
-        "/assets/creative/digi1.jpg",
-        "/assets/creative/titbit.jpg",
-        "/assets/creative/zepair.jpg",
-        "/assets/creative/tradesmen.jpg",
-        "/assets/creative/stayon.jpg"
+        {
+            "image": "/assets/creativelogos/roopkala.svg",
+            "modalImage":"/assets/creative/roopkala.jpg"},
+        {
+            "image": "/assets/creativelogos/adenwal_jewellers.svg",
+            "modalImage":"/assets/creative/adenwala.jpg"},
+        {
+            "image": "/assets/creativelogos/milan_fabric.svg",
+            "modalImage":"/assets/creative/milan.jpg"},
+        {
+            "image": "/assets/creativelogos/digi1.svg",
+            "modalImage":"/assets/creative/digi1.jpg"},
+        {
+            "image": "/assets/creativelogos/titbit.svg",
+            "modalImage":"/assets/creative/titbit.jpg"},
+        {
+            "image": "/assets/creativelogos/titbit.svg",
+            "modalImage":"/assets/creative/zepair.jpg"},
+        {
+            "image": "/assets/creativelogos/tradesmen.svg",
+            "modalImage":"/assets/creative/tradesmen.jpg"},
+        {
+            "image": "/assets/creativelogos/osaka.svg",
+            "modalImage":"/assets/creative/osaka.jpg"},
+        {
+            "image": "/assets/creativelogos/saucyaffair.svg",
+            "modalImage":"/assets/creative/saucyaffair.jpg"},
+        {
+            "image": "/assets/creativelogos/stayon.svg",
+            "modalImage":"/assets/creative/stayon.jpg"}
     ],
     "digitalMarketing": [
         "/assets/amazon.png",

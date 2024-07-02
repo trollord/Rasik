@@ -116,7 +116,7 @@ function OurWork() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
-
+  
   const handleOpen = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setOpen(true);

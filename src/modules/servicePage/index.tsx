@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Modal, Typography } from "@mui/material";
 import { Link, scroller } from 'react-scroll'
 import { PrintMedia, Ecommerce, RadioFM, Creative, SocialMarketing, DigitalMarketing } from "../commonComponents/icons";
 import Footer from "../homePage/components/footer";
@@ -7,11 +7,20 @@ import FooterMobile from "../homePage/components/footerMobile";
 import { ResponsiveHeader } from "../commonComponents/header";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+// import '../../../../App.css';
 
 export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCommerceSolution' | 'radioFm' | 'creative' | 'digitalMarketing' | 'socialMediaMarketing' }) {
     const isMobile = useMediaQuery('(max-width:600px)');
+    const [open, setOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const navigate = useNavigate();
     let componentToRender;
+    const handleOpen = (imageSrc: string) => {
+        setSelectedImage(imageSrc);
+        setOpen(true);
+      };
+      const handleClose = () => setOpen(false);
     let textToRender;
     let description;
     switch (currentPage) {
@@ -79,13 +88,35 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
     };
 
 
-
+    const style = {
+        position: 'absolute' as 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '70vw',
+        height: '70vh',
+        bgcolor: 'background.paper',
+        boxShadow: 24,
+        p: 4,
+        outline: 'none',
+        borderRadius: '10px'
+      };
     return (
         <Grid container display='flex' sx={{ marginTop: { xs: '8vh', md: '15vh' } }} flexDirection='column' justifyContent='center' alignItems='center'>
 
             {/* <Header /> */}
             <ResponsiveHeader></ResponsiveHeader>
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <Box sx={style}>
 
+                {selectedImage && (
+                    <img src={selectedImage} alt="Modal Content" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                )}
+                </Box>
+            </Modal>
             <Grid item width='80%' sx={{ width: { xs: '100%', md: '80%' }, padding: { xs: '18px', md: '40px' } }} display='flex' flexDirection='column' justifyContent='center' alignItems='center'   >
                 {/* width='200px' height='200px' print media box height and width */}
                 <Box sx={{ width: { xs: '170px', md: '200px' }, height: { xs: '170px', md: '200px' } }} bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center' boxShadow='0px 4px 4px 0px #00000040'>
@@ -103,18 +134,32 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
 
                 <Grid container item pt={3} pb={3} bgcolor='#F1E5D1' width='90%' display='flex' justifyContent='center' borderRadius='5px'>
 
-                    {serviceData[currentPage].length > 0 ?
-                        serviceData[currentPage].map((path) => {
+                    {serviceData[currentPage].length > 0 && currentPage=="creative"? 
+                        serviceData[currentPage].map(({ image, modalImage }) => {
                             return (
                                 // boxShadow='0px 4px 4px 0px #00000040'
                                 // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
                                 <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
-                                    <Box sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                    {currentPage=="creative" && <Box onClick={() => handleOpen(modalImage)} sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } , cursor: 'pointer'}} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                        <img src={image} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
+                                    </Box>}
+                                    {currentPage!="creative" && <Box  sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                        <img src={image} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
+                                    </Box>}
+                                </Grid>
+                            )
+                        }) : serviceData[currentPage].map((path) => {
+                            return (
+                                // boxShadow='0px 4px 4px 0px #00000040'
+                                // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
+                                <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
+                                    
+                                    <Box  sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
                                         <img src={path} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
                                     </Box>
                                 </Grid>
                             )
-                        }) : ""
+                        })
                     }
                     {/* 
                     <Grid item display='flex' justifyContent="center" width='100%'>
