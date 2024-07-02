@@ -22,22 +22,44 @@
         "/assets/amazon.png"
     ],
     "radioFm": [
-        "/assets/radiofm/radiofm-1.png",
-        "/assets/radiofm/radiofm-2.png",
-        "/assets/radiofm/radiofm-3.png",
-        "/assets/radiofm/radiofm-4.png",
-        "/assets/radiofm/radiofm-5.png",
-        "/assets/radiofm/radiofm-6.png",
-        "/assets/radiofm/radiofm-7.png",
-        "/assets/radiofm/radiofm-8.png"
+        "/assets/radiofm/radiofm.svg",
+        "/assets/radiofm/buses.svg",
+        "/assets/radiofm/kiosks.svg",
+        "/assets/radiofm/theatre.svg",
+        "/assets/radiofm/railway.svg",
+        "/assets/radiofm/hoarding.svg"
     ],
     "creative": [
-        "/assets/creative/creative-1.png",
-        "/assets/creative/creative-2.png",
-        "/assets/creative/creative-3.png",
-        "/assets/creative/creative-4.png",
-        "/assets/creative/creative-5.png",
-        "/assets/creative/creative-6.png"
+        {
+            "image": "/assets/creativelogos/roopkala.svg",
+            "modalImage":"/assets/creative/roopkala.jpg"},
+        {
+            "image": "/assets/creativelogos/adenwal_jewellers.svg",
+            "modalImage":"/assets/creative/adenwala.jpg"},
+        {
+            "image": "/assets/creativelogos/milan_fabric.svg",
+            "modalImage":"/assets/creative/milan.jpg"},
+        {
+            "image": "/assets/creativelogos/digi1.svg",
+            "modalImage":"/assets/creative/digi1.jpg"},
+        {
+            "image": "/assets/creativelogos/titbit.svg",
+            "modalImage":"/assets/creative/titbit.jpg"},
+        {
+            "image": "/assets/creativelogos/titbit.svg",
+            "modalImage":"/assets/creative/zepair.jpg"},
+        {
+            "image": "/assets/creativelogos/tradesmen.svg",
+            "modalImage":"/assets/creative/tradesmen.jpg"},
+        {
+            "image": "/assets/creativelogos/osaka.svg",
+            "modalImage":"/assets/creative/osaka.jpg"},
+        {
+            "image": "/assets/creativelogos/saucyaffair.svg",
+            "modalImage":"/assets/creative/saucyaffair.jpg"},
+        {
+            "image": "/assets/creativelogos/stayon.svg",
+            "modalImage":"/assets/creative/stayon.jpg"}
     ],
     "digitalMarketing": [
         "/assets/amazon.png",

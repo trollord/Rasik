@@ -116,7 +116,7 @@ function OurWork() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
-
+  
   const handleOpen = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setOpen(true);
@@ -231,8 +231,8 @@ function OurWork() {
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
+                  <Box onClick={() => handleOpen(img.img2)}  sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                    <img src={img.img2} className='ourwork-img'  style={{ height: '18vh' }} />
                   </Box>
                 </Box>
               ))}

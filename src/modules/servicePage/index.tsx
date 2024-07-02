@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Modal, Typography } from "@mui/material";
 import { Link, scroller } from 'react-scroll'
 import { PrintMedia, Ecommerce, RadioFM, Creative, SocialMarketing, DigitalMarketing } from "../commonComponents/icons";
 import Footer from "../homePage/components/footer";
@@ -7,11 +7,20 @@ import FooterMobile from "../homePage/components/footerMobile";
 import { ResponsiveHeader } from "../commonComponents/header";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+// import '../../../../App.css';
 
 export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCommerceSolution' | 'radioFm' | 'creative' | 'digitalMarketing' | 'socialMediaMarketing' }) {
     const isMobile = useMediaQuery('(max-width:600px)');
+    const [open, setOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const navigate = useNavigate();
     let componentToRender;
+    const handleOpen = (imageSrc: string) => {
+        setSelectedImage(imageSrc);
+        setOpen(true);
+      };
+      const handleClose = () => setOpen(false);
     let textToRender;
     let description;
     switch (currentPage) {
@@ -21,23 +30,23 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             break;
         case 'eCommerceSolution':
             componentToRender = <Ecommerce />;
-            description = "Elevate your online business with Rasik Communications' E-commerce Solutions. We provide tailored strategies and innovative technologies to enhance your digital storefront, driving traffic and boosting sales. Transform your e-commerce presence and achieve unprecedented growth with our expert guidance."
+            description = "Elevate your online business with Rasik's E-commerce Solutions. We provide tailored strategies and innovative technologies to enhance your digital storefront, driving traffic and boosting sales. Transform your e-commerce presence and achieve unprecedented growth with our expert guidance."
             break;
         case 'radioFm':
             componentToRender = <RadioFM />;
-            description = "Amplify your brand's voice with Rasik Communications' Radio FM services. We create captivating radio campaigns that resonate with listeners, ensuring your message reaches a wide and diverse audience. Tune in to success with expertly crafted ads that make an impact."
+            description="Elevate your brand's visibility with Rasik's Outdoor Advertising. Reach your audience through a dynamic mix of Radio FM, bus ads, kiosks, theatres, railways, and eye-catching hoardings. Maximize your impact with comprehensive, multi-channel outdoor solutions. Tune in to success with expertly crafted ads that make an impact."
             break;
         case 'creative':
             componentToRender = <Creative />;
-            description = "Unleash your brand's potential with Rasik Communications' Creatives. Our innovative design solutions captivate audiences and communicate your message with impact. From striking visuals to compelling narratives, we bring your vision to life, ensuring your brand stands out in a crowded marketplace."
+            description = "Unleash your brand's potential with Rasik's Creatives. Our innovative design solutions captivate audiences and communicate your message with impact. From striking visuals to compelling narratives, we bring your vision to life, ensuring your brand stands out in a crowded marketplace."
             break;
         case 'digitalMarketing':
             componentToRender = <DigitalMarketing />;
-            description = "Elevate your brand's online presence with Rasik Communications' cutting-edge digital marketing strategies. Engage your audience through tailored campaigns, boost conversions, and achieve unparalleled growth. Experience the power of data-driven marketing with our expert team."
+            description = "Elevate your brand's online presence with Rasik's cutting-edge digital marketing strategies. Engage your audience through tailored campaigns, boost conversions, and achieve unparalleled growth. Experience the power of data-driven marketing with our expert team."
             break;
         case 'socialMediaMarketing':
             componentToRender = <SocialMarketing />;
-            description = "Transform your social media presence with Rasik Communications. Our expert team crafts compelling content and targeted campaigns to enhance engagement, build your brand, and drive results. Connect with your audience on a deeper level and watch your community grow."
+            description = "Transform your social media presence with Rasik . Our expert team crafts compelling content and targeted campaigns to enhance engagement, build your brand, and drive results. Connect with your audience on a deeper level and watch your community grow."
             break;
         default:
             componentToRender = 'no logo';
@@ -51,7 +60,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             textToRender = 'Ecommerce Solution';
             break;
         case 'radioFm':
-            textToRender = 'Radio FM';
+            textToRender = 'Outdoor Advertising';
             break;
         case 'creative':
             textToRender = 'Creative';
@@ -79,13 +88,35 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
     };
 
 
-
+    const style = {
+        position: 'absolute' as 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '70vw',
+        height: '70vh',
+        bgcolor: 'background.paper',
+        boxShadow: 24,
+        p: 4,
+        outline: 'none',
+        borderRadius: '10px'
+      };
     return (
         <Grid container display='flex' sx={{ marginTop: { xs: '8vh', md: '15vh' } }} flexDirection='column' justifyContent='center' alignItems='center'>
 
             {/* <Header /> */}
             <ResponsiveHeader></ResponsiveHeader>
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <Box sx={style}>
 
+                {selectedImage && (
+                    <img src={selectedImage} alt="Modal Content" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                )}
+                </Box>
+            </Modal>
             <Grid item width='80%' sx={{ width: { xs: '100%', md: '80%' }, padding: { xs: '18px', md: '40px' } }} display='flex' flexDirection='column' justifyContent='center' alignItems='center'   >
                 {/* width='200px' height='200px' print media box height and width */}
                 <Box sx={{ width: { xs: '140px', md: '170px' }, height: { xs: '140px', md: '170px' } }} bgcolor='#F1E5D1' mb={2} borderRadius='50%' display='flex' justifyContent='center' alignItems='center' boxShadow='0px 4px 4px 0px #00000040'>
@@ -98,22 +129,37 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             </Grid>
 
             <Grid container item display='flex' flexDirection='column' justifyContent='center' alignItems='center' mb={5} >
-                <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Our channel partners</Typography>
+                {currentPage!="creative" && <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Our Channel Partners</Typography>}
+                {currentPage=="creative" && <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: { xs: '12px', md: '32px' } }}  >Some of our Creatives</Typography>}
 
                 <Grid container item pt={3} pb={3} bgcolor='#F1E5D1' width='90%' display='flex' justifyContent='center' borderRadius='5px'>
 
-                    {serviceData[currentPage].length > 0 ?
-                        serviceData[currentPage].map((path) => {
+                    {serviceData[currentPage].length > 0 && currentPage=="creative"? 
+                        serviceData[currentPage].map(({ image, modalImage }) => {
                             return (
                                 // boxShadow='0px 4px 4px 0px #00000040'
                                 // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
                                 <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
-                                    <Box sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                    {currentPage=="creative" && <Box onClick={() => handleOpen(modalImage)} sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } , cursor: 'pointer'}} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                        <img src={image} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
+                                    </Box>}
+                                    {currentPage!="creative" && <Box  sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
+                                        <img src={image} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
+                                    </Box>}
+                                </Grid>
+                            )
+                        }) : serviceData[currentPage].map((path) => {
+                            return (
+                                // boxShadow='0px 4px 4px 0px #00000040'
+                                // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
+                                <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
+                                    
+                                    <Box  sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
                                         <img src={path} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
                                     </Box>
                                 </Grid>
                             )
-                        }) : ""
+                        })
                     }
                     {/* 
                     <Grid item display='flex' justifyContent="center" width='100%'>
