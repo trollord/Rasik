@@ -25,7 +25,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             break;
         case 'radioFm':
             componentToRender = <RadioFM />;
-            description="Amplify your brand's voice with Rasik Communications' Radio FM services. We create captivating radio campaigns that resonate with listeners, ensuring your message reaches a wide and diverse audience. Tune in to success with expertly crafted ads that make an impact."
+            description = "Amplify your brand's voice with Rasik Communications' Radio FM services. We create captivating radio campaigns that resonate with listeners, ensuring your message reaches a wide and diverse audience. Tune in to success with expertly crafted ads that make an impact."
             break;
         case 'creative':
             componentToRender = <Creative />;
@@ -105,9 +105,10 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
                     {serviceData[currentPage].length > 0 ?
                         serviceData[currentPage].map((path) => {
                             return (
+                                // boxShadow='0px 4px 4px 0px #00000040'
                                 // height='28.5vh' width='100%' height and width of box which is inside grid on desktop
                                 <Grid item display='flex' justifyContent="center" md={2.9} xs={6} >
-                                    <Box sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px' boxShadow='0px 4px 4px 0px #00000040' >
+                                    <Box sx={{ width: { xs: '100%', md: '100%' }, height: { xs: '17vh', md: '28.5vh' } }} bgcolor='#fff' m={2} borderRadius='10px'  >
                                         <img src={path} width={"100%"} height="100%" style={{ borderRadius: '10px' }}></img>
                                     </Box>
                                 </Grid>
@@ -133,8 +134,9 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             </Grid>
 
 
+            {/* , boxShadow: '0px 4px 4px 0px #00000040' */}
             <Link to='contactUs' onClick={() => navigateAndScroll('/', 'contactUs')} spy={true} smooth={true} offset={-100} duration={500}><Button size="medium" sx={{
-                backgroundColor: '#EB3335', width: '190px', height: '40px', boxShadow: '0px 4px 4px 0px #00000040', color: "#FFFFFF", marginBottom: '30px', textTransform: 'none', fontSize: '20px', display: { xs: 'none', md: 'block' }, padding: '4px', '&:hover': {
+                backgroundColor: '#EB3335', width: '190px', height: '40px', color: "#FFFFFF", marginBottom: '30px', textTransform: 'none', fontSize: '20px', display: { xs: 'none', md: 'block' }, padding: '4px', '&:hover': {
                     color: '#000',
                     backgroundColor: '#EB3335'
                 }
