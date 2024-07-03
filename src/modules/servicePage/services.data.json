@@ -70,6 +70,9 @@
         "/assets/digitalmarketing/google.svg"
     ],
     "socialMediaMarketing": [
-        "/assets/amazon.png"
+        "/assets/socialmedia/facebook.svg",
+        "/assets/socialmedia/instagram.svg",
+        "/assets/socialmedia/youtube.svg",
+        "/assets/socialmedia/linkedin.svg"
     ]
 }
