@@ -2,6 +2,7 @@ import { Grid, Typography, Box, Modal } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../../../../App.css';
+import Divider from '@mui/material/Divider';
 
 
 import { useState, useEffect } from 'react';
@@ -116,7 +117,7 @@ function OurWork() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
-  
+
   const handleOpen = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setOpen(true);
@@ -199,6 +200,8 @@ function OurWork() {
         <Grid item id="first-carousel" className={visibleFirst ? 'fade-in-left' : ''} md={4} sm={5} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }} >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Print Clients</Typography>
 
+          <Box sx={{ margin: '10px auto', borderTop: '4px solid #000', width: '15%', borderRadius: '5px' }}> </Box>
+
           <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
@@ -222,6 +225,7 @@ function OurWork() {
         {/* className={visibleSecond ? 'fade-in-bottom' : ''} */}
         <Grid item id="second-carousel" className={visibleSecond ? (isMobile ? 'fade-in-right' : 'fade-in-bottom') : ''} md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' }, marginBottom: { xs: '20px', md: '0' } }}>
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Digital Clients</Typography>
+          <Box sx={{ margin: '10px auto', borderTop: '4px solid #000', width: '15%', borderRadius: '5px' }}> </Box>
           <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
@@ -231,8 +235,8 @@ function OurWork() {
                   <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)}  sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
-                    <img src={img.img2} className='ourwork-img'  style={{ height: '18vh' }} />
+                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                    <img src={img.img2} className='ourwork-img' style={{ height: '18vh' }} />
                   </Box>
                 </Box>
               ))}
@@ -244,6 +248,7 @@ function OurWork() {
 
         <Grid item className={visibleThird ? (isMobile ? 'fade-in-left' : 'fade-in-right') : ''} id="third-carousel" md={4} display='flex' alignItems='center' flexDirection='column' sx={{ margin: { xs: 'auto', md: '0' }, width: { xs: '85%' } }}  >
           <Typography variant='h6' mb={2} style={{ fontWeight: '600' }}>Overseas Clients</Typography>
+          <Box sx={{ margin: '10px auto', borderTop: '4px solid #000', width: '15%', borderRadius: '5px' }}> </Box>
           <Box bgcolor='F1E5D1' pt={2} pb={1} sx={{ borderRadius: '10px', width: { xs: '95%', md: '70%' } }}
           >
             <Carousel className='.carousel' autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false} interval={5000}>
