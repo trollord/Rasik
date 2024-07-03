@@ -18,7 +18,7 @@ export function About() {
         {/* <Typography >Who are we?</Typography> */}
 
         {/* <Typography sx={{wordWrap:'break-word',textIndent:'50px'}}>We are amongst the select few accredited with INS. It empowers us to deal directly with media houses across India. We have an excellent rapport with all the leading publications all over India. Hence you get the best ever rates & deals for your ads releases. You name anything in the world of print, electronic and web advertising and the entire range of services come to you without compromising on quality and without an iota of doubt. Our experience and expertise ensure that you get maximum impact for every Rupee of your media expenditure.</Typography> */}
-        <Typography  textAlign={isMobile?"left":"center"} sx={{ fontSize: { xs: '15px', md: '20px' } }}>
+        <Typography  textAlign={isMobile?"center":"center"} sx={{ fontSize: { xs: '15px', md: '20px' } }}>
           <span 
             className={styles.weAreAmongst}
           >{`At Rasik, we are one of the select few accredited with INS, allowing us to work directly with media houses across India. Our strong relationships with leading publications nationwide ensure the best rates and deals for your ad releases. From print to electronic and web advertising, we offer a comprehensive range of services without compromising on quality. With our extensive experience and expertise, we guarantee maximum impact for every rupee of your media expenditure.`}</span>
