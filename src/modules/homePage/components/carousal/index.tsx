@@ -15,11 +15,11 @@ function Carasouel() {
             <Carousel autoPlay infiniteLoop swipeable showThumbs={false} emulateTouch showArrows={false} showStatus={false}>
                 
                 <Box>
-                    <img src="/assets/rasik/banner1.svg" height='100%' className="carousal-img-custom mobile-img" />
+                    <img src="/assets/rasik/banner2.svg" height='100%' className="carousal-img-custom mobile-img" />
                 </Box>
 
                 <Box>
-                    <img src="/assets/rasik/banner2.svg" height='100%' className="carousal-img-custom mobile-img" />
+                    <img src="/assets/rasik/banner1.svg" height='100%' className="carousal-img-custom mobile-img" />
                 </Box>
 
                 <Box>
