@@ -10,39 +10,53 @@ import { useState, useEffect } from 'react';
 const overseasImages = [
   {
     img1: 'assets/overseas/active_consultant.svg',
-    img2: 'assets/overseas/ajeet_manpower.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/overseas/ajeet_manpower.svg',
+    modal2: 'assets/ourworkmodals/'
 
   },
   {
     img1: 'assets/overseas/arafa_travels.svg',
-    img2: 'assets/overseas/ASMACS.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/overseas/ASMACS.svg',
+    modal2: 'assets/ourworkmodals/'
 
   },
   {
     img1: 'assets/overseas/bhatia_employ.svg',
-    img2: 'assets/overseas/dhaid_travels.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/overseas/dhaid_travels.svg',
+    modal2: 'assets/ourworkmodals/',
 
   },
   {
     img1: 'assets/overseas/prerna.svg',
-    img2: 'assets/overseas/tradesmen.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/overseas/tradesmen.svg',
+    modal2: 'assets/ourworkmodals/tradesmen.jpg'
   },
 
 ];
 const digitalImages = [
   {
     img1: 'assets/digitalclients/digi1.svg',
-    img2: 'assets/digitalclients/saucyaffair.svg'
+    modal1: 'assets/ourworkmodals/digi1.jpg',
+    img2: 'assets/digitalclients/saucyaffair.svg',
+    modal2: 'assets/ourworkmodals/saucy.jpg'
 
   },
   {
     img1: 'assets/digitalclients/somaiya.svg',
-    img2: 'assets/digitalclients/titbit.svg'
+    modal1: 'assets/ourworkmodals/Somaiya.jpg',
+    img2: 'assets/digitalclients/titbit.svg',
+    modal2: 'assets/ourworkmodals/titbit.jpg'
 
   },
   {
     img1: 'assets/digitalclients/GiftingMazeBrandLogo.svg',
-    img2: 'assets/digitalclients/awwbaby.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/digitalclients/awwbaby.svg',
+    modal2: 'assets/ourworkmodals/'
   }
 
 ];
@@ -50,37 +64,51 @@ const digitalImages = [
 const printClientImg = [
   {
     img1: 'assets/printclients/adenwal_jewellers.svg',
-    img2: 'assets/printclients/bhatia_employ.svg'
+    modal1: 'assets/ourworkmodals/adenwala.jpg',
+    img2: 'assets/printclients/bhatia_employ.svg',
+    modal2: 'assets/ourworkmodals/'
 
   },
   {
     img1: 'assets/printclients/digi1.svg',
-    img2: 'assets/printclients/lghing.svg'
+    modal1: 'assets/ourworkmodals/digi1.jpg',
+    img2: 'assets/printclients/lghing.svg',
+    modal2: 'assets/ourworkmodals/'
 
   },
   {
     img1: 'assets/printclients/milan_fabric.svg',
-    img2: 'assets/printclients/osaka.svg'
+    modal1: 'assets/ourworkmodals/milan.jpg',
+    img2: 'assets/printclients/osaka.svg',
+    modal2: 'assets/ourworkmodals/osaka.jpg'
 
   },
   {
     img1: 'assets/printclients/prerna.svg',
-    img2: 'assets/printclients/roopkala.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/printclients/roopkala.svg',
+    modal2: 'assets/ourworkmodals/roopkala.jpg'
 
   },
   {
     img1: 'assets/printclients/roopmilan.svg',
-    img2: 'assets/printclients/somaiya.svg'
+    modal1: 'assets/ourworkmodals/',
+    img2: 'assets/printclients/somaiya.svg',
+    modal2: 'assets/ourworkmodals/Somaiya.jpg'
 
   },
   {
     img1: 'assets/printclients/stayon.svg',
-    img2: 'assets/printclients/titbit.svg'
+    modal1: 'assets/ourworkmodals/stayon.jpg',
+    img2: 'assets/printclients/titbit.svg',
+    modal2: 'assets/ourworkmodals/titbit.jpg'
 
   },
   {
     img1: 'assets/printclients/tradesmen.svg',
-    img2: 'assets/printclients/varsha.svg'
+    modal1: 'assets/ourworkmodals/tradesmen.jpg',
+    img2: 'assets/printclients/varsha.svg',
+    modal2: 'assets/ourworkmodals/'
   },
 
 ];
@@ -94,8 +122,8 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '50vw',
   height: '50vh',
-  bgcolor: 'background.paper',
-  boxShadow: 24,
+  bgcolor: 'transparent',
+  boxShadow: 0,
   p: 4,
   outline: 'none',
   borderRadius: '10px'
@@ -210,10 +238,10 @@ function OurWork() {
               {printClientImg.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
@@ -234,10 +262,10 @@ function OurWork() {
               {digitalImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '18vh' }} />
                   </Box>
                 </Box>
@@ -257,11 +285,11 @@ function OurWork() {
               {overseasImages.map((img, index) => (
                 <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', paddingTop: 2, height: { xs: '45vh', md: '50vh' } }}>
 
-                  <Box onClick={() => handleOpen(img.img1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal1)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img1} className='ourwork-img' style={{ height: '100%', }} />
 
                   </Box>
-                  <Box onClick={() => handleOpen(img.img2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
+                  <Box onClick={() => handleOpen(img.modal2)} sx={{ height: { xs: '42%', md: '50%' }, width: { xs: '79%', md: '77%' }, backgroundColor: '#F1E5D1', marginBottom: '50px', borderRadius: '10px', cursor: 'pointer' }}>
                     <img src={img.img2} className='ourwork-img' style={{ height: '100%' }} />
                   </Box>
                 </Box>
