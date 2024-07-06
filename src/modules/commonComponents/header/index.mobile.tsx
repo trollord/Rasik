@@ -55,9 +55,9 @@ export function MobileHeader() {
 
                     <Menu open={Boolean(anchorNav)} onClose={handleClose} sx={{
 
-                        width: '100vw', height: '90vh', display: { xs: 'flex', md: 'none' }, top: 0, left: 0, position: 'fixed', '& .MuiPaper-root': {
+                        width: '100vw', height: '95vh', display: 'flex', top: 0, left: 0, position: 'fixed', '& .MuiPaper-root': {
                             width: '100vw',
-                            height: '90vh',
+                            // height: '90vh',
                             margin: 0,
                             borderRadius: 0,
                         }
