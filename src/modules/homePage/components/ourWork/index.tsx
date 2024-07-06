@@ -26,7 +26,6 @@ const overseasImages = [
   {
     img1: 'assets/overseas/prerna.svg',
     img2: 'assets/overseas/tradesmen.svg'
-
   },
 
 ];
@@ -41,11 +40,10 @@ const digitalImages = [
     img2: 'assets/digitalclients/titbit.svg'
 
   },
-  // Aww baby and gifting maze to go iside this.
-  // {
-  //   img1: 'assets/digitalclients/giftingMaze.svg',
-  //   img2: 'assets/digitalclients/aww.bay.svg'
-  // }
+  {
+    img1: 'assets/digitalclients/GiftingMazeBrandLogo.svg',
+    img2: 'assets/digitalclients/awwbaby.svg'
+  }
 
 ];
 

@@ -26,7 +26,7 @@ function OurClients() {
                     <img src='/assets/Saucy Affair.svg' className='our-image' />
                     <img src='/assets/Somaiya.svg' className='our-image' />
                     <img src='/assets/Tit Bit.svg' className='our-image' />
-
+                    <img src='/assets/digitalclients/awwbaby.svg' className='our-image' />
                 </Grid>
                 {/* </Grid> */}
             </Box>
