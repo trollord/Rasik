@@ -47,6 +47,21 @@ function ourClientsCarousel(){
             <Slider.Slide>
                 <img src='/assets/Tit Bit.svg' alt="any3" className='our-image' />
             </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/ASMACS.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/awwbaby.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/tradesmen.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/zepair.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/dhaid_travels.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
             
         </Slider>
         </Box>

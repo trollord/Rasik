@@ -180,9 +180,9 @@ export function DesktopHeader() {
             <Grid item md={2} >
                 <Typography sx={{ fontSize: '20px', color: '#737373' }}>Advertising Agency</Typography>
             </Grid>
-            <Grid item height="82%" md={2} sx={{ paddingLeft: "40px !important" }} >
+            <Grid item height="82%" md={2} display="flex" justifyContent="center" alignItems="center" sx={{ paddingLeft: "10px !important" }} >
                 {/* <img src="/image.png" alt="logo" width="100%" height="100%" /> */}
-                <img src="/ras1-removebg-preview.svg" alt="logo" width="100%" height={"90%"} />
+                <img src="/assets/rasik_logo.svg" alt="logo" width="100%" height={"90%"} />
             </Grid>
             <Grid item display="flex" justifyContent="space-around" alignItems="center" md={3}   >
 
