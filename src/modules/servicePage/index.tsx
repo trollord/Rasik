@@ -63,7 +63,7 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
             textToRender = 'Outdoor Advertising';
             break;
         case 'creative':
-            textToRender = 'Creative';
+            textToRender = 'Creatives';
             break;
         case 'digitalMarketing':
             textToRender = 'Digital Marketing';

@@ -41,6 +41,11 @@ const digitalImages = [
     img2: 'assets/digitalclients/titbit.svg'
 
   },
+  // Aww baby and gifting maze to go iside this.
+  // {
+  //   img1: 'assets/digitalclients/giftingMaze.svg',
+  //   img2: 'assets/digitalclients/aww.bay.svg'
+  // }
 
 ];
 
@@ -78,7 +83,6 @@ const printClientImg = [
   {
     img1: 'assets/printclients/tradesmen.svg',
     img2: 'assets/printclients/varsha.svg'
-
   },
 
 ];
