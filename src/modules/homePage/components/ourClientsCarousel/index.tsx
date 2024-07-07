@@ -8,7 +8,7 @@ function ourClientsCarousel(){
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
     
     return (
-      <Grid height = {isMobile? "50vh":"60vh"} width = "100vw" >
+      <Grid height = {isMobile? "50vh":"60vh"} width = "100vw" id="ourclientscarousel">
         < Box height={isMobile?"20vh":"30vh"} textAlign='center' mb={3} paddingTop={isMobile? "5vh":"10vh"} paddingBottom="5vh">
           <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px', fontFamily: 'Playfair Display' }, pb: "15vh" }}>Our Clients</Typography>
         </Box>
@@ -46,6 +46,21 @@ function ourClientsCarousel(){
             </Slider.Slide>
             <Slider.Slide>
                 <img src='/assets/Tit Bit.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/ASMACS.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/awwbaby.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/tradesmen.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/zepair.svg' alt="any3" className='our-image' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src='/assets/dhaid_travels.svg' alt="any3" className='our-image' />
             </Slider.Slide>
             
         </Slider>

@@ -48,7 +48,7 @@
             "image": "/assets/creativelogos/titbit.svg",
             "modalImage":"/assets/creative/titbit.jpg"},
         {
-            "image": "/assets/creativelogos/titbit.svg",
+            "image": "/assets/creativelogos/zepair.svg",
             "modalImage":"/assets/creative/zepair.jpg"},
         {
             "image": "/assets/creativelogos/tradesmen.svg",
@@ -58,15 +58,15 @@
             "modalImage":"/assets/creative/osaka.jpg"},
         {
             "image": "/assets/creativelogos/saucyaffair.svg",
-            "modalImage":"/assets/creative/saucyaffair.jpg"},
+            "modalImage":"/assets/creative/saucy.jpg"},
         {
             "image": "/assets/creativelogos/stayon.svg",
             "modalImage":"/assets/creative/stayon.jpg"}
     ],
     "digitalMarketing": [
         "/assets/digitalmarketing/meta.svg",
-        "/assets/digitalmarketing/whatsapp.svg",
-        "/assets/digitalmarketing/twitter.svg",
+        "/assets/digitalmarketing/publicrelation.jpeg",
+        "/assets/seoSem.png",
         "/assets/digitalmarketing/google.svg"
     ],
     "socialMediaMarketing": [

@@ -87,7 +87,13 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
         }, 100); // Adjust the timeout as needed
     };
 
-
+    const modalstyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        bgcolor: 'transparent', // Ensures no background color
+        outline: 'none',
+      };
     const style = {
         position: 'absolute' as 'absolute',
         top: '50%',
@@ -95,8 +101,8 @@ export function ServicePage({ currentPage }: { currentPage: 'printMedia' | 'eCom
         transform: 'translate(-50%, -50%)',
         width: '70vw',
         height: '70vh',
-        bgcolor: 'background.paper',
-        boxShadow: 24,
+        bgcolor: 'transparent',
+        boxShadow: 0,
         p: 4,
         outline: 'none',
         borderRadius: '10px'
