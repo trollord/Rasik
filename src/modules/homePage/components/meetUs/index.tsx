@@ -12,7 +12,7 @@ function MeetUs() {
       <Box className={styles.meetUsWrapper} >
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
-
+{/* needs to be worked on, mobile view mai length of the card needs to increase to accomodate the new phone numbers. */}
       <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '92vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
@@ -98,16 +98,16 @@ function MeetUs() {
               <Typography> Phone : +91-9821028256</Typography>
             </Box>
             <Box>
-              <Typography>Ms. Twinkle Shah</Typography>
-              <Typography>Phone : +91-8898827588</Typography>
-            </Box>
-            <Box>
               <Typography>Mr. Rohit Naik</Typography> 
               <Typography>Phone : +91-9768001616</Typography>
             </Box>
             <Box>
               <Typography>Mr. Vishal jadhav</Typography>
               <Typography>Phone : +91-9773773434</Typography>
+            </Box>
+            <Box>
+              <Typography>Ms. Twinkle Shah</Typography>
+              <Typography>Phone : +91-8898827588</Typography>
             </Box>
           </Box>
         </Grid>
