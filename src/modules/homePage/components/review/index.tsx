@@ -13,16 +13,6 @@ const testimonials = [
     "author2": "Jayesh Mehta"
   },
   {
-    "quote": "“An absolutely transparent agency that is genuinely interested in the growth of their clients. The advice given by them from time to time has helped us tremendously in overcoming most of our brand communication-related issues and contributed positively to our growth.”",
-    "author": "Ala Mode",
-    "author2": "Vasant Savla"
-  },
-  {
-    "quote": "“According to us, Rasik is unmatched when it comes to getting the best rates and best deals from publications. It is their forte, and they are real professionals in their work ethics and commitments. In our long association, we have felt most comfortable dealing with them.”",
-    "author": "Jarden Consumer Solution",
-    "author2": "Sandip Kumar"
-  },
-  {
     "quote": "“Ours has been a very cordial and mutually rewarding association with Rasik for the past two decades. Their personal touch is what impressed us the most. They are highly approachable, readily adapt to change, and empathize with you in a manner that’s rare these days.”",
     "author": "Digi-1",
     "author2": "Amit Mulani"
@@ -39,17 +29,17 @@ const testimonials = [
   },
   {
     "quote":"“Rasik Publicity transformed our brand's presence across print, digital, and social media. Their innovative strategies and creative campaigns significantly boosted our engagement and sales. Highly recommend their services!”",
-    "author":"",
+    "author":"Arafa travels",
     "author2":""
   },
   {
     "quote":"“Working with Rasik Publicity has been a game-changer for our marketing efforts. Their expertise in  digital, and social media advertising helped us reach our target audience effectively. Professional, reliable, and results-driven!”",
-    "author":"",
+    "author":"Tit bit group",
     "author2":""
   },
   {
     "quote":"“The team at Rasik Publicity exceeded our expectations with their comprehensive approach to advertising. The eye-catching print ads in the world of digital have delivered exceptional results that drove our business growth. Truly a top-notch agency! Rasik Publicity's dedication and creativity shine through in every campaign they manage”",
-    "author":"",
+    "author":"Roopmilan",
     "author2":""
   }
 ];
