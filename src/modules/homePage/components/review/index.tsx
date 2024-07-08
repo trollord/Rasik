@@ -36,6 +36,21 @@ const testimonials = [
     "quote": "“An agency with a heart of gold. That’s what sums it up for Rasik. We never expected an agency to be so transparent and deeply rooted in ethical conduct. This quality is further complemented by a professional approach, especially when it comes to media releases.”",
     "author": "Somaiya Group",
     "author2": ""
+  },
+  {
+    "quote":"“Rasik Publicity transformed our brand's presence across print, digital, and social media. Their innovative strategies and creative campaigns significantly boosted our engagement and sales. Highly recommend their services!”",
+    "author":"",
+    "author2":""
+  },
+  {
+    "quote":"“Working with Rasik Publicity has been a game-changer for our marketing efforts. Their expertise in  digital, and social media advertising helped us reach our target audience effectively. Professional, reliable, and results-driven!”",
+    "author":"",
+    "author2":""
+  },
+  {
+    "quote":"“The team at Rasik Publicity exceeded our expectations with their comprehensive approach to advertising. The eye-catching print ads in the world of digital have delivered exceptional results that drove our business growth. Truly a top-notch agency! Rasik Publicity's dedication and creativity shine through in every campaign they manage”",
+    "author":"",
+    "author2":""
   }
 ];
 
