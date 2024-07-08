@@ -16,7 +16,7 @@ function MeetUs() {
       <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '88vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
-        <Grid container item md={6} height={isMobile ? '30vh' : isTablet?'20vh':'45vh'}  width={isMobile? "65vw":"55vw"} borderRadius="10px" overflow="hidden">
+        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'45vh'}  width={isMobile? "65vw":"55vw"} borderRadius="10px" overflow="hidden">
 
           <Box
                 sx={{
