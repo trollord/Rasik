@@ -10,28 +10,28 @@ import { useState, useEffect } from 'react';
 const overseasImages = [
   {
     img1: 'assets/overseas/active_consultant.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/activeconsultant.jpg',
     img2: 'assets/overseas/ajeet_manpower.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/ajeet.jpg'
 
   },
   {
     img1: 'assets/overseas/arafa_travels.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/arafatravels.jpg',
     img2: 'assets/overseas/ASMACS.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/asmacs.jpg'
 
   },
   {
     img1: 'assets/overseas/bhatia_employ.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/bhatia.jpg',
     img2: 'assets/overseas/dhaid_travels.svg',
-    modal2: 'assets/ourworkmodals/',
+    modal2: 'assets/ourworkmodals/dhaidtravels.jpg',
 
   },
   {
     img1: 'assets/overseas/prerna.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/prerna.jpg',
     img2: 'assets/overseas/tradesmen.svg',
     modal2: 'assets/ourworkmodals/tradesmen.jpg'
   },
@@ -53,10 +53,10 @@ const digitalImages = [
 
   },
   {
-    img1: 'assets/digitalclients/GiftingMazeBrandLogo.svg',
-    modal1: 'assets/ourworkmodals/',
+    img1: 'assets/digitalclients/giftingmaze.svg',
+    modal1: 'assets/ourworkmodals/giftingmaze.jpeg',
     img2: 'assets/digitalclients/awwbaby.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/awwbaby.jpeg'
   }
 
 ];
@@ -66,14 +66,14 @@ const printClientImg = [
     img1: 'assets/printclients/adenwal_jewellers.svg',
     modal1: 'assets/ourworkmodals/adenwala.jpg',
     img2: 'assets/printclients/bhatia_employ.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/bhatia.jpg'
 
   },
   {
     img1: 'assets/printclients/digi1.svg',
     modal1: 'assets/ourworkmodals/digi1.jpg',
     img2: 'assets/printclients/lghing.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/lghing.jpg'
 
   },
   {
@@ -85,14 +85,14 @@ const printClientImg = [
   },
   {
     img1: 'assets/printclients/prerna.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/prerna.jpg',
     img2: 'assets/printclients/roopkala.svg',
     modal2: 'assets/ourworkmodals/roopkala.jpg'
 
   },
   {
     img1: 'assets/printclients/roopmilan.svg',
-    modal1: 'assets/ourworkmodals/',
+    modal1: 'assets/ourworkmodals/roopmilan.jpg',
     img2: 'assets/printclients/somaiya.svg',
     modal2: 'assets/ourworkmodals/Somaiya.jpg'
 
@@ -108,7 +108,7 @@ const printClientImg = [
     img1: 'assets/printclients/tradesmen.svg',
     modal1: 'assets/ourworkmodals/tradesmen.jpg',
     img2: 'assets/printclients/varsha.svg',
-    modal2: 'assets/ourworkmodals/'
+    modal2: 'assets/ourworkmodals/varsha.jpg'
   },
 
 ];
