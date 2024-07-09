@@ -61,7 +61,7 @@ function FooterMobile() {
                         <Typography className={styles.servicesFont}>E-Commerce</Typography>              
                     </Box>
                     <Box onClick={() => { handleClick('radioFm') }}>
-                        <Typography className={styles.servicesFont}>Radio FM</Typography>
+                        <Typography className={styles.servicesFont}>Outdoor Ad</Typography>
                     </Box>
                     <Box onClick={() => { handleClick('creative') }}>
                         <Typography className={styles.servicesFont}>Creatives</Typography>
