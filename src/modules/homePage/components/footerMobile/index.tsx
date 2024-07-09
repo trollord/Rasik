@@ -8,6 +8,10 @@ import { Link, scroller } from "react-scroll";
 import { useNavigate } from 'react-router-dom';
 function FooterMobile() {
     const navigate = useNavigate();
+    const handleClick = (service: string) => {
+        navigate(`/services/${service}`)
+    
+      }
     const navigateAndScroll = (path: string, section: string) => {
 
         navigate(path);
