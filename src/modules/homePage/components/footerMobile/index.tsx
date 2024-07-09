@@ -52,14 +52,26 @@ function FooterMobile() {
 
             </Grid>
             <Grid container width="37vw" paddingLeft="30px">
-                <Grid item>
+            <Grid item>
                     <Typography variant="h5" className={styles.services}>Services</Typography>
-                    <Typography className={styles.servicesFont}>Print media </Typography>
-                    <Typography className={styles.servicesFont}>E-Commerce</Typography>
-                    <Typography className={styles.servicesFont}>Radio FM</Typography>
-                    <Typography className={styles.servicesFont}>Creatives</Typography>
-                    <Typography className={styles.servicesFont}>Digital Marketing</Typography>
-                    <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
+                    <Box onClick={() => { handleClick('printMedia') }}>
+                        <Typography className={styles.servicesFont}>Print media </Typography>
+                    </Box>
+                    <Box onClick={() => { handleClick('eCommerceSolution') }}>
+                        <Typography className={styles.servicesFont}>E-Commerce</Typography>              
+                    </Box>
+                    <Box onClick={() => { handleClick('radioFm') }}>
+                        <Typography className={styles.servicesFont}>Radio FM</Typography>
+                    </Box>
+                    <Box onClick={() => { handleClick('creative') }}>
+                        <Typography className={styles.servicesFont}>Creatives</Typography>
+                    </Box>
+                    <Box onClick={() => { handleClick('digitalMarketing') }}>
+                        <Typography className={styles.servicesFont}>Digital Marketing</Typography>
+                    </Box>
+                    <Box onClick={() => { handleClick('socialMediaMarketing') }}>
+                        <Typography className={styles.servicesFont}>Social Media Marketing</Typography>
+                    </Box>
                 </Grid>
             </Grid>
 
