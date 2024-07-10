@@ -36,7 +36,7 @@ function FooterMobile() {
                         <img src="/imagenew.png" alt="logo" width={"120%"} height={"100%"} />
                     </Grid>
                     <Grid paddingTop="10px">
-                        <Typography variant="h5" className={styles.connect} paddingLeft="10px">Connect</Typography>
+                        <Typography variant="h5" className={styles.connect} width="30vw" paddingLeft="10px">Connect</Typography>
                         <Box style={{ marginTop: '10px' }} paddingLeft="10px">
                             <a href="https://www.instagram.com/rasik_communications?igsh=MWJvcTk3cTVyajRvcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                                 <InstaGram />

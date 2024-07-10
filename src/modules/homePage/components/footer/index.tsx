@@ -61,7 +61,7 @@ function Footer() {
               <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Creatives</Typography>
             </Box>
             <Box onClick={() => { handleClick('radioFm') }}>
-              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Radio FM</Typography>
+              <Typography className={styles.servicesFont} sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: "2.2vh" }}>Outdoor Advertising</Typography>
             </Box>
             
             
@@ -69,7 +69,7 @@ function Footer() {
           </Grid>
 
 
-          <Grid item display='flex' flexDirection='column' paddingTop="15px">
+          <Grid item display='flex' flexDirection='column' paddingTop="14px">
             <Typography paddingBottom="10px" variant="h5" className={styles.company} sx={{ fontFamily: 'Inter, sans-serif', fontSize:"4vh",fontWeight: 600 }}>Company</Typography>
 
             <Link to="about"  onClick={() => navigateAndScroll('/', 'about')} spy={true} smooth={true} offset={-100} duration={500}  className={styles.companyFont} >
