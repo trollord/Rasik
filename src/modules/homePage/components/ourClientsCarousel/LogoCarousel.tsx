@@ -28,12 +28,17 @@ const LogoSlider = () => {
     { id: 7, src: '/assets/Saucy Affair.svg', alt: 'Logo 7', className: `${styles.our_image} ${styles.saucy_img}`},
     { id: 8, src: '/assets/Somaiya.svg', alt: 'Logo 8', className: `${styles.our_image} ${styles.somaiya_img}` },
     { id: 9, src: '/assets/Tit Bit.svg', alt: 'Logo 9', className: `${styles.our_image} ${styles.titbit_img}` },
+    { id: 9, src: '/assets/ASMACS.svg', alt: 'Logo 10', className: `${styles.our_image} ${styles.ASMACS_img}` },
+    { id: 9, src: '/assets/awwbaby.svg', alt: 'Logo 11', className: `${styles.our_image} ${styles.awwbaby_img}` },
+    { id: 9, src: '/assets/tradesmen.svg', alt: 'Logo 12', className: `${styles.our_image} ${styles.tradesmen_img}` },
+    { id: 9, src: '/assets/zepair.svg', alt: 'Logo 12', className: `${styles.our_image} ${styles.zepair_img}` },
+    // { id: 9, src: '/assets/dhaid_travels.svg', alt: 'Logo 12', className: `${styles.our_image} ${styles.dhaid_travels_img}` },
   ];
 
   return (
     <Grid className="slider-container" container direction="column" alignItems="center" justifyContent="center">
       <Box height="20vh" textAlign='center' mb={3} paddingTop="5vh" paddingBottom="0vh">
-      <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px', fontFamily: 'Inter, sans-serif' }, pb: "15vh" }}>Our Clients</Typography>
+      <Typography sx={{ fontWeight: '600', fontSize: { xs: '45px', md: '64px', fontFamily: 'Playfair Display' }, pb: "15vh" }}>Our Clients</Typography>
       </Box>
       <Grid item height="75vh" paddingLeft="0vw">
       <Slider {...settings} >
