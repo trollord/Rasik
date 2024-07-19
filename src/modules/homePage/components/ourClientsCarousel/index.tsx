@@ -15,7 +15,7 @@ function ourClientsCarousel(){
         <Box height="40vh">
         <Slider
             width="250px"
-            duration={20}
+            duration={80}
             pauseOnHover={true}
             blurBorders={false}
             blurBoderColor={'#fff'}

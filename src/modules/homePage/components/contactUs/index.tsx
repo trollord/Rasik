@@ -1,10 +1,10 @@
 import { Grid, Typography, Box } from '@mui/material';
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import { useState } from 'react';
 import styles from "./styles.module.css"
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useInView } from 'react-intersection-observer';
-
+import axios from 'axios';
+ 
 function ContactUs() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -13,7 +13,7 @@ function ContactUs() {
     phone: '',
     message: '',
   });
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,21 +21,29 @@ function ContactUs() {
       [name]: value,
     });
   };
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-
-    emailjs.send(
-      'service_5g3ffli', // Replace with your EmailJS service ID
-      'template_vt9r61r',
-      formData,
-      'A2aWUHE6R1nJV1nOh' // Replace with your EmailJS user ID (public key)
-    )
+ 
+  const handleSubmit = () => {
+    const sendobject = {
+      to: 'rasikads43@gmail.com',
+      subject: 'New Message from Website',
+      body: `First Name: ${formData.firstName} \n Last Name: ${formData.lastName} \n Email: ${formData.email} \n Phone: ${formData.phone} \n Message: ${formData.message}`
+    };
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://emailservice-42dg.onrender.com/send-email',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: sendobject
+    };
+ 
+    axios.request(config)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        console.log(JSON.stringify(response.data));
       })
-      .catch((err) => {
-        console.log('FAILED...', err);
+      .catch((error) => {
+        console.log(error);
       });
   };
   const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -46,10 +54,10 @@ function ContactUs() {
   const isTablet = useMediaQuery('(min-width:600px) and (max-width:1200px)', { noSsr: true });
   // console.log(isMobile);
   return (
-
-    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2}  m='auto' height={isMobile ? '90vh' : '100vh'} justifyContent="center" alignItems="center" sx={{ flexDirection: isMobile ? 'row' : 'row', }} p={3} >
-
-      <Grid ref={leftRef} height={isMobile? "10vh": "25vh"} width={isMobile ? "80vw" : isTablet ? "35vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0 , marginLeft: isMobile? "14vw" : "0vw"}}  >
+ 
+    <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height={isMobile ? '90vh' : '100vh'} justifyContent="center" alignItems="center" sx={{ flexDirection: isMobile ? 'row' : 'row', }} p={3} >
+ 
+      <Grid ref={leftRef} height={isMobile ? "10vh" : "25vh"} width={isMobile ? "80vw" : isTablet ? "35vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0, marginLeft: isMobile ? "14vw" : "0vw" }}  >
         <Box className={styles.frameWrapper}>
           <Box className={styles.frameGroup} width={isTablet ? "35vw" : "100%"}>
             <Box className={styles.notSureWhatYouNeedWrapper}>
@@ -61,24 +69,24 @@ function ContactUs() {
           </Box>
         </Box>
       </Grid>
-      <Grid container ref={rightRef} item md={7} display='flex' height={isMobile ? '53vh' : '56vh'} width={isMobile ? "77vw" : "646px"}  p={4} borderRadius='10px'>
+      <Grid container ref={rightRef} item md={7} display='flex' height={isMobile ? '53vh' : '56vh'} width={isMobile ? "77vw" : "646px"} p={4} borderRadius='10px'>
         <form onSubmit={handleSubmit} style={{ paddingLeft: '1.2vw', paddingTop: "0.4vw", paddingBottom: "0.4vw", width: '100%', height: "100%", display: 'flex', gap: '15px', flexDirection: 'column' }} >
           <Box height="5vh" style={{ display: 'flex' }}>
-
+ 
             <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First name*' style={{ padding: '10px 15px', width: '50%', height: "40px", marginRight: '10px', border: '1px solid #D5D5D5', borderRadius: '10px', fontFamily: "Inria Sans" }} />
             <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last name*' style={{ padding: '10px 15px', width: '50%', height: "40px", border: '1px solid #D5D5D5', borderRadius: '10px', fontFamily: "Inria Sans" }} />
           </Box>
-
+ 
           <Box height="5vh" >
-
+ 
             <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email*' style={{ width: '100%', height: "40px", border: '1px solid #D5D5D5', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} />
           </Box>
           <Box height="5vh">
-
+ 
             <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder='Phone*' style={{ width: '100%', height: "40px", border: '1px solid #D5D5D5', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} />
           </Box>
           <Box height="22vh" >
-
+ 
             <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Type Your Message...' style={{ width: '100%', height: "100%", border: '1px solid #D5D5D5', padding: '10px 15px', borderRadius: '10px', fontFamily: "Inria Sans" }} rows="8" cols="50" />
           </Box>
           <Box height="7vh" paddingTop="1vh">
