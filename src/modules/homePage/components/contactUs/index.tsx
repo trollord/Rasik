@@ -4,7 +4,7 @@ import styles from "./styles.module.css"
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useInView } from 'react-intersection-observer';
 import axios from 'axios';
- 
+
 function ContactUs() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -13,7 +13,7 @@ function ContactUs() {
     phone: '',
     message: '',
   });
- 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,7 +21,7 @@ function ContactUs() {
       [name]: value,
     });
   };
- 
+
   const handleSubmit = () => {
     const sendobject = {
       to: 'rasikads43@gmail.com',
@@ -57,7 +57,7 @@ function ContactUs() {
  
     <Grid className={styles.mainGrid} container id="contactUs" width='100%' spacing={2} m='auto' height={isMobile ? '90vh' : '100vh'} justifyContent="center" alignItems="center" sx={{ flexDirection: isMobile ? 'row' : 'row', }} p={3} >
  
-      <Grid ref={leftRef} height={isMobile ? "10vh" : "25vh"} width={isMobile ? "80vw" : isTablet ? "35vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0, marginLeft: isMobile ? "14vw" : "0vw" }}  >
+      <Grid ref={leftRef} height={isMobile ? "10vh" : "25vh"} width={isMobile ? "68vw" : isTablet ? "35vw" : "477px"} sx={{ marginBottom: isMobile ? 7 : 0, marginLeft: isMobile ? "3vw" : "0vw" }}  >
         <Box className={styles.frameWrapper}>
           <Box className={styles.frameGroup} width={isTablet ? "35vw" : "100%"}>
             <Box className={styles.notSureWhatYouNeedWrapper}>

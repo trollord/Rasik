@@ -13,15 +13,15 @@ function MeetUs() {
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 {/* needs to be worked on, mobile view mai length of the card needs to increase to accomodate the new phone numbers. */}
-      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '104vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} sx={{  width:{ xs: '75+vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '104vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
-        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'45vh'}  width={isMobile? "65vw":"55vw"} borderRadius="10px" overflow="hidden">
+        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'45vh'}  width={isMobile? "66vw":"55vw"} borderRadius="10px" overflow="hidden">
 
           <Box
                 sx={{
                   borderRadius: '10px',
-                  width: '100%',
+                  width: '95%',
                   height: '100%',
                   border: 'none',
                   overflow: 'hidden',

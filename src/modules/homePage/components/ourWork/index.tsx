@@ -120,8 +120,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '50vw',
-  height: '50vh',
+  width: '80vw',
+  height: '80vh',
   // bgcolor: 'transparent',
   bgcolor: 'rgba(255, 255, 255, 0.2)',
   boxShadow: 0,
@@ -213,7 +213,8 @@ function OurWork() {
         open={open}
         onClose={handleClose}
       >
-        <Box sx={style}>
+        <Box sx={style} width="80vw">
+
 
           {selectedImage && (
             <img src={selectedImage} alt="Modal Content" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
