@@ -13,7 +13,7 @@ function MeetUs() {
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 {/* needs to be worked on, mobile view mai length of the card needs to increase to accomodate the new phone numbers. */}
-      <Grid spacing={2} p={2} sx={{  width:{ xs: '75+vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '104vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '104vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
         <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'45vh'}  width={isMobile? "66vw":"55vw"} borderRadius="10px" overflow="hidden">
@@ -91,23 +91,25 @@ function MeetUs() {
           <Box style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }}>
             <Box>
               <Typography>Mr. Prashant Shah</Typography>
-              <Typography> Phone : +91-9768128256</Typography>
+              <Typography> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
             </Box>
             <Box>
               <Typography>Mr. Parth Shah</Typography>
-              <Typography> Phone : +91-9821028256</Typography>
+              
+              <Typography> Phone : <a href="tel:+919821028256" style={{ color: 'black', textDecoration: 'none' }}>+91-9821028256</a></Typography>
+              
             </Box>
             <Box>
               <Typography>Mr. Rohit Naik</Typography> 
-              <Typography>Phone : +91-9768001616</Typography>
+              <Typography>Phone : <a href="tel:+919768001616" style={{ color: 'black', textDecoration: 'none' }}>+91-9768001616</a></Typography>
             </Box>
             <Box>
               <Typography>Mr. Vishal jadhav</Typography>
-              <Typography>Phone : +91-9773773434</Typography>
+              <Typography>Phone : <a href="tel:+919773773434" style={{ color: 'black', textDecoration: 'none' }}>+91-9773773434</a></Typography>
             </Box>
             <Box>
               <Typography>Ms. Twinkle Shah</Typography>
-              <Typography>Phone : +91-8898827588</Typography>
+              <Typography>Phone : <a href="tel:+918898827588" style={{ color: 'black', textDecoration: 'none' }}>+91-8898827588</a></Typography>
             </Box>
           </Box>
         </Grid>
