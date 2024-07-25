@@ -13,7 +13,7 @@ function MeetUs() {
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 {/* needs to be worked on, mobile view mai length of the card needs to increase to accomodate the new phone numbers. */}
-      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '104vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '110vh' : isTablet?'67vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
 
         <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'20vh':'45vh'}  width={isMobile? "66vw":"55vw"} borderRadius="10px" overflow="hidden">
@@ -88,7 +88,7 @@ function MeetUs() {
             </p>
           </Box>
         </Grid>
-        <Grid container item md={3} justifyContent='left' flexDirection='column' >
+        <Grid container item md={3} justifyContent='left' flexDirection='column' height = "43vh" >
           {/* <Box height = "5vh">           */}
             <Typography fontWeight="600" variant="h5" >Contacts</Typography>
           {/* </Box> */}
