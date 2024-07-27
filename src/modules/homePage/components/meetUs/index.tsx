@@ -88,32 +88,32 @@ function MeetUs() {
             </p>
           </Box>
         </Grid>
-        <Grid container item md={3} justifyContent='left' flexDirection='column' height = "43vh" >
+        <Grid container item md={3} justifyContent='left' flexDirection='column' height = "53vh" >
           {/* <Box height = "5vh">           */}
             <Typography fontWeight="600" variant="h5" >Contacts</Typography>
           {/* </Box> */}
           <Box style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }}  >
             <Box height="5vh" marginBottom="1vh">
-              <Typography>Mr. Prashant Shah</Typography>
-              <Typography> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
+              <Typography fontSize="2.5vh">Mr. Prashant Shah</Typography>
+              <Typography fontSize="2.5vh"> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
             </Box>
             <Box height="5vh" marginBottom="1vh">
-              <Typography>Mr. Parth Shah</Typography>
+              <Typography fontSize="2.5vh">Mr. Parth Shah</Typography>
               
-              <Typography> Phone : <a href="tel:+919821028256" style={{ color: 'black', textDecoration: 'none' }}>+91-9821028256</a></Typography>
+              <Typography fontSize="2.5vh"> Phone : <a href="tel:+919821028256" style={{ color: 'black', textDecoration: 'none' }}>+91-9821028256</a></Typography>
               
             </Box>
             <Box height="5vh" marginBottom="1vh">
-              <Typography>Mr. Rohit Naik</Typography> 
-              <Typography>Phone : <a href="tel:+919768001616" style={{ color: 'black', textDecoration: 'none' }}>+91-9768001616</a></Typography>
+              <Typography fontSize="2.5vh">Mr. Rohit Naik</Typography> 
+              <Typography fontSize="2.5vh">Phone : <a href="tel:+919768001616" style={{ color: 'black', textDecoration: 'none' }}>+91-9768001616</a></Typography>
             </Box>
             <Box height="5vh" marginBottom="1vh">
-              <Typography>Mr. Vishal jadhav</Typography>
-              <Typography>Phone : <a href="tel:+919773773434" style={{ color: 'black', textDecoration: 'none' }}>+91-9773773434</a></Typography>
+              <Typography fontSize="2.5vh">Mr. Vishal jadhav</Typography>
+              <Typography fontSize="2.5vh">Phone : <a href="tel:+919773773434" style={{ color: 'black', textDecoration: 'none' }}>+91-9773773434</a></Typography>
             </Box>
             <Box height="5vh" marginBottom="1vh">
-              <Typography>Ms. Twinkle Shah</Typography>
-              <Typography>Phone : <a href="tel:+918898827588" style={{ color: 'black', textDecoration: 'none' }}>+91-8898827588</a></Typography>
+              <Typography fontSize="2.5vh">Ms. Twinkle Shah</Typography>
+              <Typography fontSize="2.5vh">Phone : <a href="tel:+918898827588" style={{ color: 'black', textDecoration: 'none' }}>+91-8898827588</a></Typography>
             </Box>
           </Box>
         </Grid>
