@@ -39,7 +39,7 @@ export function MobileHeader() {
 
     const isTablet = useMediaQuery('(min-width:600px) and (max-width:900px)', { noSsr: true });
     return (
-        <Grid container height="8vh" alignItems={"center"} justifyContent="space-between" direction={"row"} display="flex" columnSpacing={3.5} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'} pl={2} pr={2}>
+        <Grid container height={isTablet?"15vh":"8vh"} alignItems={"center"} justifyContent="space-between" direction={"row"} display="flex" columnSpacing={3.5} bgcolor='#fff' position={'fixed'} top='0' left='0' zIndex={'100'} pl={2} pr={2}>
 
 
             <Grid item width={140} height={"70%"} ml={2} xs={4} sx={{ paddingLeft: "10px !important" }}>
