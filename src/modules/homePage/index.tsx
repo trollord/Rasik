@@ -20,8 +20,7 @@ import OurClientsCarousel from "./components/ourClientsCarousel";
 
 export function HomePage() {
   const isMobile = useMediaQuery('(max-width:600px)');
-
-
+  const isLandscape = useMediaQuery('(min-width:600px) and (max-width:900px)', { noSsr: true });
   return (
     <Grid container gap="10px" style={{ overflow: 'hidden' }}>
 
@@ -37,8 +36,9 @@ export function HomePage() {
       <Review />
       <ContactUs />
       <MeetUs />
-      {!isMobile && <Footer />}
-      {isMobile && <FooterMobile />}
+      {(isMobile && <FooterMobile/>) || (isLandscape && <FooterMobile/>)}
+      {!isMobile && !isLandscape&&  <Footer />}
+      {/* {isMobile && <FooterMobile />} */}
     </Grid>
   );
 }
