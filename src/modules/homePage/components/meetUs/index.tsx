@@ -13,9 +13,9 @@ function MeetUs() {
         <h1 className={styles.meetUs}>Meet Us</h1>
       </Box>
 {/* needs to be worked on, mobile view mai length of the card needs to increase to accomodate the new phone numbers. */}
-      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '110vh' : isTablet?'100vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
+      <Grid spacing={2} p={2} sx={{  width:{ xs: '75vw' , md : '90vw'}}} bgcolor='#EADBC8' height={isMobile ? '110vh' : isTablet?'130vh':'53vh'} border= '2px solid black' m='auto' flexDirection="row" container display='flex' borderRadius='10px' justifyContent='space-evenly'>
 
-        <Grid container item md={6} height={isMobile ? '25vh' : isTablet ? '20vh' : '45vh'} width={isMobile ? "66vw" : "55vw"} borderRadius="10px" overflow="hidden">
+        <Grid container item md={6} height={isMobile ? '25vh' : isTablet?'40vh':'45vh'}  width={isMobile? "66vw":"55vw"} borderRadius="10px" overflow="hidden">
 
           <Box
             sx={{
@@ -87,14 +87,14 @@ function MeetUs() {
             </p>
           </Box>
         </Grid>
-        <Grid container item md={3} justifyContent='left' flexDirection='column' height="auto" sx={{ marginBotton: { xs: '2vw' } }}>
-          {/* <Box height = "5vh">           */}
-          <Typography fontWeight="600" variant="h5" >Contacts</Typography>
-          {/* </Box> */}
-          <Box style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }} >
-            <Box height="5vh" marginBottom="1vw">
-              <Typography sx={{ fontSize: { xs: '4vw', md: '1vw' } }}>Mr. Prashant Shah</Typography>
-              <Typography sx={{ fontSize: { xs: '4vw', md: '1vw' } }}> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
+        {!isTablet && <Grid container item md={3} justifyContent='left' flexDirection='column' height = "53vh" >
+
+            <Typography fontWeight="600" variant="h5" >Contacts</Typography>
+
+          <Box style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'left' }}  >
+            <Box height="5vh" marginBottom="1vh">
+              <Typography fontSize="2.5vh">Mr. Prashant Shah</Typography>
+              <Typography fontSize="2.5vh"> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
             </Box>
             <Box height="5vh" marginBottom="1vw">
               <Typography sx={{ fontSize: { xs: '4vw', md: '1vw' } }}>Mr. Parth Shah</Typography>
@@ -115,8 +115,43 @@ function MeetUs() {
               <Typography sx={{ fontSize: { xs: '4vw', md: '1vw' } }}>Phone : <a href="tel:+918898827588" style={{ color: 'black', textDecoration: 'none' }}>+91-8898827588</a></Typography>
             </Box>
           </Box>
-        </Grid>
+        </Grid>}
+        {isTablet && <Grid container item md={3} justifyContent='left' flexDirection='column' height = "53vh" >
 
+          <Typography fontWeight="600" variant="h5" >Contacts</Typography>
+          
+          <Box style={{ display: 'flex', flexDirection: 'row', gap: '150px', justifyContent: 'left' }}  >
+            <Box>
+
+            
+              <Box height="5vh" marginBottom="4vh">
+                <Typography fontSize="3vh">Mr. Prashant Shah</Typography>
+                <Typography fontSize="3vh"> Phone : <a href="tel:+919768128256" style={{ color: 'black', textDecoration: 'none' }}>+91-9768128256</a></Typography>
+              </Box>
+              <Box height="5vh" marginBottom="4vh">
+                <Typography fontSize="3vh">Mr. Parth Shah</Typography>
+                
+                <Typography fontSize="3vh"> Phone : <a href="tel:+919821028256" style={{ color: 'black', textDecoration: 'none' }}>+91-9821028256</a></Typography>
+                
+              </Box>
+              <Box height="5vh" marginBottom="4vh">
+                <Typography fontSize="3vh">Mr. Rohit Naik</Typography> 
+                <Typography fontSize="3vh">Phone : <a href="tel:+919768001616" style={{ color: 'black', textDecoration: 'none' }}>+91-9768001616</a></Typography>
+              </Box>
+            </Box>
+            <Box>
+              <Box height="5vh" marginBottom="4vh">
+                <Typography fontSize="3vh">Mr. Vishal jadhav</Typography>
+                <Typography fontSize="3vh">Phone : <a href="tel:+919773773434" style={{ color: 'black', textDecoration: 'none' }}>+91-9773773434</a></Typography>
+              </Box>
+              <Box height="5vh" marginBottom="4vh">
+                <Typography fontSize="3vh">Ms. Twinkle Shah</Typography>
+                <Typography fontSize="3vh">Phone : <a href="tel:+918898827588" style={{ color: 'black', textDecoration: 'none' }}>+91-8898827588</a></Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Grid>}
+       
 
       </Grid>
 
