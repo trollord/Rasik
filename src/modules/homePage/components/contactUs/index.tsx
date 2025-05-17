@@ -3,7 +3,6 @@ import { useState } from 'react';
 import styles from "./styles.module.css"
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useInView } from 'react-intersection-observer';
-import axios from 'axios';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -22,30 +21,50 @@ function ContactUs() {
     });
   };
 
-  const handleSubmit = () => {
-    const sendobject = {
-      to: 'rasikads43@gmail.com',
-      subject: 'New Message from Website',
-      body: `First Name: ${formData.firstName} \n Last Name: ${formData.lastName} \n Email: ${formData.email} \n Phone: ${formData.phone} \n Message: ${formData.message}`
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  try {
+    // Prepare the request body
+    const requestBody = {
+      name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      To: 'rasikads43@gmail.com' // Hardcoded recipient
     };
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://emailservice-42dg.onrender.com/send-email',
+
+    const response = await fetch('https://cqgo2gggpg.execute-api.ap-northeast-1.amazonaws.com/default/mailer_function', {
+      method: 'POST',
+      mode: 'cors',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
-      data: sendobject
-    };
- 
-    axios.request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
+      body: JSON.stringify(requestBody),
+    });
+
+    const data = await response.json();
+    
+    if (data.status === 'success') {
+      alert('Mail sent successfully! We will get back to you soon.');
+      // Reset form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
       });
-  };
+    } else {
+      alert('Failed to send mail. Please try again later.');
+      console.error('Error details:', data.message);
+    }
+  } catch (error) {
+    alert('An error occurred while sending your message. Please try again.');
+    console.error('Network error:', error);
+  }
+};
   const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   // className={`${leftInView ? styles.slideInFromLeft : ''}`}
